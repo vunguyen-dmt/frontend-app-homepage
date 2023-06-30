@@ -3,28 +3,29 @@ import { IconInfo } from "../../components";
 import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
 import messages from "../messages";
 import IMAGES from "../../images/images";
+import './FooterContent.scss';
 
 function FooterContent({intl}) {
     const connectFlexCss = "d-flex flex-nowrap align-items-center";
     const connectPaddingCss = "px-1 px-lg-0";
 
     return (
-        <footer className="text-white px4 footer-content-wrapper">
+        <footer className="text-white px-3 footer-content-wrapper">
             <div className="container">
                 <div className="px-3 px-lg-0 py-4">
                     <img className="mx-auto d-block mx-lg-0" src={IMAGES.footer_logo} alt='bottom logo'/>
                 </div>
                 <div className="d-flex flex-column flex-lg-row justify-content-between text-center text-lg-left">
-                    <div>
-                        <div className="d-none d-lg-block">{intl.formatMessage(messages.info)}</div>
+                    <div className="footer-info">
+                        <div className="font-weight-bold mb-2 text-left">{intl.formatMessage(messages.info)}</div>
                         <IconInfo imageSource={IMAGES.home_light} textInfo={intl.formatMessage(messages.name)} uppercase={true} />
                         <IconInfo imageSource={IMAGES.pin_light} textInfo={intl.formatMessage(messages.address)} />
                         <IconInfo imageSource={IMAGES.phone_light} textInfo="(+84) 28 5445 9998" />
                         <IconInfo imageSource={IMAGES.message_light} textInfo="dayhocso@hutech.edu.vn" />
                     </div>
-                    <div className="d-flex flex-row flex-lg-column align-items-center align-items-lg-baseline justify-content-center justify-content-lg-start px-3">
-                        <div className="d-none d-lg-block">{intl.formatMessage(messages.connect)}</div>
-                        <a href="https://www.facebook.com/hutechuniversity" target='_blank'>
+                    <div className="footer-connect">
+                        <div className="font-weight-bold mb-2 text-left">{intl.formatMessage(messages.connect)}</div>
+                        <a href="https://www.facebook.com/profile.php?id=100092564956873" target='_blank'>
                             <IconInfo imageSource={IMAGES.facebook} textInfo="Facebook" flex={connectFlexCss} padding={connectPaddingCss}/>
                         </a>
                         <a href="https://www.youtube.com/c/HUTECHChannel" target='_blank'>
@@ -34,8 +35,8 @@ function FooterContent({intl}) {
                             <IconInfo imageSource={IMAGES.instagram} textInfo="Instagram" flex={connectFlexCss} padding={connectPaddingCss}/>
                         </a>
                     </div>
-                    <div className="py-2 py-lg-0">
-                        <div className="d-none d-lg-block">{intl.formatMessage(messages.download)}</div>
+                    <div className="py-2 py-lg-0 download">
+                        <div className="font-weight-bold mb-2 text-left">{intl.formatMessage(messages.download)}</div>
                         <div className="d-flex justify-content-center justify-content-lg-start">
                             <div className="d-flex flex-column pr-2 /*stores*/">
                                 <a href="https://apps.apple.com/us/app/hutech-x/id1632853626" target="_blank">

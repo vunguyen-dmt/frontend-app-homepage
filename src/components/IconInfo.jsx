@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 function IconInfo({imageSource, textInfo, uppercase, padding, flex}) {
 
-    const updateClass = flex + " py-1 " + padding;
+    const updateClass = flex + padding;
 
     return (
-       <div className={updateClass}>
+       <p className={updateClass}>
             <img src={imageSource}/>
             <span className={uppercase ? 'text-uppercase pl-1' : 'pl-1'}>{textInfo}</span>
-       </div> 
+       </p> 
     )
 }
 

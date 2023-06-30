@@ -2,13 +2,15 @@ import React from "react";
 import { NavigationTopBar } from "../../components";
 import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
 import messages from "../messages";
+import IMAGES from '../../images/images';
+import './HeaderContent.scss';
 
 function HeaderContent({intl}) {
     return (
         <>
             <NavigationTopBar />
-            <header className="background_wrapper">
-                <div className="outer-wrapper container">
+            <header>
+                <div className="banner container">
                     <div className="text-over">
                         <div className="text-wrapper">
                             <div className="text-title">{intl.formatMessage(messages.learning)}</div>
@@ -16,6 +18,7 @@ function HeaderContent({intl}) {
                             <div className="text-name">HUTECH</div>
                         </div>
                     </div>
+                    <img src={IMAGES.banner} />
                 </div>
             </header>
         </>

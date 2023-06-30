@@ -1,128 +1,47 @@
 /////////// Header Content ///////////
 
-.navbar-nav {
-    @media (max-width: 991px) {
-        border-top: 1px solid #f0eeed;
-    }
 
-    .nav-link {
-        font-weight: 600;
-        color: #0161CC !important;
+// .background_wrapper {
 
-        @media (min-width: 992px) {
-            padding: 0 2rem !important;
-        }
+//     position: relative;
+//     // background-image: url('../images/background.jpg');
+//     height: 80vh;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-size: cover;
 
-        @media (max-width: 991px) {
-            border-bottom: 1px solid #f0eeed;
+//     @media (max-width: 767px) {
+//         max-height: 400px;
+//     }
 
-            &:hover {
-                background-color: #f0eeed;
-            }
-        }
-    }
-}
+//     @media (min-width: 768px) and (max-width: 991px) {
+//         max-height: 600px;
+//     }
 
-.background_wrapper {
-    position: relative;
-    background-image: url('../images/background.jpg');
-    height: calc(100vh - 77px);
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
+//     @media (max-width: 499px) {
+//         background-image: url('../images/background_sm.jpg');
+//     }
 
-    @media (max-width: 767px) {
-        max-height: 400px;
-    }
+//     @media (min-width: 500px) and (max-width: 1280px) {
+//         background-image: url('../images/background_md.jpg');
+//     }
 
-    @media (min-width: 768px) and (max-width: 991px) {
-        max-height: 600px;
-    }
+//     .banner {
+//         animation: none;
+//         padding-top: calc(100vh/6);
 
-    @media (max-width: 499px) {
-        background-image: url('../images/background_sm.jpg');
-    }
+//         @media (max-width: 767px) {
+//             min-height: 500px;
+//             padding-top: unset;
+//         }
 
-    @media (min-width: 500px) and (max-width: 1280px) {
-        background-image: url('../images/background_md.jpg');
-    }
+//         @media (min-width: 768px) {
+//             padding-top: calc(100vh/10);
+//         }
 
-    .outer-wrapper {
-        animation: none;
-        padding-top: calc(100vh/6);
-
-        @media (max-width: 767px) {
-            min-height: 500px;
-            padding-top: unset;
-        }
-
-        @media (min-width: 768px) {
-            padding-top: calc(100vh/10);
-        }
-
-        .text-over {
-            height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: left;
-            color: black;
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 2.1rem;
-
-            @media (max-width: 767px) {
-                max-height: 300px
-            }
-
-            .text-wrapper {
-                
-                .text-name {
-                    font-family: "Montserrat",sans-serif;
-                    font-size: 3rem;
-                    font-weight: bolder;
-                    color: #E30613;
-                    line-height: 1;
-                    max-width: 400px;
-                    border-radius: 0 30px 30px 0;
-
-                    @media (max-width: 767px) {
-                        width: calc(100vw/4 + 2em);
-                    }
-
-                    @media (min-width: 768px) and (max-width: 991px) {
-                        font-size: 4rem;
-                        width: calc(100vw/5 + 2em);
-                    }
-
-                    @media (min-width: 992px) {
-                        font-size: 5rem;
-                    }
-                }
-
-                .text-title {
-                    font-family: "Montserrat",sans-serif;
-                    font-size: 2rem;
-                    font-weight: bolder;
-                    color: #15304B;
-                    line-height: 1.2;
-
-                    @media (min-width: 768px) and (max-width: 991px) {
-                        font-size: 3rem;
-                    }
-
-                    @media (min-width: 992px) {
-                        font-size: 4rem;
-                    }
-                }
-
-            }
-
-            .margin-bottom-20 {
-                margin-bottom: 20px;
-            }
-        }
-    }
-}
+       
+//     }
+// }
 
 //// NavigationTopBar Content ///
 .btn {
@@ -176,11 +95,11 @@
 .body-content-wrapper {
     background-color: #F3F3F3;
     padding-top: 4rem;
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
     
     .body-content {
         margin: 0 auto;
-        max-width: 1280px;
+        // max-width: 1280px;
 
         .guide {
             font-family: Arial, Helvetica, sans-serif;
@@ -205,13 +124,3 @@
 }
 
 /////////// Footer Content ///////////
-.footer-content-wrapper {
-    background-color: #878787;
-    color: #FFF;
-    font-family: Helvetica, sans-serif;
-
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
-}

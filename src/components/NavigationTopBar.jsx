@@ -6,6 +6,7 @@ import { Navbar, Nav, Form, Button, Dropdown } from "@edx/paragon";
 import { getCookie, setCookie } from '../homepage/data/cookies'
 import { getConfig } from '@edx/frontend-platform';
 import { Helmet } from "react-helmet";
+import './NavigationTopBar.scss';
 
 function NavigationTopBar({intl}) {
 
@@ -27,7 +28,7 @@ function NavigationTopBar({intl}) {
       <Navbar expand="lg" className="px-4">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Brand href="#home" className="mx-auto">
-            <img src={IMAGES.header_logo} alt='top logo'/>
+            <img src={IMAGES.header_logo} alt='top logo' className="logo"/>
         </Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
@@ -37,14 +38,14 @@ function NavigationTopBar({intl}) {
             <Nav.Link href="/authn/login?next" className="d-lg-none">{intl.formatMessage(messages.login)}</Nav.Link>
           </Nav>
           <Form inline>
-            <Button href="https://learner-help.goamazing.org" variant="danger" className="mx-1 d-none d-lg-block">FAQ</Button>
-            <Button href="/authn/login?next" variant="danger" className="mx-1 d-none d-lg-block">{intl.formatMessage(messages.login)}</Button>
+            <Button href="https://learner-help.goamazing.org" variant="danger" className="mx-1 d-none d-lg-block red-btn">FAQ</Button>
+            <Button href="/authn/login?next" variant="danger" className="mx-1 d-none d-lg-block red-btn">{intl.formatMessage(messages.login)}</Button>
             <Form.Label className="d-lg-none language">{intl.formatMessage(messages.language)}</Form.Label>
             <Dropdown onSelect={handleSelect}>
                 <Dropdown.Toggle className="btn-transparent" id="dropdown-basic">
                   {currentLang == "en" ? 'English' : 'Tiếng Việt'} 
                 </Dropdown.Toggle>
-                <Dropdown.Menu>
+                <Dropdown.Menu className="shadow">
                   <Dropdown.Item eventKey="en">English</Dropdown.Item>
                   <Dropdown.Item eventKey="vi">Tiếng Việt</Dropdown.Item>
                 </Dropdown.Menu>
