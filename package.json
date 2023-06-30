@@ -47,11 +47,13 @@
     "prop-types": "15.8.1",
     "react": "16.14.0",
     "react-dom": "16.14.0",
+    "react-helmet": "^6.1.0",
     "react-redux": "7.2.9",
     "react-router": "5.3.4",
     "react-router-dom": "5.3.4",
     "redux": "4.2.1",
-    "regenerator-runtime": "0.13.11"
+    "regenerator-runtime": "0.13.11",
+    "universal-cookie": "^4.0.4"
   },
   "devDependencies": {
     "@edx/browserslist-config": "^1.1.1",
