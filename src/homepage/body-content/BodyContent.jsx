@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
 import { AccessTime, ContentPaste } from '@edx/paragon/icons';
+import AOS from 'aos';
 import { VideoPlayer } from '../../components';
 import messages from '../messages';
 import './BodyContent.scss';
@@ -16,17 +17,26 @@ const BodyContent = ({ intl }) => {
   //       console.log(`error loading courses: ${err}`);
   //     });
   // }, []);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
     <div className="body-content-wrapper">
       <div className="body-content container section-mw">
         <div className="tl">{intl.formatMessage(messages.guide)}</div>
         <div className="d-flex flex-wrap justify-content-center py-3">
           <VideoPlayer
+            aos="fade-right"
             source="https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/videos/huong-dan-dang-nhap.mp4"
             title="Cách đăng nhập HUTECH eLearning"
             videoPoster="poster1"
           />
           <VideoPlayer
+            aos="fade-left"
             source="https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/videos/huongdantracnghiemtuluan-26-05-fix.mp4"
             title="Cách làm bài tập HUTECH eLearning"
             videoPoster="poster2"

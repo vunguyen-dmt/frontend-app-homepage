@@ -7,14 +7,13 @@ import {
 import { AppProvider, ErrorPage } from '@edx/frontend-platform/react';
 import ReactDOM from 'react-dom';
 import { Helmet } from 'react-helmet';
-
 import Header from '@edx/frontend-component-header';
 import Footer from '@edx/frontend-component-footer';
 import messages from './i18n';
 import Homepage from './homepage/Homepage';
 import { UnAuthOnlyRoute } from './components';
 import { HOMEPAGE } from './components/data/constants';
-
+import "aos/dist/aos.css";
 import './index.scss';
 
 subscribe(APP_READY, () => {
