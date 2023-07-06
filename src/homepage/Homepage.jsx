@@ -4,10 +4,10 @@ import FooterContent from './footer-content/FooterContent';
 
 const Homepage = () => (
   <main>
-    <HeaderContent/>
+    <HeaderContent />
     <BodyContent />
     <FooterContent />
   </main>
-)
+);
 
 export default Homepage;

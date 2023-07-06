@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function IconInfo({imageSource, textInfo, uppercase, padding, flex}) {
 
-    const updateClass = flex + padding;
+    const updateClass = "" + flex + padding;
 
     return (
        <p className={updateClass}>

@@ -90,37 +90,3 @@
         }
     }
 }
-
-/////////// Body Content ///////////
-.body-content-wrapper {
-    background-color: #F3F3F3;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    
-    .body-content {
-        margin: 0 auto;
-        // max-width: 1280px;
-
-        .guide {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 1.5em;
-            font-weight: 600;
-
-            @media (max-width: 991px) {
-                text-align: center;
-            }
-        }
-    }
-
-    video {
-        width: 280px;
-        height: 157px;
-
-        @media screen and (min-width: 600px) {
-            width: 500px;
-            height: 281px;
-        }
-    }
-}
-
-/////////// Footer Content ///////////

@@ -11,5 +11,7 @@
     "homepage.footerContent.connect": "Kết nối",
     "homepage.footerContent.name": "Trung tâm dạy học số - HUTECH",
     "homepage.footerContent.address": "475A Điện Biên Phủ, Phường 25, Quận Bình Thạnh, TP. HCM",
-    "homepage.footerContent.download": "App Download"
+    "homepage.footerContent.download": "App Download",
+    "homepage.bodyContent.popularCourses": "Các khóa học phổ biến",
+    "homepage.bodyContent.viewMoreCourses": "Xem thêm khóa học"
 }

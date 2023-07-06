@@ -20,7 +20,7 @@ function FooterContent({intl}) {
                         <div className="font-weight-bold mb-2 text-left">{intl.formatMessage(messages.info)}</div>
                         <IconInfo imageSource={IMAGES.home_light} textInfo={intl.formatMessage(messages.name)} uppercase={true} />
                         <IconInfo imageSource={IMAGES.pin_light} textInfo={intl.formatMessage(messages.address)} />
-                        <IconInfo imageSource={IMAGES.phone_light} textInfo="(+84) 28 5445 9998" />
+                        <IconInfo imageSource={IMAGES.phone_light} textInfo="(028) 5449 9998" />
                         <IconInfo imageSource={IMAGES.message_light} textInfo="dayhocso@hutech.edu.vn" />
                     </div>
                     <div className="footer-connect">
