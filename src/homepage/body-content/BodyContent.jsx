@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
-import { AccessTime, ContentPaste } from '@edx/paragon/icons';
+import { ContentPaste } from '@edx/paragon/icons';
+import { Hyperlink, Card, Badge } from '@edx/paragon';
 import AOS from 'aos';
-import { VideoPlayer } from '../../components';
-import messages from '../messages';
+import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
+import messages from '../../messages/messages';
 import './BodyContent.scss';
 
 const BodyContent = ({ intl }) => {
-  // const [courses, setCourses] = useState([]);
+  const [courses, setCourses] = useState([]);
   // useEffect(() => {
-  //   fetch(`https://hutech-public.s3.ap-southeast-1.amazonaws.com/home-page-resource/courses.json?t=${+new Date()}`).then(response => response.json())
+  //   fetch(`https://apps.courses.goamazing.org:3000/courses.json?t=${+new Date()}`).then(response => response.json())
   //     .then(data => {
-  //       console.log(data.courses);
   //       setCourses(data.courses);
   //     }).catch(err => {
   //       console.log(`error loading courses: ${err}`);
@@ -29,7 +29,7 @@ const BodyContent = ({ intl }) => {
     <div className="body-content-wrapper">
       <div className="body-content container section-mw">
         <div className="tl">{intl.formatMessage(messages.guide)}</div>
-        <div className="d-flex flex-wrap justify-content-center py-3">
+        <div className="d-flex flex-wrap py-3">
           <VideoPlayer
             aos="fade-right"
             source="https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/videos/huong-dan-dang-nhap.mp4"
@@ -46,18 +46,35 @@ const BodyContent = ({ intl }) => {
       </div>
       {/* <div className="container section-mw">
         <div className="tl">{intl.formatMessage(messages.popularCourses)}</div>
-        <div className="courses">
+        <div className="courses d-flex">
           {
-                    courses.map((course) => (
-                      <div key={course.id} className="course rounded-lg shadow-lg">
-                        <div><a href={course.aboutPage}><img alt="course" className="image" src={course.image} /></a></div>
-                        <div><a className="name" href={course.aboutPage}>{course.name}</a></div>
-                        <div className="px-3 desc">{course.description}</div>
+                    courses.map((item) => (
+                      <Card
+                        key={item.id}
+                        as={Hyperlink}
+                        destination={item.aboutPage}
+                        isClickable
+                      >
+                        <Card.ImageCap
+                          src={item.image}
+                          srcAlt="course image"
+                          logoSrc={item.orgLogo}
+                          logoAlt="org logo"
+                        />
+                        <Card.Header
+                          title={item.name}
+                        />
+                        <Card.Section>
+                          <div className="desc">{item.description}</div>
+                          <div className="space" />
+                        </Card.Section>
                         <div className="foot">
-                          <div><AccessTime /> {course.totalTime} Giờ</div>
-                          <div><ContentPaste /> {course.numberOfLessons} Bài học</div>
+                          <div>
+                            <Badge variant="light">{intl.formatMessage(messages.Course)}</Badge>
+                          </div>
+                          <div><ContentPaste /> {item.numberOfLessons} {intl.formatMessage(messages.Lessons)}</div>
                         </div>
-                      </div>
+                      </Card>
                     ))
            }
         </div>

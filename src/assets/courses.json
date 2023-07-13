@@ -1,0 +1,84 @@
+{
+	"courses": [
+		{
+            "id": "1",
+			"image" : "https://apps.courses.goamazing.org:3000/4e53663d87545aa44664e614b1d6d4a3.png",
+			"name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+			"instructor": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "totalTime": "11:11:11",
+            "numberOfLessons": "50",
+            "aboutPage": "https://courses.goamazing.org/courses/course-v1:AmazingEnglish+ATT001+2020/about"
+		},
+        {
+            "id": "2",
+			"image" : "https://apps.courses.goamazing.org:3000/4e53663d87545aa44664e614b1d6d4a3.png",
+			"name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+			"instructor": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "totalTime": "11:11:11",
+            "numberOfLessons": "50",
+            "aboutPage": "https://courses.goamazing.org/courses/course-v1:AmazingEnglish+ATT001+2020/about"
+		},
+        {
+            "id": "3",
+			"image" : "https://apps.courses.goamazing.org:3000/4e53663d87545aa44664e614b1d6d4a3.png",
+			"name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+			"instructor": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "totalTime": "11:11:11",
+            "numberOfLessons": "50",
+            "aboutPage": "https://courses.goamazing.org/courses/course-v1:AmazingEnglish+ATT001+2020/about"
+		},
+        {
+            "id": "4",
+			"image" : "https://apps.courses.goamazing.org:3000/4e53663d87545aa44664e614b1d6d4a3.png",
+			"name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+			"instructor": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "totalTime": "11:11:11",
+            "numberOfLessons": "50",
+            "aboutPage": "https://courses.goamazing.org/courses/course-v1:AmazingEnglish+ATT001+2020/about"
+		},
+        {
+            "id": "5",
+			"image" : "https://apps.courses.goamazing.org:3000/4e53663d87545aa44664e614b1d6d4a3.png",
+			"name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+			"instructor": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "totalTime": "11:11:11",
+            "numberOfLessons": "50",
+            "aboutPage": "https://courses.goamazing.org/courses/course-v1:AmazingEnglish+ATT001+2020/about"
+		},
+        {
+            "id": "6",
+			"image" : "https://apps.courses.goamazing.org:3000/4e53663d87545aa44664e614b1d6d4a3.png",
+			"name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+			"instructor": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "totalTime": "11:11:11",
+            "numberOfLessons": "50",
+            "aboutPage": "https://courses.goamazing.org/courses/course-v1:AmazingEnglish+ATT001+2020/about"
+		},
+        {
+            "id": "7",
+			"image" : "https://apps.courses.goamazing.org:3000/4e53663d87545aa44664e614b1d6d4a3.png",
+			"name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+			"instructor": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "totalTime": "11:11:11",
+            "numberOfLessons": "50",
+            "aboutPage": "https://courses.goamazing.org/courses/course-v1:AmazingEnglish+ATT001+2020/about"
+		},
+        {
+            "id": "8",
+			"image" : "https://apps.courses.goamazing.org:3000/4e53663d87545aa44664e614b1d6d4a3.png",
+			"name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+			"instructor": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "totalTime": "11:11:11",
+            "numberOfLessons": "50",
+            "aboutPage": "https://courses.goamazing.org/courses/course-v1:AmazingEnglish+ATT001+2020/about"
+		}
+	]
+}
