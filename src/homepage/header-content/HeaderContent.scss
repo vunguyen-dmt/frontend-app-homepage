@@ -185,6 +185,7 @@
                 list-style: none;
                 a {
                     color: var(--norm-text);
+                    cursor: pointer;
                     padding: 0.5rem 1rem;
                     display: block;
                     &:hover {

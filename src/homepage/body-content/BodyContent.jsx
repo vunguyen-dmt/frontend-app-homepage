@@ -9,14 +9,14 @@ import './BodyContent.scss';
 
 const BodyContent = ({ intl }) => {
   const [courses, setCourses] = useState([]);
-  // useEffect(() => {
-  //   fetch(`https://apps.courses.goamazing.org:3000/courses.json?t=${+new Date()}`).then(response => response.json())
-  //     .then(data => {
-  //       setCourses(data.courses);
-  //     }).catch(err => {
-  //       console.log(`error loading courses: ${err}`);
-  //     });
-  // }, []);
+  useEffect(() => {
+    fetch(`https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/home-page-resources/courses.json?t=${+new Date()}`).then(response => response.json())
+      .then(data => {
+        setCourses(data.courses);
+      }).catch(err => {
+        console.log(`error loading courses: ${err}`);
+      });
+  }, []);
 
   useEffect(() => {
     AOS.init({
@@ -44,7 +44,7 @@ const BodyContent = ({ intl }) => {
           />
         </div>
       </div>
-      {/* <div className="container section-mw">
+      <div className="container section-mw">
         <div className="tl">{intl.formatMessage(messages.popularCourses)}</div>
         <div className="courses d-flex">
           {
@@ -79,9 +79,9 @@ const BodyContent = ({ intl }) => {
            }
         </div>
         <div className="mt-3 text-center">
-          <a href="https://lms.hutech.edu.vn/courses">{intl.formatMessage(messages.viewMoreCourses)}</a>
+          <a href="/courses">{intl.formatMessage(messages.viewMoreCourses)}</a>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

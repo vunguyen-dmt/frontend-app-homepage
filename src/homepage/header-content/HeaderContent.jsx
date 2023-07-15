@@ -54,7 +54,7 @@ const HeaderContent = ({ intl }) => {
   };
 
   const goToCourseAboutPage = (courseId) => {
-    window.location.href = `${getConfig().PUBLIC_PATH}${courseId}`;
+    window.location.href = `/courses/${courseId}`;
   };
 
   return (
@@ -67,7 +67,7 @@ const HeaderContent = ({ intl }) => {
               <div className="text-title">{intl.formatMessage(messages.learning)}</div>
               <div className="text-title margin-bottom-20">{intl.formatMessage(messages.managementSystem)}</div>
               <div className="text-name">HUTECH</div>
-              {/* <div className="search-area">
+              <div className="search-area">
                 <SearchField
                   submitButtonLocation="external"
                   buttonText={intl.formatMessage(messages.Search)}
@@ -92,7 +92,7 @@ const HeaderContent = ({ intl }) => {
                   </div>
                   )
                 }
-              </div> */}
+              </div>
             </div>
           </div>
           <img alt="banner" data-aos="slide-leftx" data-aos-easing="ease-in-out" data-aos-duration="900" src={IMAGES.banner} />
