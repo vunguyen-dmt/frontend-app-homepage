@@ -35,7 +35,7 @@ const NavigationTopBar = ({ intl }) => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
             <Nav.Link href="/">{intl.formatMessage(messages.home)}</Nav.Link>
-            {/* <Nav.Link href="/search">{intl.formatMessage(messages.Courses)}</Nav.Link> */}
+            <Nav.Link href="/courses">{intl.formatMessage(messages.Courses)}</Nav.Link>
             <Nav.Link href="https://lms.hutech.edu.vn/about">{intl.formatMessage(messages.aboutUs)}</Nav.Link>
             <Nav.Link href="https://lms.hutech.edu.vn/faq" className="d-lg-none">FAQ</Nav.Link>
             <Nav.Link href="/authn/login?next" className="d-lg-none">{intl.formatMessage(messages.login)}</Nav.Link>
