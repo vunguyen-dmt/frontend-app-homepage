@@ -25,7 +25,7 @@ const BodyContent = ({ intl }) => {
     <div className="home-body-content-wrapper">
       <div className="body-content container container-mw-lg">
         <div className="tl">{intl.formatMessage(messages.guide)}</div>
-        <div className="d-flex flex-wrap py-3">
+        <div className="d-flex py-3 home-videos">
           <VideoPlayer
             source="https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/videos/huong-dan-dang-nhap.mp4"
             title="Cách đăng nhập HUTECH eLearning"
