@@ -1,25 +1,36 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
-
+import { getConfig } from '@edx/frontend-platform';
 import {
   APP_INIT_ERROR, APP_READY, subscribe, initialize,
 } from '@edx/frontend-platform';
 import { AppProvider, ErrorPage } from '@edx/frontend-platform/react';
 import ReactDOM from 'react-dom';
-
-import Header from '@edx/frontend-component-header';
-import Footer from '@edx/frontend-component-footer';
+import { Helmet } from 'react-helmet';
+import {
+  BrowserRouter, Route, Switch,
+} from 'react-router-dom';
 import messages from './i18n';
-import ExamplePage from './example/ExamplePage';
-
+// import { UnAuthOnlyRoute } from './components';
+import Homepage from './homepage/Homepage';
+import UnAuthOnlyRoute from './components/UnAuthOnlyRoute';
+import 'aos/dist/aos.css';
 import './index.scss';
 
 subscribe(APP_READY, () => {
   ReactDOM.render(
+    // <BrowserRouter>
+    //   <AppProvider>
+    //     <Switch>
+    //       <Route exact path="/" component={Homepage} />
+    //     </Switch>
+    //   </AppProvider>
+    // </BrowserRouter>,
     <AppProvider>
-      <Header />
-      <ExamplePage />
-      <Footer />
+      <Helmet>
+        <link rel="shortcut icon" href={getConfig().FAVICON_URL} type="image/x-icon" />
+      </Helmet>
+      <UnAuthOnlyRoute exact path="/" render={() => <Homepage />} />
     </AppProvider>,
     document.getElementById('root'),
   );

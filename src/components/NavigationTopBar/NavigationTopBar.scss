@@ -1,0 +1,85 @@
+.logo {
+    max-height: 121px;
+    width: auto;
+    @media (max-width: 991px) {
+        max-height: 60px;
+    }
+}
+
+.navbar-collapse {
+    @media (min-width: 991px) {
+        margin-bottom: 40px;
+    }
+}
+
+.navbar-nav {
+    @media (max-width: 991px) {
+        border-top: 1px solid #f0eeed;
+    }
+
+    .nav-link {
+        color: rgba(0,0,0,0.87)!important;
+        white-space: nowrap;
+        font-weight: 600;
+        &:first-child {
+            color: #0161CC !important;
+        }
+        &:hover {
+            color: #0161CC !important;
+        }
+
+        @media (min-width: 992px) {
+            padding: 0 2rem !important;
+        }
+
+        @media (max-width: 991px) {
+            border-bottom: 1px solid #f0eeed;
+
+            &:hover {
+                background-color: #f0eeed;
+            }
+        }
+    }
+}
+
+.red-btn {
+    background-color: #E30613!important;
+    white-space: nowrap;
+    border-color: #E30613!important;
+    &:hover, &:focus {
+        background-color: #C32D3A!important;
+    }
+}
+
+.navbar-toggler {
+    margin-top: -24px;
+    margin-left: -12px;
+    &:not(.collapsed) {
+        .navbar-toggler-icon {
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABN0lEQVR4nO3ZTWrDMBCG4fcoXfQkLZTuK83CSc6eRc8QAk0hJWBDMTFxJM1oLPRBdsYzj34S2YGenp6e1vIKhIr1w9hDVl6AI/ALHLCPABfgOwczIa7jxxojI2Kqn4yJY/PXGWaHfnYLtW89FRkVi5kRrZqWGNGuZYExGzDNQuZLWBQK1tiHxQtXQ5RsoDqiRCNuEDkNuUOkNOYW8UyD7hFrGt0M4tFhr9bhMyv3Rn8zM7EWsylEMxBpYWkNLWx2aeHrNy40uv93jXtMXIFwj4lPINxiYgLCHSZkINxgQgFEdUxYKJzzm2COCQoIc0xQRJhhAvBjdMQQLczXAuJ2ptKKlMbcW06XnFf7BZ40h5SbfQBnw5mYZz4zJ+A99WYTxhoxx2QhpnxW/jN0AN4q1u/p6emhfP4AxlR3VfJGRpkAAAAASUVORK5CYII=) ;
+        }
+    }
+}
+
+.mobile-login {
+    margin-top: -15px!important;
+    margin-right: -15px!important;
+}
+
+.navbar-light .navbar-toggler {
+    border: 0;
+}
+
+.navbar-light .navbar-toggler-icon {
+    height: 24px;
+    color: var(--norm-text)!important;
+    width: 24px;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.right-box-faq {
+    flex-wrap: nowrap!important;
+}

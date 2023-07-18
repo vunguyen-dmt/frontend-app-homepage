@@ -1,0 +1,92 @@
+/////////// Header Content ///////////
+
+
+// .background_wrapper {
+
+//     position: relative;
+//     // background-image: url('../images/background.jpg');
+//     height: 80vh;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+
+//     @media (max-width: 767px) {
+//         max-height: 400px;
+//     }
+
+//     @media (min-width: 768px) and (max-width: 991px) {
+//         max-height: 600px;
+//     }
+
+//     @media (max-width: 499px) {
+//         background-image: url('../images/background_sm.jpg');
+//     }
+
+//     @media (min-width: 500px) and (max-width: 1280px) {
+//         background-image: url('../images/background_md.jpg');
+//     }
+
+//     .banner {
+//         animation: none;
+//         padding-top: calc(100vh/6);
+
+//         @media (max-width: 767px) {
+//             min-height: 500px;
+//             padding-top: unset;
+//         }
+
+//         @media (min-width: 768px) {
+//             padding-top: calc(100vh/10);
+//         }
+
+       
+//     }
+// }
+
+//// NavigationTopBar Content ///
+.btn {
+    border-radius: 50px;
+    
+    &:focus {
+        &::before{
+            border-radius: inherit;
+        }
+    }
+}
+
+.btn-transparent {
+    background-color: unset !important;
+    border: none !important;
+    color: #4c4c4c !important;
+
+    &:hover, &:active {
+        background-color: unset;
+        border: none !important;
+        color: #4c4c4c;
+    }
+
+    &:focus {
+        &::before{
+            border: none;
+        }
+    }
+
+    @media (max-width: 991px) {
+        padding: .3rem .5rem !important;
+    }
+}
+
+.language {
+    padding: 0.5rem 0 !important;
+    margin: unset;
+}
+
+.dropdown-menu {
+    min-width: unset;
+
+    .dropdown-item {
+        &:active {
+            background-color: #C32D3A;
+        }
+    }
+}
