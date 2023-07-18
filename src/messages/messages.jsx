@@ -96,6 +96,16 @@ const messages = defineMessages({
     defaultMessage: 'Course',
     description: '',
   },
+  'LMS course': {
+    id: 'home.lmsCourse',
+    defaultMessage: 'LMS course',
+    description: '',
+  },
+  'MOOCS course': {
+    id: 'home.moocsCourse',
+    defaultMessage: 'MOOCS course',
+    description: '',
+  },
   Lessons: {
     id: 'Lessons',
     defaultMessage: 'Lessons',

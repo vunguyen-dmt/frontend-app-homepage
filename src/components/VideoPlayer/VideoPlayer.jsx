@@ -3,9 +3,9 @@ import IMAGES from '../../images/images';
 import './VideoPlayer.scss';
 
 const VideoPlayer = ({
-  source, title, videoPoster, aos,
+  source, title, videoPoster
 }) => (
-  <div data-aos={aos} className="home-video bg-white rounded-lg cvideo d-flex flex-column justify-content-center pb-3 /*video-player*/">
+  <div className="home-video bg-white rounded-lg cvideo d-flex flex-column justify-content-center pb-3 /*video-player*/">
     <video className="rounded-lg object-fit-cover clickable" poster={IMAGES[videoPoster]} controls>
       <source src={source} />
     </video>

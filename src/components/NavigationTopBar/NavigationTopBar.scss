@@ -1,8 +1,14 @@
 .logo {
-    max-height: 100px;
+    max-height: 121px;
     width: auto;
     @media (max-width: 991px) {
         max-height: 60px;
+    }
+}
+
+.navbar-collapse {
+    @media (min-width: 991px) {
+        margin-bottom: 40px;
     }
 }
 
@@ -13,6 +19,7 @@
 
     .nav-link {
         color: rgba(0,0,0,0.87)!important;
+        white-space: nowrap;
         font-weight: 600;
         &:first-child {
             color: #0161CC !important;
@@ -37,6 +44,7 @@
 
 .red-btn {
     background-color: #E30613!important;
+    white-space: nowrap;
     border-color: #E30613!important;
     &:hover, &:focus {
         background-color: #C32D3A!important;
@@ -70,4 +78,8 @@
 
 .fw-600 {
     font-weight: 600;
+}
+
+.right-box-faq {
+    flex-wrap: nowrap!important;
 }

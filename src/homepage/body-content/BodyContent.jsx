@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
-import { ContentPaste } from '@edx/paragon/icons';
-import { Hyperlink, Card, Badge } from '@edx/paragon';
-import AOS from 'aos';
+import { ContentPaste, ArrowForward } from '@edx/paragon/icons';
+import {
+  Hyperlink, Card, Badge, Icon,
+} from '@edx/paragon';
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 import messages from '../../messages/messages';
 import './BodyContent.scss';
@@ -10,7 +11,9 @@ import './BodyContent.scss';
 const BodyContent = ({ intl }) => {
   const [courses, setCourses] = useState([]);
   useEffect(() => {
-    fetch(`https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/home-page-resources/courses.json?t=${+new Date()}`).then(response => response.json())
+    const coursesUrl = `https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/home-page-resources/courses.json?t=${+new Date()}`;
+    // const coursesUrl = `https://apps.courses.goamazing.org:3000/courses.json?t=${+new Date()}`;
+    fetch(coursesUrl).then(response => response.json())
       .then(data => {
         setCourses(data.courses);
       }).catch(err => {
@@ -18,33 +21,24 @@ const BodyContent = ({ intl }) => {
       });
   }, []);
 
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-    });
-  }, []);
-
   return (
-    <div className="body-content-wrapper">
-      <div className="body-content container section-mw">
+    <div className="home-body-content-wrapper">
+      <div className="body-content container container-mw-lg">
         <div className="tl">{intl.formatMessage(messages.guide)}</div>
         <div className="d-flex flex-wrap py-3">
           <VideoPlayer
-            aos="fade-right"
             source="https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/videos/huong-dan-dang-nhap.mp4"
             title="Cách đăng nhập HUTECH eLearning"
             videoPoster="poster1"
           />
           <VideoPlayer
-            aos="fade-left"
             source="https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/videos/huongdantracnghiemtuluan-26-05-fix.mp4"
             title="Cách làm bài tập HUTECH eLearning"
             videoPoster="poster2"
           />
         </div>
       </div>
-      <div className="container section-mw">
+      <div className="container container-mw-lg">
         <div className="tl">{intl.formatMessage(messages.popularCourses)}</div>
         <div className="courses d-flex">
           {
@@ -70,7 +64,7 @@ const BodyContent = ({ intl }) => {
                         </Card.Section>
                         <div className="foot">
                           <div>
-                            <Badge variant="light">{intl.formatMessage(messages.Course)}</Badge>
+                            <Badge variant="light">{intl.formatMessage(messages[item.tag])}</Badge>
                           </div>
                           <div><ContentPaste /> {item.numberOfLessons} {intl.formatMessage(messages.Lessons)}</div>
                         </div>
@@ -78,8 +72,9 @@ const BodyContent = ({ intl }) => {
                     ))
            }
         </div>
-        <div className="mt-3 text-center">
-          <a href="/courses">{intl.formatMessage(messages.viewMoreCourses)}</a>
+        <div className="mt-3 text-right view-more-courses-wrapper">
+          <a className="view-more-courses" href="/courses"><Icon src={ArrowForward} /></a>
+          {/* <a href="/courses">{intl.formatMessage(messages.viewMoreCourses)}</a> */}
         </div>
       </div>
     </div>

@@ -40,7 +40,7 @@ const NavigationTopBar = ({ intl }) => {
             <Nav.Link href="https://lms.hutech.edu.vn/faq" className="d-lg-none">FAQ</Nav.Link>
             <Nav.Link href="/authn/login?next" className="d-lg-none">{intl.formatMessage(messages.login)}</Nav.Link>
           </Nav>
-          <Form inline className="fw-600">
+          <Form inline className="fw-600 right-box-faq">
             <Button href="https://lms.hutech.edu.vn/faq" variant="danger" className="mx-1 d-none d-lg-block red-btn">FAQ</Button>
             <Button href="/authn/login?next" variant="danger" className="mx-3 d-none d-lg-block red-btn">{intl.formatMessage(messages.login)}</Button>
             <Form.Label className="d-lg-none language">{intl.formatMessage(messages.language)}</Form.Label>
