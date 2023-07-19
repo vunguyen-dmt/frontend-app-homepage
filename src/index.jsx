@@ -14,7 +14,6 @@ import messages from './i18n';
 // import { UnAuthOnlyRoute } from './components';
 import Homepage from './homepage/Homepage';
 import UnAuthOnlyRoute from './components/UnAuthOnlyRoute';
-import 'aos/dist/aos.css';
 import './index.scss';
 
 subscribe(APP_READY, () => {

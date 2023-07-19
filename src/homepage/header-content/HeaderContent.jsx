@@ -95,7 +95,7 @@ const HeaderContent = ({ intl }) => {
               </div>
             </div>
           </div>
-          <img alt="banner" data-aos="slide-leftx" data-aos-easing="ease-in-out" data-aos-duration="900" src={IMAGES.banner} />
+          <img alt="banner" src={IMAGES.banner} />
         </div>
       </header>
     </>
