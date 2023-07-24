@@ -42,11 +42,11 @@ const NavigationTopBar = ({ intl }) => {
             <Nav.Link href="/">{intl.formatMessage(messages.home)}</Nav.Link>
             <Nav.Link href="/courses">{intl.formatMessage(messages.Courses)}</Nav.Link>
             <Nav.Link href="https://lms.hutech.edu.vn/about">{intl.formatMessage(messages.aboutUs)}</Nav.Link>
-            <Nav.Link href="https://apps.lms.hutech.edu.vn/faq?role=student" className="d-lg-none">FAQ</Nav.Link>
+            <Nav.Link href="https://apps.lms.hutech.edu.vn/home/faq?role=student" className="d-lg-none">FAQ</Nav.Link>
             <Nav.Link href="/authn/login?next" className="d-lg-none">{intl.formatMessage(messages.login)}</Nav.Link>
           </Nav>
           <Form inline className="fw-600 right-box-faq">
-            <Button href="https://apps.lms.hutech.edu.vn/faq?role=student" variant="danger" className="mx-1 d-none d-lg-block red-btn">FAQ</Button>
+            <Button href="https://apps.lms.hutech.edu.vn/home/faq?role=student" variant="danger" className="mx-1 d-none d-lg-block red-btn">FAQ</Button>
             <Button href="/authn/login?next" variant="danger" className="mx-3 d-none d-lg-block red-btn">{intl.formatMessage(messages.login)}</Button>
             <Form.Label className="d-lg-none language">{intl.formatMessage(messages.language)}</Form.Label>
             <Dropdown onSelect={handleSelect}>
