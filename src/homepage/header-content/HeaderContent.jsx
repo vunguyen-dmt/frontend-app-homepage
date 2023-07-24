@@ -79,16 +79,16 @@ const HeaderContent = ({ intl }) => {
                   onClear={searchClearHandle}
                 />
                 {
-                  dropdownCourses.length > 0
+                  dropdownCourses && dropdownCourses.results && dropdownCourses.results.length > 0
                   && (
                   <div className="search-dropdown shadow">
                     <ul>
                       {
-                      dropdownCourses.map((item) => (
+                      dropdownCourses.results.map((item) => (
                         <li key={item.id}><a onClick={() => goToCourseAboutPage(item.id)}>{item.display_name} <Badge variant="light">{item.display_org_with_default}</Badge> <Badge variant="dark">{item.display_number_with_default}</Badge></a></li>
                       ))
                     }
-                      {dropdownCourses.length > 10 && <li className="view-all-search-result"><a onClick={searchSubmittedHandle}>{intl.formatMessage(messages['View all results'])}</a></li>}
+                      {dropdownCourses.total > 10 && <li className="view-all-search-result"><a onClick={searchSubmittedHandle}>{intl.formatMessage(messages['View all results'])}</a></li>}
                     </ul>
                   </div>
                   )
