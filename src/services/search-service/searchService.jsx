@@ -21,7 +21,7 @@ export const searchCourse = (query) => {
     pageSize: query.limit,
   };
 
-  var baseUrl = "https://insights.lms.hutech.edu.vn";
+  var baseUrl = "https://api.hutech-elearning-insights.goamazing.org";
   // var baseUrl = "https://localhost:5001";
 
   return getHttpClient().post(`${baseUrl}/search`, body);
