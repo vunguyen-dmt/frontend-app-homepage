@@ -111,6 +111,11 @@ const messages = defineMessages({
     defaultMessage: 'Lessons',
     description: '',
   },
+  viewAllResults: {
+    id: 'home.viewAllResult',
+    defaultMessage: 'View all results',
+    description: '',
+  },
 });
 
 export default messages;
