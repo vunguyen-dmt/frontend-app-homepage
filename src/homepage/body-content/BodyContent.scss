@@ -3,7 +3,6 @@
     background-color: #F3F3F3;
     padding-top: 4rem;
     padding-bottom: 3rem;
-    
     .body-content {
         margin: 0 auto 3rem auto;
         @media screen and (max-width: 600px) {
@@ -20,8 +19,13 @@
     }
 
     .home-videos {
-        flex-wrap: nowrap;
         overflow-x: auto;
+        flex-wrap: nowrap;
+        // flex-wrap: wrap;
+        // @media screen and (max-width: 700px) {
+        //     overflow-x: auto;
+        //     flex-wrap: nowrap;
+        // }
     }
 
     // video{
@@ -114,24 +118,34 @@
         }
 
         .foot {
+            background-color: #0161CC;
+            font-size: 0.875rem;
+            color: white;
             width: 100%;
             bottom: 0;
             position: absolute;
             margin-top: 1rem;
             padding: 8px 1rem;
             display: flex;
-            color: var(--norm-text);
             overflow: hidden;
             border-radius: 0 0 0.425rem 0.425rem!important;
-            font-size: 0.9rem;
-            >div:last-child {
-                margin-left: auto;
+            >div {
+                display: flex;
+                align-items: center;
+                .pgn__icon {
+                    display: flex;
+                    margin-right: 1px;
+                    align-items: center;
+                    svg {
+                        margin-top: -1px;
+                        height: 1.2rem;
+                    }
+                }
+                &:nth-child(2) {
+                    margin-left: auto;
+                }
             }
-            svg {
-                margin-top: -5px;
-                margin-right: -5px;
-                height: 18px;
-            }
+
         }
         .pgn__card-logo-cap {
             height: auto;

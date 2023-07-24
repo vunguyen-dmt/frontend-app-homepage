@@ -1,0 +1,29 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "question": "Hướng dẫn cách đăng nhập vào trang Hutech eLearning (lms.hutech.edu.vn) và cách thay đổi mật khẩu tài khoản Hutech eLearning",
+            "answer": "<video className='rounded-lg object-fit-cover clickable' poster='https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/videos/v1.jpg' controls><source src='https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/videos/huong-dan-dang-nhap.mp4' /></video>"
+        },
+        {
+            "id": 2,
+            "question": "Giới thiệu cấu trúc khóa học Hutech eLearning hệ chính quy",
+            "answer": "<video className='rounded-lg object-fit-cover clickable' poster='https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/videos/v3.jpg' controls><source src='https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/videos/cau-truc-khoa-hoc-he-chinh-quy.mp4' /></video>"
+        },
+        {
+            "id": 3,
+            "question": "Giới thiệu cấu trúc khóa học Hutech eLearning hệ chính Từ xa",
+            "answer": "<video className='rounded-lg object-fit-cover clickable' poster='https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/videos/v3.jpg' controls><source src='https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/videos/cau-truc-khoa-hoc-he-tu-xa.mp4' /></video>"
+        },
+        {
+            "id": 4,
+            "question": "Hướng dẫn cách làm bài tập tự luận, trắc nghiệm và xem điểm trực tuyến",
+            "answer": "<video className='rounded-lg object-fit-cover clickable' poster='https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/videos/v2.jpg' controls><source src='https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/videos/huongdantracnghiemtuluan-26-05-fix.mp4' /></video>"
+        },
+        {
+            "id": 5,
+            "question": "Hướng dẫn cách liên hệ Trung tâm dạy học số",
+            "answer": "<p>SDT: (028) 5449 9998 <br/> Mail: dayhocso@hutech.edu.vn <br/>Fanpage: <a href='https://www.facebook.com/people/Trung-t%C3%A2m-D%E1%BA%A1y-h%E1%BB%8Dc-s%E1%BB%91-Hutech/100092564956873/'>Trung tâm Dạy học số - Hutech</a></p>"
+        }
+    ]
+}

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,800,900');
 
 .banner {
+    max-width: 1450px!important;
     @media (max-width: 600px) {
         max-height: 375px;
     }

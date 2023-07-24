@@ -24,13 +24,14 @@ const HeaderContent = ({ intl }) => {
     const delay = 500;
     clearTimeout(searchDropdownTimerId);
     if (searchQuery) {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       searchDropdownTimerId = setTimeout(() => {
         searchCourse({
           page: 1,
           limit: 11,
           query: searchQuery,
         }).then(response => {
-          setDropdownCourses(response.data.results);
+          setDropdownCourses(response.data);
         });
       }, delay);
     }
@@ -84,7 +85,7 @@ const HeaderContent = ({ intl }) => {
                     <ul>
                       {
                       dropdownCourses.map((item) => (
-                        <li key={item.id}><a onClick={() => goToCourseAboutPage(item.data.id)}>{item.data.content.display_name} <Badge variant="light">{item.data.org}</Badge> <Badge variant="dark">{item.data.number}</Badge></a></li>
+                        <li key={item.id}><a onClick={() => goToCourseAboutPage(item.id)}>{item.display_name} <Badge variant="light">{item.display_org_with_default}</Badge> <Badge variant="dark">{item.display_number_with_default}</Badge></a></li>
                       ))
                     }
                       {dropdownCourses.length > 10 && <li className="view-all-search-result"><a onClick={searchSubmittedHandle}>{intl.formatMessage(messages['View all results'])}</a></li>}

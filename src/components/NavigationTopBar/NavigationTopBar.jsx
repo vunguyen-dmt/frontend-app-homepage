@@ -11,12 +11,17 @@ import { getCookie, setCookie } from '../../homepage/data/cookies';
 import './NavigationTopBar.scss';
 
 const NavigationTopBar = ({ intl }) => {
-  // set expiry to exactly 7 days from now
+  // set expiry to exactly 30 days from now
   const changeLanguageTimestamp = (new Date()).getTime();
-  const cookieExpiry = new Date(changeLanguageTimestamp + 7 * 864e5);
-  const [currentLang, setCurrentLang] = useState(getCookie(getConfig().LANGUAGE_PREFERENCE_COOKIE_NAME) ?? 'en');
+  const cookieExpiry = new Date(changeLanguageTimestamp + 30 * 864e5);
 
+  let languageCode = getCookie(getConfig().LANGUAGE_PREFERENCE_COOKIE_NAME);
+  if (!languageCode) {
+    languageCode = 'vi';
+  }
+  const [currentLang, setCurrentLang] = useState(languageCode);
   const handleSelect = (lang) => {
+    setCookie(getConfig().LANGUAGE_PREFERENCE_COOKIE_NAME, currentLang, cookieExpiry);
     setCurrentLang(lang);
     window.location.reload(false);
   };
@@ -26,9 +31,9 @@ const NavigationTopBar = ({ intl }) => {
   return (
     <>
       <Helmet htmlAttributes={{ lang: currentLang }} />
-      <Navbar expand="lg" className="px-4">
+      <Navbar expand="lg" className="px-4 nav-wrapper">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Brand href="#home" className="mx-auto">
+        <Navbar.Brand href="#home">
           <img src={IMAGES.header_logo} alt="top logo" className="logo" />
         </Navbar.Brand>
         <Button href="/authn/login?next" size="sm" variant="danger" className="d-lg-none red-btn mobile-login">{intl.formatMessage(messages.login)}</Button>
@@ -37,11 +42,11 @@ const NavigationTopBar = ({ intl }) => {
             <Nav.Link href="/">{intl.formatMessage(messages.home)}</Nav.Link>
             <Nav.Link href="/courses">{intl.formatMessage(messages.Courses)}</Nav.Link>
             <Nav.Link href="https://lms.hutech.edu.vn/about">{intl.formatMessage(messages.aboutUs)}</Nav.Link>
-            <Nav.Link href="https://lms.hutech.edu.vn/faq" className="d-lg-none">FAQ</Nav.Link>
+            <Nav.Link href="https://apps.lms.hutech.edu.vn/faq?role=student" className="d-lg-none">FAQ</Nav.Link>
             <Nav.Link href="/authn/login?next" className="d-lg-none">{intl.formatMessage(messages.login)}</Nav.Link>
           </Nav>
           <Form inline className="fw-600 right-box-faq">
-            <Button href="https://lms.hutech.edu.vn/faq" variant="danger" className="mx-1 d-none d-lg-block red-btn">FAQ</Button>
+            <Button href="https://apps.lms.hutech.edu.vn/faq?role=student" variant="danger" className="mx-1 d-none d-lg-block red-btn">FAQ</Button>
             <Button href="/authn/login?next" variant="danger" className="mx-3 d-none d-lg-block red-btn">{intl.formatMessage(messages.login)}</Button>
             <Form.Label className="d-lg-none language">{intl.formatMessage(messages.language)}</Form.Label>
             <Dropdown onSelect={handleSelect}>

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
-import { ContentPaste, ArrowForward } from '@edx/paragon/icons';
+import {
+  ContentPaste, ArrowForward, AutoStories, EventNote,
+} from '@edx/paragon/icons';
 import {
   Hyperlink, Card, Badge, Icon,
 } from '@edx/paragon';
@@ -36,6 +38,11 @@ const BodyContent = ({ intl }) => {
             title="Cách làm bài tập HUTECH eLearning"
             videoPoster="poster2"
           />
+          <VideoPlayer
+            source="https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/videos/cau-truc-khoa-hoc-he-chinh-quy.mp4"
+            title="Cấu trúc khóa học hệ chính quy"
+            videoPoster="poster3"
+          />
         </div>
       </div>
       <div className="container container-mw-lg">
@@ -64,9 +71,13 @@ const BodyContent = ({ intl }) => {
                         </Card.Section>
                         <div className="foot">
                           <div>
-                            <Badge variant="light">{intl.formatMessage(messages[item.tag])}</Badge>
+                            <Icon src={AutoStories} />
+                            {intl.formatMessage(messages[item.tag])}
                           </div>
-                          <div><ContentPaste /> {item.numberOfLessons} {intl.formatMessage(messages.Lessons)}</div>
+                          <div>
+                            <Icon src={EventNote} />
+                            {item.numberOfLessons} {intl.formatMessage(messages.Lessons)}
+                          </div>
                         </div>
                       </Card>
                     ))

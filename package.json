@@ -33,9 +33,9 @@
     "url": "https://github.com/openedx/frontend-template-application/issues"
   },
   "dependencies": {
-    "@edx/brand": "npm:@edx/brand-openedx@1.2.0",
+    "@edx/brand": "github:vunguyen-dmt/brand-openedx#hutech_v1.2.0",
     "@edx/frontend-component-footer": "github:vunguyen-dmt/frontend-component-footer#hutech-elearning-footer-dist-3",
-    "@edx/frontend-component-header": "4.0.3",
+    "@edx/frontend-component-header": "github:vunguyen-dmt/frontend-component-header#v4.0.0_vi_dist",
     "@edx/frontend-platform": "4.5.1",
     "@edx/paragon": "^20.20.0",
     "@fortawesome/fontawesome-svg-core": "1.2.36",
@@ -46,6 +46,7 @@
     "aos": "^3.0.0-beta.6",
     "core-js": "3.31.0",
     "prop-types": "15.8.1",
+    "qs": "^6.11.2",
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "react-helmet": "^6.1.0",

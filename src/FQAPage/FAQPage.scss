@@ -1,0 +1,21 @@
+.faq-wrapper {
+    margin-bottom: 120px;
+    margin-top: 1.5rem;
+    .pgn_collapsible {
+        background-color: white;
+        border: 0;
+        box-shadow: 0 0.0625rem 0.125rem rgba(0,0,0,.15), 0 0.0625rem 0.25rem rgba(0,0,0,.15);
+        margin-bottom: 1rem;
+        .collapsible-trigger {
+            font-weight: bold;
+        }
+    }
+
+    video {
+        width: 600px;
+        max-width: 100%;
+    }
+    .tl {
+        font-size: 1.5rem;
+    }
+}
