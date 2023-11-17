@@ -15,5 +15,6 @@
     flex-basis: calc(33% - 20px);
     video {
         aspect-ratio: 16/9;
+        max-width: 500px;
     }
 }
