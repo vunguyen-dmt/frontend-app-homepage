@@ -21,5 +21,6 @@
     "home.lmsCourse": "Khóa học LMS",
     "home.moocsCourse": "Khóa học MOOCS",
     "Lessons": "Bài học",
-    "home.viewAllResult": "Xem tất cả các kết quả"
+    "home.viewAllResult": "Xem tất cả các kết quả",
+    "homepage.title" : "Trang chủ | {siteName}"
 }

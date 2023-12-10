@@ -116,6 +116,11 @@ const messages = defineMessages({
     defaultMessage: 'View all results',
     description: '',
   },
+  'homepage.title': {
+    id: 'homepage.title',
+    defaultMessage: 'Home | {siteName}',
+    description: '',
+  },
 });
 
 export default messages;

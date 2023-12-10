@@ -15,14 +15,13 @@ import messages from './i18n';
 import Homepage from './homepage/Homepage';
 import FAQPage from './FQAPage/FAQPage';
 import UnAuthOnlyRoute from './components/UnAuthOnlyRoute';
+import Head from './Head';
 import './index.scss';
 
 subscribe(APP_READY, () => {
   ReactDOM.render(
     <AppProvider>
-      <Helmet>
-        <link rel="shortcut icon" href={getConfig().FAVICON_URL} type="image/x-icon" />
-      </Helmet>
+      <Head />
       <UnAuthOnlyRoute exact path="/" render={() => <Homepage />} />
       <Switch>
         <Route exact path="/faq" component={FAQPage} />
