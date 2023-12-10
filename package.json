@@ -33,7 +33,7 @@
     "url": "https://github.com/openedx/frontend-template-application/issues"
   },
   "dependencies": {
-    "@edx/brand": "github:vunguyen-dmt/brand-openedx#hutech_v1.2.0",
+    "@edx/brand": "npm:@edx/brand-openedx@1.2.0",
     "@edx/frontend-component-footer": "github:vunguyen-dmt/frontend-component-footer#hutech-elearning-footer-dist-3",
     "@edx/frontend-component-header": "github:vunguyen-dmt/frontend-component-header#v4.0.0_vi_dist",
     "@edx/frontend-platform": "4.5.1",
