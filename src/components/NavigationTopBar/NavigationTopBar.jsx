@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
 import {
   Navbar, Nav, Form, Button, Dropdown,
@@ -11,26 +11,25 @@ import { getCookie, setCookie } from '../../homepage/data/cookies';
 import './NavigationTopBar.scss';
 
 const NavigationTopBar = ({ intl }) => {
+  const defaultLanguageCode = 'vi';
   // set expiry to exactly 30 days from now
   const changeLanguageTimestamp = (new Date()).getTime();
   const cookieExpiry = new Date(changeLanguageTimestamp + 30 * 864e5);
 
-  let languageCode = getCookie(getConfig().LANGUAGE_PREFERENCE_COOKIE_NAME);
-  if (!languageCode) {
-    languageCode = 'vi';
-  }
-  const [currentLang, setCurrentLang] = useState(languageCode);
+  const languageCode = getCookie(getConfig().LANGUAGE_PREFERENCE_COOKIE_NAME);
+
   const handleSelect = (lang) => {
-    setCookie(getConfig().LANGUAGE_PREFERENCE_COOKIE_NAME, currentLang, cookieExpiry);
-    setCurrentLang(lang);
+    setCookie(getConfig().LANGUAGE_PREFERENCE_COOKIE_NAME, lang, cookieExpiry);
     window.location.reload(false);
   };
 
-  setCookie(getConfig().LANGUAGE_PREFERENCE_COOKIE_NAME, currentLang, cookieExpiry);
+  if (!languageCode) {
+    handleSelect(defaultLanguageCode);
+  }
 
   return (
     <>
-      <Helmet htmlAttributes={{ lang: currentLang }} />
+      <Helmet htmlAttributes={{ lang: languageCode }} />
       <Navbar expand="lg" className="px-4 nav-wrapper">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Brand href="#home">
@@ -51,7 +50,7 @@ const NavigationTopBar = ({ intl }) => {
             <Form.Label className="d-lg-none language">{intl.formatMessage(messages.language)}</Form.Label>
             <Dropdown onSelect={handleSelect}>
               <Dropdown.Toggle className="btn-transparent" id="dropdown-basic">
-                {currentLang === 'en' ? 'English' : 'Tiếng Việt'}
+                {languageCode === 'en' ? 'English' : 'Tiếng Việt'}
               </Dropdown.Toggle>
               <Dropdown.Menu className="shadow">
                 <Dropdown.Item eventKey="en">English</Dropdown.Item>
