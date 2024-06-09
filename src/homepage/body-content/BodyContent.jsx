@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
 import {
-  ContentPaste, ArrowForward, AutoStories, EventNote,
+  ArrowForward, AutoStories, EventNote,
 } from '@edx/paragon/icons';
 import {
-  Hyperlink, Card, Badge, Icon,
+  Hyperlink, Card, Icon,
 } from '@edx/paragon';
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 import messages from '../../messages/messages';
@@ -29,19 +29,19 @@ const BodyContent = ({ intl }) => {
         <div className="tl">{intl.formatMessage(messages.guide)}</div>
         <div className="d-flex py-3 home-videos">
           <VideoPlayer
-            source="https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/videos/huong-dan-dang-nhap.mp4"
+            source="https://d10g66pf9vjy7h.cloudfront.net/media/videos/huong-dan-dang-nhap.mp4"
             title="Cách đăng nhập HUTECH eLearning"
-            videoPoster="poster1"
+            videoPoster="https://d10g66pf9vjy7h.cloudfront.net/media/home-page-resources/video-thumbnail-01.jpg"
           />
           <VideoPlayer
-            source="https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/videos/huongdantracnghiemtuluan-26-05-fix.mp4"
+            source="https://d10g66pf9vjy7h.cloudfront.net/media/videos/huongdantracnghiemtuluan-26-05-fix.mp4"
             title="Cách làm bài tập HUTECH eLearning"
-            videoPoster="poster2"
+            videoPoster="https://d10g66pf9vjy7h.cloudfront.net/media/home-page-resources/video-thumbnail-02.jpg"
           />
           <VideoPlayer
-            source="https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/videos/cau-truc-khoa-hoc-he-chinh-quy.mp4"
+            source="https://d10g66pf9vjy7h.cloudfront.net/media/videos/cau-truc-khoa-hoc-he-chinh-quy.mp4"
             title="Cấu trúc khóa học hệ chính quy"
-            videoPoster="poster3"
+            videoPoster="https://d10g66pf9vjy7h.cloudfront.net/media/home-page-resources/video-thumbnail-03.jpg"
           />
         </div>
       </div>
@@ -85,7 +85,6 @@ const BodyContent = ({ intl }) => {
         </div>
         <div className="mt-3 text-right view-more-courses-wrapper">
           <a className="view-more-courses" href="/courses"><Icon src={ArrowForward} /></a>
-          {/* <a href="/courses">{intl.formatMessage(messages.viewMoreCourses)}</a> */}
         </div>
       </div>
     </div>

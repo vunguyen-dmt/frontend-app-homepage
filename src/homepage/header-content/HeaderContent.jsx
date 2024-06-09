@@ -1,13 +1,11 @@
 import React, { useEffect } from 'react';
 import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
-import { getConfig } from '@edx/frontend-platform';
 import {
   SearchField, Badge,
 } from '@edx/paragon';
 import { searchCourse } from '../../services/search-service/searchService';
 import NavigationTopBar from '../../components/NavigationTopBar/NavigationTopBar';
 import messages from '../../messages/messages';
-import IMAGES from '../../images/images';
 import './HeaderContent.scss';
 
 const HeaderContent = ({ intl }) => {
@@ -96,7 +94,7 @@ const HeaderContent = ({ intl }) => {
               </div>
             </div>
           </div>
-          <img alt="banner" src={IMAGES.banner} />
+          <img alt="banner" src="https://d10g66pf9vjy7h.cloudfront.net/media/home-page-resources/a-man-holds-a-laptop.png" />
         </div>
       </header>
     </>

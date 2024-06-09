@@ -6,7 +6,6 @@ import {
 import { getConfig } from '@edx/frontend-platform';
 import { Helmet } from 'react-helmet';
 import messages from '../../messages/messages';
-import IMAGES from '../../images/images';
 import { getCookie, setCookie } from '../../homepage/data/cookies';
 import './NavigationTopBar.scss';
 
@@ -33,14 +32,14 @@ const NavigationTopBar = ({ intl }) => {
       <Navbar expand="lg" className="px-4 nav-wrapper">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Brand href="#home">
-          <img src={IMAGES.header_logo} alt="top logo" className="logo" />
+          <img src="https://d10g66pf9vjy7h.cloudfront.net/media/home-page-resources/header_logo_full.png" alt="top logo" className="logo" />
         </Navbar.Brand>
         <Button href="/authn/login?next" size="sm" variant="danger" className="d-lg-none red-btn mobile-login">{intl.formatMessage(messages.login)}</Button>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
             <Nav.Link href="/">{intl.formatMessage(messages.home)}</Nav.Link>
             <Nav.Link href="/courses">{intl.formatMessage(messages.Courses)}</Nav.Link>
-            <Nav.Link href="https://lms.hutech.edu.vn/about">{intl.formatMessage(messages.aboutUs)}</Nav.Link>
+            <Nav.Link href="https://www.hutech.edu.vn/dayhocso">{intl.formatMessage(messages.aboutUs)}</Nav.Link>
             <Nav.Link href="https://apps.lms.hutech.edu.vn/home/faq?role=student" className="d-lg-none">FAQ</Nav.Link>
             <Nav.Link href="/authn/login?next" className="d-lg-none">{intl.formatMessage(messages.login)}</Nav.Link>
           </Nav>
