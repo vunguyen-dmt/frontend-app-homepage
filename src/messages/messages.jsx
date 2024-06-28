@@ -41,31 +41,6 @@ const messages = defineMessages({
     defaultMessage: 'Guide',
     description: '',
   },
-  info: {
-    id: 'homepage.footerContent.info',
-    defaultMessage: 'Information',
-    description: '',
-  },
-  connect: {
-    id: 'homepage.footerContent.connect',
-    defaultMessage: 'Connect',
-    description: '',
-  },
-  name: {
-    id: 'homepage.footerContent.name',
-    defaultMessage: 'Digital Learning Center - HUTECH',
-    description: '',
-  },
-  download: {
-    id: 'homepage.footerContent.download',
-    defaultMessage: 'App Download',
-    description: '',
-  },
-  address: {
-    id: 'homepage.footerContent.address',
-    defaultMessage: '475A Dien Bien Phu, Ward 25, Binh Thanh District, Ho Chi Minh City',
-    description: '',
-  },
   popularCourses: {
     id: 'homepage.bodyContent.popularCourses',
     defaultMessage: 'Popular courses',
@@ -77,22 +52,22 @@ const messages = defineMessages({
     description: '',
   },
   Courses: {
-    id: 'Courses',
+    id: 'homepage.courses',
     defaultMessage: 'Courses',
     description: '',
   },
   Search: {
-    id: 'homepage.Search',
+    id: 'homepage.search',
     defaultMessage: 'Search',
     description: '',
   },
   FindYourCourses: {
-    id: 'homepage.FindYourCourses',
+    id: 'homepage.findYourCourses',
     defaultMessage: 'Find your courses!',
     description: '',
   },
   Course: {
-    id: 'homepage.Course',
+    id: 'homepage.course',
     defaultMessage: 'Course',
     description: '',
   },
@@ -107,7 +82,7 @@ const messages = defineMessages({
     description: '',
   },
   Lessons: {
-    id: 'homepage.Lessons',
+    id: 'homepage.lessons',
     defaultMessage: 'Lessons',
     description: '',
   },

@@ -73,7 +73,7 @@ const BodyContent = () => {
                         <div className="foot">
                           <div>
                             <Icon src={AutoStories} />
-                            {formatMessage({...messages[item.tag]})}
+                            {messages[item.tag] ? formatMessage({...messages[item.tag]}) : item.tag}
                           </div>
                           <div>
                             <Icon src={EventNote} />
