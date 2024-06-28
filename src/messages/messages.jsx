@@ -82,41 +82,41 @@ const messages = defineMessages({
     description: '',
   },
   Search: {
-    id: 'Search',
+    id: 'homepage.Search',
     defaultMessage: 'Search',
     description: '',
   },
-  'Find your courses': {
-    id: 'Find your courses',
+  FindYourCourses: {
+    id: 'homepage.FindYourCourses',
     defaultMessage: 'Find your courses!',
     description: '',
   },
   Course: {
-    id: 'Course',
+    id: 'homepage.Course',
     defaultMessage: 'Course',
     description: '',
   },
   'LMS course': {
-    id: 'home.lmsCourse',
+    id: 'homepage.lmsCourse',
     defaultMessage: 'LMS course',
     description: '',
   },
   'MOOCS course': {
-    id: 'home.moocsCourse',
+    id: 'homepage.moocsCourse',
     defaultMessage: 'MOOCS course',
     description: '',
   },
   Lessons: {
-    id: 'Lessons',
+    id: 'homepage.Lessons',
     defaultMessage: 'Lessons',
     description: '',
   },
   viewAllResults: {
-    id: 'home.viewAllResult',
+    id: 'homepage.viewAllResult',
     defaultMessage: 'View all results',
     description: '',
   },
-  'homepage.title': {
+  title: {
     id: 'homepage.title',
     defaultMessage: 'Home | {siteName}',
     description: '',

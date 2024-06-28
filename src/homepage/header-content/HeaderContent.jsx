@@ -1,14 +1,15 @@
 import React, { useEffect } from 'react';
-import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
+import { useIntl } from '@edx/frontend-platform/i18n';
 import {
   SearchField, Badge,
-} from '@edx/paragon';
+} from '@openedx/paragon';
 import { searchCourse } from '../../services/search-service/searchService';
 import NavigationTopBar from '../../components/NavigationTopBar/NavigationTopBar';
 import messages from '../../messages/messages';
 import './HeaderContent.scss';
 
-const HeaderContent = ({ intl }) => {
+const HeaderContent = () => {
+  const { formatMessage } = useIntl();
   const [searchQuery, setSearchQuery] = React.useState('');
   const [dropdownCourses, setDropdownCourses] = React.useState([]);
   const setSearchBoxAutoCompleteOff = React.useRef(false);
@@ -63,14 +64,14 @@ const HeaderContent = ({ intl }) => {
         <div className="banner container">
           <div className="text-over">
             <div className="text-wrapper">
-              <div className="text-title">{intl.formatMessage(messages.learning)}</div>
-              <div className="text-title margin-bottom-20">{intl.formatMessage(messages.managementSystem)}</div>
+              <div className="text-title">{formatMessage(messages.learning)}</div>
+              <div className="text-title margin-bottom-20">{formatMessage(messages.managementSystem)}</div>
               <div className="text-name">HUTECH</div>
               <div className="search-area">
                 <SearchField
                   submitButtonLocation="external"
-                  buttonText={intl.formatMessage(messages.Search)}
-                  placeholder={intl.formatMessage(messages['Find your courses'])}
+                  buttonText={formatMessage(messages.Search)}
+                  placeholder={formatMessage(messages.FindYourCourses)}
                   value={searchQuery}
                   onSubmit={searchSubmittedHandle}
                   onChange={searchBoxOnChangeHandle}
@@ -86,7 +87,7 @@ const HeaderContent = ({ intl }) => {
                         <li key={item.id}><a onClick={() => goToCourseAboutPage(item.id)}>{item.display_name} <Badge variant="light">{item.display_org_with_default}</Badge> <Badge variant="dark">{item.display_number_with_default}</Badge></a></li>
                       ))
                     }
-                      {dropdownCourses.total > 5 && <li className="view-all-search-result"><a onClick={searchSubmittedHandle}>{intl.formatMessage(messages.viewAllResults)}</a></li>}
+                      {dropdownCourses.total > 5 && <li className="view-all-search-result"><a onClick={searchSubmittedHandle}>{formatMessage(messages.viewAllResults)}</a></li>}
                     </ul>
                   </div>
                   )
@@ -101,8 +102,4 @@ const HeaderContent = ({ intl }) => {
   );
 };
 
-HeaderContent.propTypes = {
-  intl: intlShape.isRequired,
-};
-
-export default injectIntl(HeaderContent);
+export default HeaderContent;

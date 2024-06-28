@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
+import { useIntl } from '@edx/frontend-platform/i18n';
 import {
   ArrowForward, AutoStories, EventNote,
-} from '@edx/paragon/icons';
+} from '@openedx/paragon/icons';
 import {
   Hyperlink, Card, Icon,
-} from '@edx/paragon';
+} from '@openedx/paragon';
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 import messages from '../../messages/messages';
 import './BodyContent.scss';
 
-const BodyContent = ({ intl }) => {
+const BodyContent = () => {
+  const { formatMessage } = useIntl();
   const [courses, setCourses] = useState([]);
   useEffect(() => {
-    const coursesUrl = `https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/home-page-resources/courses.json?t=${+new Date()}`;
-    // const coursesUrl = `https://apps.courses.goamazing.org:3000/courses.json?t=${+new Date()}`;
+    // const coursesUrl = `https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/home-page-resources/courses.json?t=${+new Date()}`;
+    const coursesUrl = `https://apps.courses.goamazing.org:3000/courses.json?t=${+new Date()}`;
     fetch(coursesUrl).then(response => response.json())
       .then(data => {
         setCourses(data.courses);
@@ -26,7 +27,7 @@ const BodyContent = ({ intl }) => {
   return (
     <div className="home-body-content-wrapper">
       <div className="body-content container container-mw-lg">
-        <div className="tl">{intl.formatMessage(messages.guide)}</div>
+        <div className="tl">{formatMessage(messages.guide)}</div>
         <div className="d-flex py-3 home-videos">
           <VideoPlayer
             source="https://d10g66pf9vjy7h.cloudfront.net/media/videos/huong-dan-dang-nhap.mp4"
@@ -46,7 +47,7 @@ const BodyContent = ({ intl }) => {
         </div>
       </div>
       <div className="container container-mw-lg">
-        <div className="tl">{intl.formatMessage(messages.popularCourses)}</div>
+        <div className="tl">{formatMessage(messages.popularCourses)}</div>
         <div className="courses d-flex">
           {
                     courses.map((item) => (
@@ -72,11 +73,11 @@ const BodyContent = ({ intl }) => {
                         <div className="foot">
                           <div>
                             <Icon src={AutoStories} />
-                            {intl.formatMessage(messages[item.tag])}
+                            {formatMessage({...messages[item.tag]})}
                           </div>
                           <div>
                             <Icon src={EventNote} />
-                            {item.numberOfLessons} {intl.formatMessage(messages.Lessons)}
+                            {item.numberOfLessons} {formatMessage(messages.Lessons)}
                           </div>
                         </div>
                       </Card>
@@ -91,8 +92,4 @@ const BodyContent = ({ intl }) => {
   );
 };
 
-BodyContent.propTypes = {
-  intl: intlShape.isRequired,
-};
-
-export default injectIntl(BodyContent);
+export default BodyContent;

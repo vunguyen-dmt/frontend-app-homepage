@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import { getConfig } from '@edx/frontend-platform';
 import { fetchAuthenticatedUser, getAuthenticatedUser } from '@edx/frontend-platform/auth';
-import { Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 import { DEFAULT_REDIRECT_URL } from './data/constants';
 
@@ -18,6 +18,8 @@ const UnAuthOnlyRoute = (props) => {
     fetchAuthenticatedUser({ forceRefresh: !!getAuthenticatedUser() }).then((authenticatedUser) => {
       setAuthUser(authenticatedUser);
       setIsReady(true);
+    }).catch(error => {
+      setIsReady(true);
     });
   }, []);
 
@@ -27,7 +29,9 @@ const UnAuthOnlyRoute = (props) => {
       return null;
     }
 
-    return <Route {...props} />;
+    return <Routes>
+      <Route {...props} />
+    </Routes>;
   }
 
   return <></>;

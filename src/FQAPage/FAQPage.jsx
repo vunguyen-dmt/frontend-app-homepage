@@ -3,7 +3,7 @@ import Footer from '@edx/frontend-component-footer';
 import Header from '@edx/frontend-component-header';
 import {
   Collapsible, Breadcrumb,
-} from '@edx/paragon';
+} from '@openedx/paragon';
 import * as qs from 'qs';
 import { Helmet } from 'react-helmet';
 import { handleLanguageChange } from '../handleLanguageChange';
@@ -18,8 +18,8 @@ const FAQPage = () => {
   };
 
   useEffect(() => {
-    const url = `https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/home-page-resources/${parseRole()}-faq.json?t=${+new Date()}`;
-    // const url = `https://apps.courses.goamazing.org:3000/${parseRole()}-faq.json?t=${+new Date()}`;
+    // const url = `https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/home-page-resources/${parseRole()}-faq.json?t=${+new Date()}`;
+    const url = `https://apps.courses.goamazing.org:3000/${parseRole()}-faq.json?t=${+new Date()}`;
     fetch(url).then(response => response.json())
       .then(data => {
         setFAQList(data.data);
