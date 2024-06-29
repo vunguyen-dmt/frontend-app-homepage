@@ -36,7 +36,7 @@ const FAQPage = () => {
         <Breadcrumb
           ariaLabel="Breadcrumb is active"
           links={[
-            { label: 'Trang chủ', href: 'https://apps.lms.hutech.edu.vn/home' },
+            { label: 'Trang chủ', href: 'https://apps.lms.hutech.edu.vn/home/' },
           ]}
           activeLabel="FAQ"
         />

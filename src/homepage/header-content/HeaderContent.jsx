@@ -46,7 +46,7 @@ const HeaderContent = () => {
   };
 
   const searchSubmittedHandle = () => {
-    window.location.href = `/courses?q=${searchQuery}`;
+    window.location.href = `/courses/?q=${searchQuery}`;
   };
 
   const searchClearHandle = () => {

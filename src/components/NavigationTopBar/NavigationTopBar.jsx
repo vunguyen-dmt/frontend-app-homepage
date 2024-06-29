@@ -39,7 +39,7 @@ const NavigationTopBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
             <Nav.Link href="/">{formatMessage(messages.home)}</Nav.Link>
-            <Nav.Link href="/courses">{formatMessage(messages.Courses)}</Nav.Link>
+            <Nav.Link href="/courses/">{formatMessage(messages.Courses)}</Nav.Link>
             <Nav.Link href="https://www.hutech.edu.vn/dayhocso">{formatMessage(messages.aboutUs)}</Nav.Link>
             <Nav.Link href="https://apps.lms.hutech.edu.vn/home/faq?role=student" className="d-lg-none">FAQ</Nav.Link>
             <Nav.Link href="/authn/login?next" className="d-lg-none">{formatMessage(messages.login)}</Nav.Link>
