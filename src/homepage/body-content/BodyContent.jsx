@@ -14,8 +14,8 @@ const BodyContent = () => {
   const { formatMessage } = useIntl();
   const [courses, setCourses] = useState([]);
   useEffect(() => {
-    // const coursesUrl = `https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/home-page-resources/courses.json?t=${+new Date()}`;
-    const coursesUrl = `https://apps.courses.goamazing.org:3000/courses.json?t=${+new Date()}`;
+    const coursesUrl = `https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/home-page-resources/courses.json?t=${+new Date()}`;
+    // const coursesUrl = `https://apps.courses.goamazing.org:3000/courses.json?t=${+new Date()}`;
     fetch(coursesUrl).then(response => response.json())
       .then(data => {
         setCourses(data.courses);
