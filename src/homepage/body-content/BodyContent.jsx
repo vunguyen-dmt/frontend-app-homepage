@@ -85,7 +85,7 @@ const BodyContent = () => {
            }
         </div>
         <div className="mt-3 text-right view-more-courses-wrapper">
-          <a className="view-more-courses" href="/courses"><Icon src={ArrowForward} /></a>
+          <a className="view-more-courses" href="/courses/"><Icon src={ArrowForward} /></a>
         </div>
       </div>
     </div>

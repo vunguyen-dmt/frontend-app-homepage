@@ -1,10 +1,10 @@
 {
-  "name": "@edx/frontend-template-application",
+  "name": "@edx/frontend-app-homepage",
   "version": "0.1.0",
-  "description": "Frontend application template",
+  "description": "Frontend app homepage",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/openedx/frontend-template-application.git"
+    "url": "git+https://github.com/vunguyen-dmt/frontend-app-homepage.git"
   },
   "browserslist": [
     "extends @edx/browserslist-config"
@@ -24,14 +24,14 @@
       "pre-commit": "npm run lint"
     }
   },
-  "author": "edX",
+  "author": "GoAmazing",
   "license": "AGPL-3.0",
-  "homepage": "https://github.com/openedx/frontend-template-application#readme",
+  "homepage": "https://github.com/vunguyen-dmt/frontend-app-homepage#readme",
   "publishConfig": {
     "access": "public"
   },
   "bugs": {
-    "url": "https://github.com/openedx/frontend-template-application/issues"
+    "url": "https://github.com/vunguyen-dmt/frontend-app-homepage/issues"
   },
   "dependencies": {
     "@edx/brand": "npm:@openedx/brand-openedx@^1.2.2",
