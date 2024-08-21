@@ -30,7 +30,7 @@ const BodyContent = () => {
         <div className="tl">{formatMessage(messages.guide)}</div>
         <div className="d-flex py-3 home-videos">
           <VideoPlayer
-            source="https://d10g66pf9vjy7h.cloudfront.net/media/videos/huong-dan-dang-nhap.mp4"
+            source="https://d10g66pf9vjy7h.cloudfront.net/media/videos/HD-Dang-Nhap-LMS-20240821.mp4"
             title="Cách đăng nhập HUTECH eLearning"
             videoPoster="https://d10g66pf9vjy7h.cloudfront.net/media/home-page-resources/video-thumbnail-01.jpg"
           />
