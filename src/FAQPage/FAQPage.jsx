@@ -30,7 +30,7 @@ const FAQPage = () => {
 
   return (
     <div>
-      <Helmet><title>FQA | HUTECH eLearning</title></Helmet>
+      <Helmet><title>FAQ | HUTECH eLearning</title></Helmet>
       <Header />
       <div className="faq-wrapper mx-auto container-mw-lg">
         <Breadcrumb
@@ -40,7 +40,7 @@ const FAQPage = () => {
           ]}
           activeLabel="FAQ"
         />
-        <div className="font-weight-bold py-3 text-center tl">FQA - Các câu hỏi thường gặp</div>
+        <div className="font-weight-bold py-3 text-center tl">FAQ - Các câu hỏi thường gặp</div>
         {
             FAQList.map(item => (
               <Collapsible
