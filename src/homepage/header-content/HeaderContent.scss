@@ -61,7 +61,7 @@
                 font-family: "Montserrat",sans-serif;
                 font-size: 3rem;
                 font-weight: 800;
-                color: #15304B;
+                color: var(--primary);
                 line-height: 1.2;
                 
                 @media (min-width: 768px) and (max-width: 991px) {
@@ -90,7 +90,7 @@
         padding: 5px 5px;
         border-radius: 30px;
         &:focus-within {
-            border: 1px solid var(--prim);
+            border: 1px solid var(--primary);
         }
 
         @media (max-width: 600px) {
@@ -164,7 +164,7 @@
             text-decoration: underline;
             cursor: pointer;
             &:hover {
-                color: var(--prim)!important;
+                color: var(--primary)!important;
                 background-color: #f2f0ef!important;
                 text-decoration: underline!important;
             }
@@ -196,7 +196,7 @@
                     display: block;
                     &:hover {
                         text-decoration: none;
-                        background-color: var(--prim);
+                        background-color: var(--primary);
                         color: white;
                     }
                     .badge {
@@ -219,7 +219,7 @@
     .page-nav {
         font-size: 0.875rem;
         a {
-            color: var(--prim);
+            color: #1a387a;
         }
     }
     .pgn__icon {
