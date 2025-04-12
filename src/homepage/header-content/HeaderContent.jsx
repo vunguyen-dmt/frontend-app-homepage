@@ -9,6 +9,10 @@ import messages from '../../messages/messages';
 import './HeaderContent.scss';
 
 const HeaderContent = () => {
+
+  // const cdn = "https://d10g66pf9vjy7h.cloudfront.net";
+  const cdn = "https://hutech-media.goamazing.org/hutech-statics";
+
   const { formatMessage } = useIntl();
   const [searchQuery, setSearchQuery] = React.useState('');
   const [dropdownCourses, setDropdownCourses] = React.useState([]);
@@ -95,7 +99,7 @@ const HeaderContent = () => {
               </div>
             </div>
           </div>
-          <img alt="banner" src="https://d10g66pf9vjy7h.cloudfront.net/media/home-page-resources/a-man-holds-a-laptop.png" />
+          <img alt="banner" src={cdn + "/media/home-page-resources/a-man-holds-a-laptop.png"} />
         </div>
       </header>
     </>

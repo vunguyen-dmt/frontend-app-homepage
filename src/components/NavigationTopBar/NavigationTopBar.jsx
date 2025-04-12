@@ -10,6 +10,9 @@ import { getCookie, setCookie } from '../../homepage/data/cookies';
 import './NavigationTopBar.scss';
 
 const NavigationTopBar = () => {
+  // const cdn = "https://d10g66pf9vjy7h.cloudfront.net";
+  const cdn = "https://hutech-media.goamazing.org/hutech-statics";
+
   const { formatMessage } = useIntl();
   const defaultLanguageCode = 'vi';
   // set expiry to exactly 30 days from now
@@ -33,7 +36,7 @@ const NavigationTopBar = () => {
       <Navbar expand="lg" className="px-4 nav-wrapper">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Brand href="#home">
-          <img src="https://d10g66pf9vjy7h.cloudfront.net/media/home-page-resources/header_logo_full.png" alt="top logo" className="logo" />
+          <img src={cdn + "/media/home-page-resources/header_logo_full.png"} alt="top logo" className="logo" />
         </Navbar.Brand>
         <Button href="/authn/login?next" size="sm" variant="danger" className="d-lg-none red-btn mobile-login">{formatMessage(messages.login)}</Button>
         <Navbar.Collapse id="basic-navbar-nav">

@@ -13,8 +13,12 @@ import './BodyContent.scss';
 const BodyContent = () => {
   const { formatMessage } = useIntl();
   const [courses, setCourses] = useState([]);
+
+  // const cdn = "https://d10g66pf9vjy7h.cloudfront.net";
+  const cdn = "https://hutech-media.goamazing.org/hutech-statics";
+
   useEffect(() => {
-    const coursesUrl = `https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/home-page-resources/courses.json?t=${+new Date()}`;
+    const coursesUrl = `${cdn}/media/home-page-resources/courses.json?t=${+new Date()}`;
     // const coursesUrl = `https://apps.courses.goamazing.org:3000/courses.json?t=${+new Date()}`;
     fetch(coursesUrl).then(response => response.json())
       .then(data => {
@@ -30,19 +34,19 @@ const BodyContent = () => {
         <div className="tl">{formatMessage(messages.guide)}</div>
         <div className="d-flex py-3 home-videos">
           <VideoPlayer
-            source="https://d10g66pf9vjy7h.cloudfront.net/media/videos/HD-Dang-Nhap-LMS-20240821.mp4"
+            sources={["https://hutech-media.goamazing.org/hutech-statics/media/videos/HD-Dang-Nhap-LMS-20240821.mp4", "https://d10g66pf9vjy7h.cloudfront.net/media/videos/HD-Dang-Nhap-LMS-20240821.mp4"]}
             title="Cách đăng nhập HUTECH eLearning"
-            videoPoster="https://d10g66pf9vjy7h.cloudfront.net/media/home-page-resources/video-thumbnail-01.jpg"
+            videoPoster={cdn + "/media/home-page-resources/video-thumbnail-01.jpg"}
           />
           <VideoPlayer
-            source="https://d10g66pf9vjy7h.cloudfront.net/media/videos/huongdantracnghiemtuluan-26-05-fix.mp4"
+            sources={["https://hutech-media.goamazing.org/hutech-statics/media/videos/huongdantracnghiemtuluan-26-05-fix.mp4", "https://d10g66pf9vjy7h.cloudfront.net/media/videos/huongdantracnghiemtuluan-26-05-fix.mp4"]}
             title="Cách làm bài tập HUTECH eLearning"
-            videoPoster="https://d10g66pf9vjy7h.cloudfront.net/media/home-page-resources/video-thumbnail-02.jpg"
+            videoPoster={cdn + "/media/home-page-resources/video-thumbnail-02.jpg"}
           />
           <VideoPlayer
-            source="https://d10g66pf9vjy7h.cloudfront.net/media/videos/cau-truc-khoa-hoc-he-chinh-quy.mp4"
+            sources={["https://hutech-media.goamazing.org/hutech-statics/media/videos/cau-truc-khoa-hoc-he-chinh-quy.mp4", "https://d10g66pf9vjy7h.cloudfront.net/media/videos/cau-truc-khoa-hoc-he-chinh-quy.mp4"]}
             title="Cấu trúc khóa học hệ chính quy"
-            videoPoster="https://d10g66pf9vjy7h.cloudfront.net/media/home-page-resources/video-thumbnail-03.jpg"
+            videoPoster={cdn + "/media/home-page-resources/video-thumbnail-03.jpg"}
           />
         </div>
       </div>
