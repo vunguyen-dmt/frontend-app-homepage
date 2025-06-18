@@ -1,0 +1,64 @@
+.ga-chat-bot-wrapper {
+    width: fit-content;
+    margin-left: auto;
+    position: relative;
+    margin-right: 1rem;
+    #ga-chat-bot {
+        display: block;
+        position: fixed;
+        bottom: 3rem;
+        right: 1rem;
+    }
+    &.opened {
+        #ga-chat-bot {
+            height: 800px;
+            width: 450px;
+            max-height: calc(100vh - 50px);
+            max-width: 100%;
+            // border: 1px solid black;
+            z-index: 1000;
+            background-color: white;
+            box-shadow: 0 0 1rem 0 #00000026, 0 0 0.625rem 0 #00000026;
+        }
+    }
+
+    .ga-chat-bot-icon {
+        cursor: pointer;
+    }
+
+    .clickable {
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    .ga-chat-body {
+        height: 100%;
+    }
+}
+
+.chat-popout {
+    display: flex;
+    align-items: top;
+    max-width: 236px;
+    .close-popout-btn {
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 989px) {
+	.ga-chat-bot-wrapper {
+        #ga-chat-bot {
+
+        }
+
+        &.opened {
+            #ga-chat-bot {
+                height: 100%;
+                max-height: 100%!important;
+                width: 100%;
+                bottom: 0!important;
+                right: 0!important;
+            }
+        }
+	}
+}

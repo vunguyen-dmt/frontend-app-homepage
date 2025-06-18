@@ -9,6 +9,7 @@ import {
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 import messages from '../../messages/messages';
 import './BodyContent.scss';
+import ChatBot from '../../components/chat-bot/chat-bot';
 
 const BodyContent = () => {
   const { formatMessage } = useIntl();
@@ -54,44 +55,45 @@ const BodyContent = () => {
         <div className="tl">{formatMessage(messages.popularCourses)}</div>
         <div className="courses d-flex">
           {
-                    courses.map((item) => (
-                      <Card
-                        key={item.id}
-                        as={Hyperlink}
-                        destination={item.aboutPage}
-                        isClickable
-                      >
-                        <Card.ImageCap
-                          src={item.image}
-                          srcAlt="course image"
-                          logoSrc={item.orgLogo}
-                          logoAlt="org logo"
-                        />
-                        <Card.Header
-                          title={item.name}
-                        />
-                        <Card.Section>
-                          <div className="desc">{item.description}</div>
-                          <div className="space" />
-                        </Card.Section>
-                        <div className="foot">
-                          <div>
-                            <Icon src={AutoStories} />
-                            {messages[item.tag] ? formatMessage({...messages[item.tag]}) : item.tag}
-                          </div>
-                          <div>
-                            <Icon src={EventNote} />
-                            {item.numberOfLessons} {formatMessage(messages.Lessons)}
-                          </div>
-                        </div>
-                      </Card>
-                    ))
+            courses.map((item) => (
+              <Card
+                key={item.id}
+                as={Hyperlink}
+                destination={item.aboutPage}
+                isClickable
+              >
+                <Card.ImageCap
+                  src={item.image}
+                  srcAlt="course image"
+                  logoSrc={item.orgLogo}
+                  logoAlt="org logo"
+                />
+                <Card.Header
+                  title={item.name}
+                />
+                <Card.Section>
+                  <div className="desc">{item.description}</div>
+                  <div className="space" />
+                </Card.Section>
+                <div className="foot">
+                  <div>
+                    <Icon src={AutoStories} />
+                    {messages[item.tag] ? formatMessage({...messages[item.tag]}) : item.tag}
+                  </div>
+                  <div>
+                    <Icon src={EventNote} />
+                    {item.numberOfLessons} {formatMessage(messages.Lessons)}
+                  </div>
+                </div>
+              </Card>
+            ))
            }
         </div>
         <div className="mt-3 text-right view-more-courses-wrapper">
           <a className="view-more-courses" href="/courses/"><Icon src={ArrowForward} /></a>
         </div>
       </div>
+      <ChatBot />
     </div>
   );
 };
