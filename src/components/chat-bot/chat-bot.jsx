@@ -20,7 +20,7 @@ export const ChatBot = ({ intl }) => {
         return;
       }
 
-      if (event.data && !event.data.isBotOpen) {
+      if (event.data && event.data.isBotOpen === false) {
         setOpened(false);
       }
     }, false);
@@ -33,12 +33,33 @@ export const ChatBot = ({ intl }) => {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      showPopout(true);
-      setTimeout(() => {
-        showPopout(false);
-      }, 8000);
-    }, 3000);
+    const timeoutId = setTimeout(() => {
+      const localStorageKey = 'show_chatbot_popout';
+      const now = Date.now(); // Use timestamp directly
+      const storedExpiry = localStorage.getItem(localStorageKey);
+
+      let shouldShowPopout = true;
+
+      if (storedExpiry && now < Number(storedExpiry)) {
+      // Popout is still within the cooldown period
+        shouldShowPopout = false;
+      } else {
+      // Set a new 30-day expiry
+        const expiry = now + 30 * 24 * 60 * 60 * 1000; // 30 days
+        localStorage.setItem(localStorageKey, expiry.toString());
+      }
+
+      if (shouldShowPopout) {
+        showPopout(true);
+
+        // Auto-hide popout after 8 seconds
+        setTimeout(() => {
+          showPopout(false);
+        }, 8000);
+      }
+    }, 5000); // Wait 3 seconds before checking
+
+    return () => clearTimeout(timeoutId); // Cleanup on unmount
   }, []);
 
   return (
