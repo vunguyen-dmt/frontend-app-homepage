@@ -7,7 +7,7 @@ import './chat-bot.scss';
 export const ChatBot = ({ intl }) => {
   const [loaded, setLoaded] = useState(false);
   const [opened, setOpened] = useState(false);
-  const [popoutOpened, setPopoutOpened] = useState(true);
+  const [popoutOpened, setPopoutOpened] = useState(false);
 
   const init = () => {
     setOpened(true);
