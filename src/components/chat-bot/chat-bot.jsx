@@ -96,7 +96,7 @@ export const ChatBot = ({ intl }) => {
             loaded
             && (
             <div className="ga-chat-body" style={{ display: opened ? 'block' : 'none' }}>
-              <iframe title="AI assistant" style={{ border: '0' }} src="https://learner-help-bot.goamazing.org?languageCode=vi&allowOpenPostInNewWindow=yes&initState=opened" height="100%" width="100%" allow="fullscreen *" />
+              <iframe title="AI assistant" style={{ border: '0' }} src="https://learner-help-bot.goamazing.org?languageCode=vi&allowOpenPostInNewWindow=yes&initState=opened&from=f07ZrhMr074dy0FjhgxIc514M1qe0JyX" height="100%" width="100%" allow="fullscreen *" />
             </div>
             )
         }
