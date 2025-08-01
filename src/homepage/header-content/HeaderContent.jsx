@@ -65,7 +65,7 @@ const HeaderContent = () => {
     <>
       <NavigationTopBar />
       <header>
-        <div className="banner container">
+        <section className="banner">
           <div className="text-over">
             <div className="text-wrapper">
               <div className="text-title">{formatMessage(messages.learning)}</div>
@@ -99,8 +99,22 @@ const HeaderContent = () => {
               </div>
             </div>
           </div>
-          <img alt="banner" src={cdn + "/media/home-page-resources/a-man-holds-a-laptop.png"} />
-        </div>
+          <video autoPlay loop muted preload="auto" className="main-video">
+            <source src={cdn + "/media/videos/background_chinh.mp4"} type="video/mp4"/>
+          </video>
+        </section>
+        
+        <section id="programs" className="programs d-flex flex-lg-nowrap flex-column flex-md-row /*text-white text-center*/">
+          <div className="first-program w-100 py-md-4 p-1">
+            <a href="/">Đại học</a>
+          </div>
+          <div className="second-program w-100 py-md-4 p-1">
+            <a href="/">Sau đại học</a>
+          </div>
+          <div className="last-program w-100 py-md-4 p-1">
+            <a href="/">Đào tạo ngắn hạn</a>
+          </div>
+        </section>
       </header>
     </>
   );

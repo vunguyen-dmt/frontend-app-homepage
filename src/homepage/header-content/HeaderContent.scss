@@ -1,22 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,800,900');
+// @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,800,900');
 
 .banner {
-    max-width: 1450px!important;
-    @media (max-width: 600px) {
-        max-height: 330px;
-    }
-    height: calc(80vh - 100px);
-    position: relative;
-    img {
-        position: absolute;
-        max-width: 100%;
-        bottom: 0;
-        right: 0;
-        max-height: 100%;
+        
+    @media (max-width: 991px) {
+        position: relative;
     }
 
     .text-over {
-        top: 15%;
+        top: 25%;
+        left: 10%;
         z-index: 1;
         position: absolute;
         display: flex;
@@ -24,59 +16,99 @@
         justify-content: center;
         text-align: left;
         color: black;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: AvoBold, Arial, Helvetica, sans-serif;
         line-height: 2.1rem;
-
-        @media (max-width: 767px) {
+    
+        @media (max-width: 1199px) {
             max-height: 300px;
-            top: 30%;
+            top: 15%;
         }
-
+  
         .text-wrapper {
             .text-name {
-                font-family: "Montserrat",sans-serif;
+                font-family: AvoBold, Arial, Helvetica, sans-serif;
                 font-size: 3rem;
-                font-weight: 800;
+                font-weight: 600;
                 color: #E30613;
                 line-height: 1.2;
                 max-width: 400px;
                 border-radius: 0 30px 30px 0;
-
+    
                 @media (max-width: 767px) {
                     font-size: 1.5rem;
                     width: calc(100vw/4 + 2em);
                 }
-
-                @media (min-width: 768px) and (max-width: 991px) {
+    
+                @media (min-width: 768px) and (max-width: 1199px) {
                     font-size: 4rem;
                     width: calc(100vw/5 + 2em);
                 }
 
-                @media (min-width: 992px) {
+                @media (min-width: 1200px) {
                     font-size: 5rem;
                 }
             }
-
+    
             .text-title {
-                font-family: "Montserrat",sans-serif;
+                // font-family: Montserrat, AvoRegular, sans-serif;
+                font-family: AvoBold, sans-serif;
                 font-size: 3rem;
-                font-weight: 800;
-                color: var(--primary);
+                font-weight: 600;
+                color: var(--yellow-active);
                 line-height: 1.2;
+                
+                @media (max-width: 767px) {
+                    font-size: 1.5rem;
+                    font-weight: normal;
+                }
                 
                 @media (min-width: 768px) and (max-width: 991px) {
                     font-size: 3rem;
                 }
+    
+                @media (min-width: 992px) and (max-width: 1199px) {
+                    font-size: 4rem;
+                }
 
-                @media (min-width: 992px) {
+                @media (min-width: 1200px) {
                     font-size: 5rem;
                 }
-                @media (max-width: 767px) {
-                    font-size: 1.5rem;
-                }
             }
-
+    
         }
+    }
+
+    .main-video {
+        width: 100%;
+    }
+}
+
+.programs {
+    text-align: center;
+    font-family: AvoBold, sans-serif;
+    font-weight: bolder;
+    font-size: x-large;
+
+    @media (max-width: 991px) {
+        font-size: medium;
+        font-weight: 600;
+    }
+
+    .first-program {
+        background-color: var(--blue-active);
+    }
+
+    .second-program {
+        background-color: var(--yellow-active);
+    }
+
+    .last-program {
+        background-color: var(--red-active);
+    }
+
+    a, a:hover {
+        text-decoration: none;
+        color: white;
     }
 }
 

@@ -10,9 +10,23 @@
 
 :root {
     --norm-text: rgba(0,0,0,0.87);
+    --blue-active: #001F63;
+    --red-active: #870026;
+    --yellow-active: #E2AB1A;
+    --gray-active: #BFC7D8;
+}
+
+@font-face {
+	font-family: "AvoRegular";
+	src: local("AvoRegular"), url("./assets/fonts/SVN-Avo_Regular.ttf");
+}
+
+@font-face {
+	font-family: "AvoBold";
+	src: local("AvoBold"), url("./assets/fonts/SVN-Avo_Bold.ttf");
 }
 
 body {
     color: rgba(0,0,0,0.87);
-    font-family:'Open Sans', 'Helvetica Neue', 'Roboto','Arial', sans-serif;
+    font-family: AvoRegular, Open Sans, Helvetica Neue, Roboto, Arial, sans-serif;
 }

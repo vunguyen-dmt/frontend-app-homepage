@@ -1,5 +1,5 @@
 .logo {
-    max-height: 100px;
+    max-height: 80px;
     width: auto;
     @media (max-width: 991px) {
         max-height: 60px;
@@ -8,7 +8,7 @@
 
 .navbar-collapse {
     @media (min-width: 991px) {
-        margin-bottom: 40px;
+        // margin-bottom: 40px;
     }
 }
 
@@ -18,18 +18,18 @@
     }
 
     .nav-link {
-        color: rgba(0,0,0,0.87)!important;
+        color: #f0eeed!important;
         white-space: nowrap;
-        font-weight: 600;
-        &:first-child {
-            color: #0161CC !important;
-        }
+        font-family: AvoBold;
+        // &:first-child {
+        //     color: #0161CC !important;
+        // }
         &:hover {
-            color: #0161CC !important;
+            color: var(--yellow-active) !important;
         }
 
         @media (min-width: 992px) {
-            padding: 0 2rem !important;
+            padding: 0 1rem !important;
         }
 
         @media (max-width: 991px) {
@@ -72,23 +72,55 @@
 
 .navbar-light .navbar-toggler-icon {
     height: 24px;
-    color: var(--norm-text)!important;
+    // color: var(--norm-text)!important;
+    background-color: var(--gray-active) !important;
     width: 24px;
 }
 
 .fw-600 {
     font-weight: 600;
-}
 
-.right-box-faq {
-    flex-wrap: nowrap!important;
+    .btn-transparent {
+        color: white !important;
+    }
 }
 
 .nav-wrapper {
-    max-width: 1450px;
+    // max-width: 1450px;
+    z-index: 10;
+    position: sticky !important;
+    top: 0;
+    // transition: top 0.3s;
     margin: 0 auto;
+    background-color: var(--blue-active);
+    font-family: AvoRegular, Arial, Helvetica, sans-serif;
+
+    .navbar {
+        padding: 0.5rem 0!important;
+    }
+
+    .right-box-faq {
+        flex-wrap: nowrap!important;
+    }
+
 }
 
-.navbar {
-    padding: 0.5rem 0!important;
+.visible {
+    /* display: flex; */
+    top: 0;
+    transition: top 0.4s ease-out;
+}
+  
+.hidden {
+    /* display: none; */
+    top: -160px;
+    transition: top 0.4s ease-out;
+
+    @media (max-width: 991px) {
+        top: 0;
+    }
+}
+
+.language {
+    color: white;
 }
