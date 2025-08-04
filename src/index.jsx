@@ -11,6 +11,8 @@ import {
 import messages from './i18n';
 import Homepage from './homepage/Homepage';
 import FAQPage from './FAQPage/FAQPage';
+import NewsDetail from './news/NewsDetail';
+import News from './news/News';
 import Head from './Head';
 import './index.scss';
 
@@ -21,6 +23,8 @@ subscribe(APP_READY, () => {
       <Routes>
         <Route exact path="/" element={<Homepage />} />
         <Route exact path="/faq" element={<FAQPage/>} />
+        <Route exact path="/news" element={<News/>} />
+        <Route path="/news/:slug" element={<NewsDetail/>} />
       </Routes>
     </AppProvider>,
     document.getElementById('root'),
