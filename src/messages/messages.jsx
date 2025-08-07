@@ -36,6 +36,21 @@ const messages = defineMessages({
     defaultMessage: 'Management System',
     description: '',
   },
+  underGraduate: {
+    id: 'homepage.bodyContent.underGraduate',
+    defaultMessage: 'Undergraduate',
+    description: '',
+  },
+  postgraduate: {
+    id: 'homepage.headerContent.postGraduate ',
+    defaultMessage: 'Postgraduate',
+    description: '',
+  },
+  shortTermCourses: {
+    id: 'homepage.headerContent.shortTermCourses ',
+    defaultMessage: 'Short-term Courses',
+    description: '',
+  },
   guide: {
     id: 'homepage.bodyContent.guide',
     defaultMessage: 'Guide',
@@ -49,6 +64,31 @@ const messages = defineMessages({
   viewMoreCourses: {
     id: 'homepage.bodyContent.viewMoreCourses',
     defaultMessage: 'View more courses',
+    description: '',
+  },
+  semester: {
+    id: 'homepage.bodyContent.semester',
+    defaultMessage: 'Semester',
+    description: '',
+  },
+  trainingUnit: {
+    id: 'homepage.bodyContent.trainingUnit',
+    defaultMessage: 'Training Unit',
+    description: '',
+  },
+  newsInfo: {
+    id: 'homepage.bodyContent.newsInfo',
+    defaultMessage: 'Information - News',
+    description: '',
+  },
+  newsEvent: {
+    id: 'homepage.bodyContent.newsEvent',
+    defaultMessage: 'Event',
+    description: '',
+  },
+  contact: {
+    id: 'homepage.bodyContent.contact',
+    defaultMessage: 'Contact',
     description: '',
   },
   Courses: {

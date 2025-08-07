@@ -106,13 +106,13 @@ const HeaderContent = () => {
         
         <section id="programs" className="programs d-flex flex-lg-nowrap flex-column flex-md-row /*text-white text-center*/">
           <div className="first-program w-100 py-md-4 p-1">
-            <a href="/">Đại học</a>
+            <a href="/courses/?page=1&language=&org=TH,DU,DDXN,HQH,HT,MC,KHQHCC,LU,MARQT,NB,DL,QT,NN,TQH,TT,TYCN,XD&run=">{formatMessage(messages.underGraduate)}</a>
           </div>
           <div className="second-program w-100 py-md-4 p-1">
-            <a href="/">Sau đại học</a>
+            <a href="/courses/?page=1&language=&org=SDH&run=">{formatMessage(messages.postgraduate)}</a>
           </div>
           <div className="last-program w-100 py-md-4 p-1">
-            <a href="/">Đào tạo ngắn hạn</a>
+            <a href="/courses/?page=1&language=&org=DHS&run=">{formatMessage(messages.shortTermCourses)}</a>
           </div>
         </section>
       </header>

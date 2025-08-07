@@ -59,10 +59,10 @@ const NavigationTopBar = () => {
         <Button href="/authn/login?next" size="sm" variant="danger" className="d-lg-none red-btn mobile-login">{formatMessage(messages.login)}</Button>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
-            <Nav.Link href="/">Trang chủ</Nav.Link>
+            <Nav.Link href="/">{formatMessage(messages.home)}</Nav.Link>
             <Nav.Link href="/courses/">{formatMessage(messages.Courses)}</Nav.Link>
-            <Nav.Link href="/">Giáo dục & Công nghệ</Nav.Link>
-            <Nav.Link href="https://www.hutech.edu.vn/dayhocso" className="/*d-lg-none*/">Liên hệ</Nav.Link>
+            {/* <Nav.Link href="/">Giáo dục & Công nghệ</Nav.Link> */}
+            <Nav.Link href="https://www.hutech.edu.vn/dayhocso" className="/*d-lg-none*/">{formatMessage(messages.contact)}</Nav.Link>
             <Nav.Link href="https://apps.lms.hutech.edu.vn/home/faq?role=student" className="/*d-lg-none*/">FAQ</Nav.Link>
             {/* <Nav.Link href="/authn/login?next" className="d-lg-none">{formatMessage(messages.login)}</Nav.Link> */}
           </Nav>

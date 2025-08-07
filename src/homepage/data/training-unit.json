@@ -1,0 +1,110 @@
+[
+    {
+        "id": "TH",
+        "name": "KHOA CÔNG NGHỆ THÔNG TIN"
+    },
+    {
+        "id": "DU",
+        "name": "KHOA DƯỢC"
+    },
+    {
+        "id": "DDXN",
+        "name": "KHOA ĐIỀU DƯỠNG - XÉT NGHIỆM"
+    },
+    {
+        "id": "HQH",
+        "name": "KHOA HÀN QUỐC HỌC"
+    },
+    {
+        "id": "HT",
+        "name": "KHOA HỆ THỐNG THÔNG TIN QUẢN LÝ"
+    },
+    {
+        "id": "MC",
+        "name": "KHOA KIẾN TRÚC - MỸ THUẬT"
+    },
+    {
+        "id": "KHQHCC",
+        "name": "KHOA.KHOA HỌC XÃ HỘI - QUAN HỆ CÔNG CHÚNG"
+    },
+    {
+        "id": "LU",
+        "name": "KHOA LUẬT"
+    },
+    {
+        "id": "MARQT",
+        "name": "KHOA MARKETING - KINH DOANH QUỐC TẾ"
+    },
+    {
+        "id": "NB",
+        "name": "KHOA NHẬT BẢN HỌC"
+    },
+    {
+        "id": "DL",
+        "name": "KHOA QUẢN TRỊ DU LỊCH - NHÀ HÀNG - KHÁCH SẠN"
+    },
+    {
+        "id": "QT",
+        "name": "KHOA QUẢN TRỊ KINH DOANH"
+    },
+    {
+        "id": "NN",
+        "name": "KHOA TIẾNG ANH"
+    },
+    {
+        "id": "KT",
+        "name": "KHOA TÀI CHÍNH - THƯƠNG MẠI"
+    },
+    {
+        "id": "TQH",
+        "name": "KHOA TRUNG QUỐC HỌC"
+    },
+    {
+        "id": "TT",
+        "name": "KHOA TRUYỀN THÔNG THIẾT KẾ"
+    },
+    {
+        "id": "TYCN",
+        "name": "KHOA THÚ Y - CHĂN NUÔI"
+    },
+    {
+        "id": "XD",
+        "name": "KHOA XÂY DỰNG"
+    },
+    {
+        "id": "ANNT",
+        "name": "VIỆN ÂM NHẠC - NGHỆ THUẬT"
+    },
+    {
+        "id": "VH",
+        "name": "VIỆN CÔNG NGHỆ VIỆT HÀN"
+    },
+    {
+        "id": "VJ",
+        "name": "VIỆN CÔNG NGHỆ VIỆT NHẬT"
+    },
+    {
+        "id": "VQ",
+        "name": "VIỆN ĐÀO TẠO QUỐC TẾ"
+    },
+    {
+        "id": "DT",
+        "name": "VIỆN KỸ THUẬT"
+    },
+    {
+        "id": "MT",
+        "name": "VIỆN KHOA HỌC ỨNG DỤNG"
+    },
+    {
+        "id": "ML",
+        "name": "TRUNG TÂM GIÁO DỤC CHÍNH TRỊ - QUỐC PHÒNG"
+    },
+    {
+        "id": "CB",
+        "name": "TRUNG TÂM GIÁO DỤC THỂ CHẤT"
+    },
+    {
+        "id": "ĐTNN",
+        "name": "TRUNG TÂM TIN HỌC - NGOẠI NGỮ - KỸ NĂNG"
+    }
+]

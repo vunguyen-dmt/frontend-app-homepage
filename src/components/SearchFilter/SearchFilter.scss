@@ -1,0 +1,49 @@
+.popover-button {
+    border: unset !important;
+    border-radius: unset !important;
+    background-color: unset !important;
+    color: var(--blue-active) !important;
+    font-weight: 600 !important;
+
+    @media (max-width: 575px) {
+        font-size: medium !important;
+    }
+}
+
+.btn-primary:focus::before {
+    border: unset !important;
+}
+
+.popover-body {
+    background-color: var(--blue-active);
+    overflow-y: scroll;
+}
+
+.popover-content-unit {
+    height: 500px;
+    @media (max-width: 575px) {
+        height: 350px;
+    }
+}
+
+.popover-content-semester {
+    height: 350px;
+}
+
+.popover-button-hide {
+    display: none !important;
+}
+
+.arrow {
+    // color: var(--blue-active) !important;
+    display: none !important;
+}
+
+.pgn__form-label {
+    font-size: 1em !important;
+    color: white !important;
+}
+
+.pgn__form-radio-input:checked {
+    background-image: "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23E2AB1A'/%3e%3c/svg%3e"!important
+}

@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import { Helmet } from 'react-helmet';
 import Footer from '@edx/frontend-component-footer';
 import Header from '@edx/frontend-component-header';
+import NavigationTopBar from '../components/NavigationTopBar/NavigationTopBar';
 import {
    Breadcrumb,
 } from '@openedx/paragon';
@@ -38,7 +39,8 @@ const NewsDetail = () => {
   return (
     <div className="news-detail">
       <Helmet><title>News | HUTECH eLearning</title></Helmet>
-      <Header />
+      {/* <Header /> */}
+      <NavigationTopBar />
       <div className='news-content'>
         <Breadcrumb
         ariaLabel="Breadcrumb is active"

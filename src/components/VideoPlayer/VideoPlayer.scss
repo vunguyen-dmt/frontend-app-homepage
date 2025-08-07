@@ -9,10 +9,10 @@
 .cvideo {
     // box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.15), 0 0.0625rem 0.25rem rgba(0, 0, 0, 0.15);
     margin: 0 20px;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     min-width: 300px;
-    flex-shrink: 0;
-    flex-basis: calc(40% - 20px);
+    // flex-shrink: 0;
+    // flex-basis: calc(40% - 20px);
 
     @media (max-width: 767px) {
         margin: unset;
@@ -20,11 +20,18 @@
 
     video {
         aspect-ratio: 16/9;
-        max-width: 500px;
+        max-width: 300px;
 
-        @media (max-width: 767px) {
-            
-            max-width: 100%;
+        @media (min-width: 992px) and (max-width: 1399px) {
+            max-width: 450px;
+        }
+
+        @media (min-width: 1400px) and (max-width: 1599px) {
+            max-width: 500px;
+        }
+
+        @media (min-width: 1600px) {
+            max-width: 660px;
         }
     }
 }
