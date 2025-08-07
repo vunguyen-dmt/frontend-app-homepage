@@ -91,7 +91,7 @@ const BodyContent = () => {
               </div>
 
               <div className="popular-courses">
-                  <div className="px-4 px-xl-5 py-3 bg-white text-primary">
+                  <div className="px-4 px-xl-5 py-3 text-primary">
                     <div className='body-text-title'>{formatMessage(messages.popularCourses)}</div>
                   </div>
 
@@ -115,7 +115,7 @@ const BodyContent = () => {
                   </div>
 
                   <div className="readmore-btn pb-3">
-                    <a className="button" href="/courses/">{formatMessage(messages.viewMoreCourses)}</a>
+                    <a className="button" href="/courses/">{formatMessage(messages.viewMore)}</a>
                   </div>
               </div>
 
@@ -130,8 +130,8 @@ const BodyContent = () => {
                 <div className="body-text-title">{formatMessage(messages.guide)}</div>
               </div>
 
-              <div className="bg-white d-flex flex-column flex-md-row justify-content-center p-3">
-                <VideoPlayer
+              <div className="bg-white videos">
+                {/* <VideoPlayer
                   sources={["https://hutech-media.goamazing.org/hutech-statics/media/videos/HD-Dang-Nhap-LMS-20240821.mp4", "https://d10g66pf9vjy7h.cloudfront.net/media/videos/HD-Dang-Nhap-LMS-20240821.mp4"]}
                   title="Dành cho người học"
                   videoPoster={cdn + "/media/images/homepage-v2025/video-thumbnail-01.png"}
@@ -140,8 +140,49 @@ const BodyContent = () => {
                   sources={["https://hutech-media.goamazing.org/hutech-statics/media/videos/cau-truc-khoa-hoc-he-chinh-quy.mp4", "https://d10g66pf9vjy7h.cloudfront.net/media/videos/cau-truc-khoa-hoc-he-chinh-quy.mp4"]}
                   title="Dành cho giảng viên"
                   videoPoster={cdn + "/media/images/homepage-v2025/video-thumbnail-02.jpg"}
+                /> */}
+                <VideoPlayer
+                  sources={["https://hutech-media.goamazing.org/hutech-statics/media/videos/HD-Dang-Nhap-LMS-20240821.mp4", "https://d10g66pf9vjy7h.cloudfront.net/media/videos/HD-Dang-Nhap-LMS-20240821.mp4"]}
+                  title="Cách đăng nhập HUTECH eLearning"
+                  videoPoster={cdn + "/media/home-page-resources/video-thumbnail-01.jpg"}
+                />
+                <VideoPlayer
+                  sources={["https://hutech-media.goamazing.org/hutech-statics/media/videos/huongdantracnghiemtuluan-26-05-fix.mp4", "https://d10g66pf9vjy7h.cloudfront.net/media/videos/huongdantracnghiemtuluan-26-05-fix.mp4"]}
+                  title="Cách làm bài tập HUTECH eLearning"
+                  videoPoster={cdn + "/media/home-page-resources/video-thumbnail-02.jpg"}
+                />
+                <VideoPlayer
+                  sources={["https://hutech-media.goamazing.org/hutech-statics/media/videos/cau-truc-khoa-hoc-he-chinh-quy.mp4", "https://d10g66pf9vjy7h.cloudfront.net/media/videos/cau-truc-khoa-hoc-he-chinh-quy.mp4"]}
+                  title="Cấu trúc khóa học hệ chính quy"
+                  videoPoster={cdn + "/media/home-page-resources/video-thumbnail-03.jpg"}
                 />
               </div>
+              <Carousel className="video-carousel">
+                <Carousel.Item interval={1000000}>
+                  <div className="video-wrapper">
+                    <video poster={cdn + "/media/home-page-resources/video-thumbnail-01.jpg"} controls>
+                      <source src='https://hutech-media.goamazing.org/hutech-statics/media/videos/HD-Dang-Nhap-LMS-20240821.mp4'type="video/mp4"/>
+                    </video>
+                    <div>Cách đăng nhập HUTECH eLearning</div>
+                  </div>
+                </Carousel.Item>
+                <Carousel.Item interval={1000000}>
+                  <div className="video-wrapper">
+                    <video poster={cdn + "/media/home-page-resources/video-thumbnail-02.jpg"} controls>
+                      <source src='https://hutech-media.goamazing.org/hutech-statics/media/videos/huongdantracnghiemtuluan-26-05-fix.mp4'type="video/mp4"/>
+                    </video>
+                    <div>Cách làm bài tập HUTECH eLearning</div>
+                  </div>
+                </Carousel.Item>
+                <Carousel.Item interval={1000000}>
+                    <div className="video-wrapper">
+                    <video poster={cdn + "/media/home-page-resources/video-thumbnail-03.jpg"} controls>
+                      <source src='https://hutech-media.goamazing.org/hutech-statics/media/videos/cau-truc-khoa-hoc-he-chinh-quy.mp4'type="video/mp4"/>
+                    </video>
+                    <div>Cấu trúc khóa học hệ chính quy</div>
+                  </div>
+                </Carousel.Item>
+              </Carousel>
             </div>
 
             <div className="flex-shrink-0 pr-xl-6"></div>
@@ -151,8 +192,8 @@ const BodyContent = () => {
             <div className="w-0 w-xl-25"></div>
 
             <div className="news-event-content d-flex flex-column flex-md-row flex-lg-nowrap justify-content-between">
-              <div className="pr-md-3">
-                <div className="pb-2">{formatMessage(messages.newsInfo)}</div>
+              <div>
+                <div className="news-events-text">{formatMessage(messages.newsInfo)}</div>
                 
                 <Carousel interval={5000} indicators={true} slide={false} fade={true}>
                   {
@@ -174,17 +215,23 @@ const BodyContent = () => {
                   }
                 </Carousel>
               </div>
-
-              <div className="pl-md-3">
-                <div className="text-md-right pb-2">{formatMessage(messages.newsEvent)}</div>
+              
+              <div>
+                <div className="text-md-right news-events-text">{formatMessage(messages.newsEvent)}</div>
                 <Event />
               </div>
             </div>
 
             <div className="flex-shrink-0 pr-xl-6"></div>
           </section>
+
+
+
+          
         </div>
         <ChatBot />
+
+
       </div>
     </>
   );

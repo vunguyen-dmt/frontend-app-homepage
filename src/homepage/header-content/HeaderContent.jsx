@@ -3,6 +3,9 @@ import { useIntl } from '@edx/frontend-platform/i18n';
 import {
   SearchField, Badge,
 } from '@openedx/paragon';
+import {
+  Search
+} from '@openedx/paragon/icons';
 import { searchCourse } from '../../services/search-service/searchService';
 import NavigationTopBar from '../../components/NavigationTopBar/NavigationTopBar';
 import messages from '../../messages/messages';
@@ -68,18 +71,19 @@ const HeaderContent = () => {
         <section className="banner">
           <div className="text-over">
             <div className="text-wrapper">
-              <div className="text-title">{formatMessage(messages.learning)}</div>
-              <div className="text-title margin-bottom-20">{formatMessage(messages.managementSystem)}</div>
+              <div className="text-title">{formatMessage(messages.learning)} {formatMessage(messages.managementSystem)}</div>
+              {/* <div className="text-title margin-bottom-20">{formatMessage(messages.managementSystem)}</div> */}
               <div className="text-name">HUTECH</div>
               <div className="search-area">
                 <SearchField
                   submitButtonLocation="external"
-                  buttonText={formatMessage(messages.Search)}
+                  // buttonText={formatMessage(messages.Search)}
                   placeholder={formatMessage(messages.FindYourCourses)}
                   value={searchQuery}
                   onSubmit={searchSubmittedHandle}
                   onChange={searchBoxOnChangeHandle}
                   onClear={searchClearHandle}
+                  label={<Search />}
                 />
                 {
                   dropdownCourses && dropdownCourses.results && dropdownCourses.results.length > 0
@@ -99,19 +103,19 @@ const HeaderContent = () => {
               </div>
             </div>
           </div>
-          <video autoPlay loop muted preload="auto" className="main-video">
+          <video autoPlay loop muted preload="auto" className="main-video" poster={cdn + '/media/home-page-resources/header-cover.jpg'}>
             <source src={cdn + "/media/videos/background_chinh.mp4"} type="video/mp4"/>
           </video>
         </section>
         
         <section id="programs" className="programs d-flex flex-lg-nowrap flex-column flex-md-row /*text-white text-center*/">
-          <div className="first-program w-100 py-md-4 p-1">
+          <div className="first-program w-100">
             <a href="/courses/?page=1&language=&org=TH,DU,DDXN,HQH,HT,MC,KHQHCC,LU,MARQT,NB,DL,QT,NN,TQH,TT,TYCN,XD&run=">{formatMessage(messages.underGraduate)}</a>
           </div>
-          <div className="second-program w-100 py-md-4 p-1">
+          <div className="second-program w-100">
             <a href="/courses/?page=1&language=&org=SDH&run=">{formatMessage(messages.postgraduate)}</a>
           </div>
-          <div className="last-program w-100 py-md-4 p-1">
+          <div className="last-program w-100">
             <a href="/courses/?page=1&language=&org=DHS&run=">{formatMessage(messages.shortTermCourses)}</a>
           </div>
         </section>

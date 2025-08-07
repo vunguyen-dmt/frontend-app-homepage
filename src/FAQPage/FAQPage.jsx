@@ -6,7 +6,6 @@ import {
 } from '@openedx/paragon';
 import * as qs from 'qs';
 import { Helmet } from 'react-helmet';
-import { handleLanguageChange } from '../handleLanguageChange';
 import './FAQPage.scss';
 
 const FAQPage = () => {
@@ -52,13 +51,7 @@ const FAQPage = () => {
             ))
         }
       </div>
-      <Footer
-        supportedLanguages={[
-          { label: 'English', value: 'en' },
-          { label: 'Tiếng Việt', value: 'vi' },
-        ]}
-        onLanguageSelected={handleLanguageChange}
-      />
+      <Footer showLanguageSelector />
     </div>
   );
 };

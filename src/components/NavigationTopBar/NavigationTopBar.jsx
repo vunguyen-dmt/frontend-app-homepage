@@ -46,7 +46,7 @@ const NavigationTopBar = () => {
   })
 
   const cls = visible ? "visible" : "hidden";
-  const scroll_class = cls + " px-4 px-lg-5 nav-wrapper w-100 shadow-none border-bottom border-light"
+  const scroll_class = cls + " nav-wrapper"
   
   return (
     <>

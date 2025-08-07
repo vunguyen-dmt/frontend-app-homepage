@@ -27,7 +27,7 @@ const Event = ({
         {
             eventList.map(i => (
                 <div key={i.id}>
-                    <div className="d-flex flex-column flex-lg-row align-items-start align-items-lg-center py-1 py-md-3 py-lg-4 py-xl-5 ">
+                    <div className="d-flex flex-column flex-lg-row align-items-start align-items-lg-center event-item">
                         <div className="event-date text-left pr-lg-3">{i.date.toLocaleDateString("vi-VN")}</div>
                         <div className="event-name pl-lg-3 text-justify">{i.eventName}</div>
                     </div>

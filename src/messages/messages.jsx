@@ -48,7 +48,7 @@ const messages = defineMessages({
   },
   shortTermCourses: {
     id: 'homepage.headerContent.shortTermCourses ',
-    defaultMessage: 'Short-term Courses',
+    defaultMessage: 'Short-term training',
     description: '',
   },
   guide: {
@@ -61,9 +61,9 @@ const messages = defineMessages({
     defaultMessage: 'Popular courses',
     description: '',
   },
-  viewMoreCourses: {
-    id: 'homepage.bodyContent.viewMoreCourses',
-    defaultMessage: 'View more courses',
+  viewMore: {
+    id: 'homepage.bodyContent.viewMore',
+    defaultMessage: 'View more',
     description: '',
   },
   semester: {
@@ -103,7 +103,7 @@ const messages = defineMessages({
   },
   FindYourCourses: {
     id: 'homepage.findYourCourses',
-    defaultMessage: 'Find your courses!',
+    defaultMessage: 'Find your courses',
     description: '',
   },
   Course: {
