@@ -7,6 +7,7 @@ import {
 import * as qs from 'qs';
 import { Helmet } from 'react-helmet';
 import './FAQPage.scss';
+import NavigationTopBar from '../components/NavigationTopBar/NavigationTopBar';
 
 const FAQPage = () => {
   const [FAQList, setFAQList] = useState([]);
@@ -30,7 +31,8 @@ const FAQPage = () => {
   return (
     <div>
       <Helmet><title>FAQ | HUTECH eLearning</title></Helmet>
-      <Header />
+      {/* <Header /> */}
+      <NavigationTopBar />
       <div className="faq-wrapper mx-auto container-mw-lg">
         <Breadcrumb
           ariaLabel="Breadcrumb is active"

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useIntl } from '@edx/frontend-platform/i18n';
 import {
-  ArrowForward, AutoStories, EventNote,
+  ArrowForward, AutoStories, EventNote, KeyboardArrowRight
 } from '@openedx/paragon/icons';
 import {
   Hyperlink, Card, Icon, Carousel, ModalDialog, Button
@@ -74,25 +74,26 @@ const BodyContent = () => {
               </div>
           </section>
           
-          <section id="common_courses" className="common-courses d-flex flex-column flex-xl-row px-xl-5 pb-3">
-              <div className="w-xl-25 px-md-5 px-sm-3">
-                  <div className="blank-area"></div>
-                  <div className="search-common-course d-flex flex-row flex-xl-column">
-                    <div className="icon-info">
-                      <img src={cdn + "/media/images/homepage-v2025/icon_1.png"} alt="icon_1" />
-                      <SearchFilter data={filterRuns} nameFilter={formatMessage(messages.semester)} type="semester"/>
-                    </div>
-                    <div className="icon-info-line"></div>
-                    <div className="icon-info">
-                      <img src={cdn + "/media/images/homepage-v2025/icon_2.png"} alt="icon_2" />
-                      <SearchFilter data={trainingUnit} nameFilter={formatMessage(messages.trainingUnit)} type="unit"/>
-                    </div>
-                    <div className="icon-info-line"></div>
+          <section id="popular_courses" className="popular-courses-wrapper">
+            <div className="popular-courses d-flex flex-column flex-xl-row px-xl-5 pb-3">
+              <div className="px-md-3 /*w-xl-25 px-sm-3*/">
+                <div className="blank-area"></div>
+                <div className="search-common-course d-flex flex-row flex-xl-column">
+                  <div className="icon-info">
+                    <img src={cdn + "/media/images/homepage-v2025/icon_1.png"} alt="icon_1" />
+                    <SearchFilter data={filterRuns} nameFilter={formatMessage(messages.semester)} type="semester"/>
                   </div>
+                  <div className="icon-info-line"></div>
+                  <div className="icon-info">
+                    <img src={cdn + "/media/images/homepage-v2025/icon_2.png"} alt="icon_2" />
+                    <SearchFilter data={trainingUnit} nameFilter={formatMessage(messages.trainingUnit)} type="unit"/>
+                  </div>
+                  <div className="icon-info-line"></div>
+                </div>
               </div>
 
-              <div className="popular-courses">
-                  <div className="px-4 px-xl-5 py-3 text-primary">
+              <div className="popular-courses-inner">
+                  <div className="px-4 px-xl-5 py-3 text-primary bg-white">
                     <div className='body-text-title'>{formatMessage(messages.popularCourses)}</div>
                   </div>
 
@@ -119,61 +120,98 @@ const BodyContent = () => {
                     <a className="button" href="/courses/">{formatMessage(messages.viewMore)}</a>
                   </div>
               </div>
-
-              <div className="flex-shrink-0 pr-6"></div>
+            </div>
           </section>
 
-          <section id="video_user_guide" className="guide-video-wrapper d-flex flex-column flex-xl-row flex-lg-nowrap px-4 px-xl-5 pb-5">
-            <div className="video-blank-area w-0 w-xl-25"></div>
+          <section id="user_guide_video" className="guide-video-wrapper">
+            <div className="guide-video-area d-flex flex-column flex-xl-row flex-lg-nowrap px-4 px-xl-5 pb-5">
+              {/* <div className="video-blank-area w-0 w-xl-25"></div> */}
 
-            <div className="guide-video text-white">
-              <div className="px-sm-0 px-md-4 px-xl-5 py-3">
-                <div className="body-text-title">{formatMessage(messages.guide)}</div>
-              </div>
+              <div className="video-blank-area"></div>
 
-              <div className="bg-white videos">
-                <VideoPlayer
-                  sources={["https://hutech-media.goamazing.org/hutech-statics/media/videos/HD-Dang-Nhap-LMS-20240821.mp4", "https://d10g66pf9vjy7h.cloudfront.net/media/videos/HD-Dang-Nhap-LMS-20240821.mp4"]}
-                  title="Dành cho người học"
-                  videoPoster={cdn + "/media/images/homepage-v2025/video-thumbnail-01.png"}
-                />
-                <VideoPlayer
-                  sources={["https://hutech-media.goamazing.org/hutech-statics/media/videos/cau-truc-khoa-hoc-he-chinh-quy.mp4", "https://d10g66pf9vjy7h.cloudfront.net/media/videos/cau-truc-khoa-hoc-he-chinh-quy.mp4"]}
-                  title="Dành cho giảng viên"
-                  videoPoster={cdn + "/media/images/homepage-v2025/video-thumbnail-02.jpg"}
-                />
+              <div className="guide-video text-white">
+                <div className="px-sm-0 px-md-4 px-xl-5 py-3">
+                  <div className="body-text-title">{formatMessage(messages.guide)}</div>
+                </div>
+
+                <div className="videos bg-white d-flex flex-row flex-nowrap">
+                  {/* <VideoPlayer
+                    sources={["https://hutech-media.goamazing.org/hutech-statics/media/videos/HD-Dang-Nhap-LMS-20240821.mp4", "https://d10g66pf9vjy7h.cloudfront.net/media/videos/HD-Dang-Nhap-LMS-20240821.mp4"]}
+                    title="Dành cho người học"
+                    videoPoster={cdn + "/media/images/homepage-v2025/video-thumbnail-01.png"}
+                  />
+                  <VideoPlayer
+                    sources={["https://hutech-media.goamazing.org/hutech-statics/media/videos/cau-truc-khoa-hoc-he-chinh-quy.mp4", "https://d10g66pf9vjy7h.cloudfront.net/media/videos/cau-truc-khoa-hoc-he-chinh-quy.mp4"]}
+                    title="Dành cho giảng viên"
+                    videoPoster={cdn + "/media/images/homepage-v2025/video-thumbnail-02.jpg"}
+                  /> */}
+                  <div className="pr-4">
+                    <a href="/faq?role=student" className="link-title">
+                      <img src={cdn + "/media/images/homepage-v2025/link-thumbnail-01.jpg"} />
+                      <div className="font-weight-bold px-3 pt-2">Dành cho người học</div>
+                    </a>
+                  </div>
+                  <div className="pl-4">
+                    <a href="/faq?role=instrustor" className="link-title">
+                      <img src={cdn + "/media/images/homepage-v2025/link-thumbnail-02.jpg"} />
+                      <div className="font-weight-bold px-3 pt-2">Dành cho giảng viên</div>
+                    </a>
+                  </div>
+                </div>
+                <Carousel className="video-carousel">
+                  <Carousel.Item interval={5000}>
+                    <div className="video-wrapper pr-md-4">
+                    <a href="/faq?role=student" className="link-title">
+                      <img src={cdn + "/media/images/homepage-v2025/link-thumbnail-01.jpg"} />
+                      <div className="text-white /*font-weight-bold px-3 pt-2*/">Dành cho người học</div>
+                    </a>
+                  </div>
+                  </Carousel.Item>
+                  <Carousel.Item interval={5000}>
+                    <div className="video-wrapper pl-md-4">
+                    <a href="/faq?role=instrustor" className="link-title">
+                      <img src={cdn + "/media/images/homepage-v2025/link-thumbnail-02.jpg"} />
+                      <div className="text-white /*font-weight-bold px-3 pt-2*/">Dành cho giảng viên</div>
+                    </a>
+                  </div>
+                  </Carousel.Item>
+                </Carousel>
+                {/* <Carousel className="video-carousel">
+                  <Carousel.Item interval={1000000}>
+                    <div className="video-wrapper">
+                      <video preload='none' poster={cdn + "/media/home-page-resources/video-thumbnail-01.jpg"} controls>
+                        <source src='https://hutech-media.goamazing.org/hutech-statics/media/videos/HD-Dang-Nhap-LMS-20240821.mp4'type="video/mp4"/>
+                      </video>
+                      <div>Dành cho người học</div>
+                    </div>
+                  </Carousel.Item>
+                  <Carousel.Item interval={1000000}>
+                    <div className="video-wrapper">
+                      <video preload='none' poster={cdn + "/media/home-page-resources/video-thumbnail-02.jpg"} controls>
+                        <source src='https://hutech-media.goamazing.org/hutech-statics/media/videos/cau-truc-khoa-hoc-he-chinh-quy.mp4'type="video/mp4"/>
+                      </video>
+                      <div>Dành cho giảng viên</div>
+                    </div>
+                  </Carousel.Item>
+                </Carousel> */}
               </div>
-              <Carousel className="video-carousel">
-                <Carousel.Item interval={1000000}>
-                  <div className="video-wrapper">
-                    <video poster={cdn + "/media/home-page-resources/video-thumbnail-01.jpg"} controls>
-                      <source src='https://hutech-media.goamazing.org/hutech-statics/media/videos/HD-Dang-Nhap-LMS-20240821.mp4'type="video/mp4"/>
-                    </video>
-                    <div>Dành cho người học</div>
-                  </div>
-                </Carousel.Item>
-                <Carousel.Item interval={1000000}>
-                  <div className="video-wrapper">
-                    <video poster={cdn + "/media/home-page-resources/video-thumbnail-02.jpg"} controls>
-                      <source src='https://hutech-media.goamazing.org/hutech-statics/media/videos/cau-truc-khoa-hoc-he-chinh-quy.mp4'type="video/mp4"/>
-                    </video>
-                    <div>Dành cho giảng viên</div>
-                  </div>
-                </Carousel.Item>
-              </Carousel>
             </div>
 
-            <div className="flex-shrink-0 pr-xl-6"></div>
           </section>
 
-          <section id="news_event" className="news-event-wrapper d-flex flex-column flex-xl-row flex-lg-nowrap px-4 px-xl-5 pb-3">
-            <div className="w-0 w-xl-25"></div>
+          <section id="news_event" className="news-event-wrapper d-flex flex-column flex-xl-row flex-lg-nowrap px-sm-4 px-xl-5 pb-3">
+            {/* <div className="w-0 w-xl-25"></div> */}
 
             <div className="news-event-content d-flex flex-column flex-md-row flex-lg-nowrap justify-content-between">
               <div>
-                <div className="news-events-text">{formatMessage(messages.newsInfo)}</div>
+                <div className="news-events-text d-flex">
+                  <div>{formatMessage(messages.newsInfo)}</div>
+                  <div>
+                    <a href="/news/"><Icon src={KeyboardArrowRight} className="mx-1" size="lg"/></a>
+                  </div>
+                </div>
                 
-                <Carousel interval={5000} indicators={true} slide={false} fade={true}>
+                <Carousel interval={5000} indicators={true} slide={true} fade={false}>
                   {
                     newsList
                       .slice(0,5)
@@ -199,14 +237,11 @@ const BodyContent = () => {
                 <Event />
               </div>
             </div>
-
-            <div className="flex-shrink-0 pr-xl-6"></div>
           </section>
+
           <NewsDetailModal slug={newsList[0].slug}/>
         </div>
         <ChatBot />
-
-
       </div>
     </>
   );
