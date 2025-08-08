@@ -17,6 +17,7 @@ import ChatBot from '../../components/chat-bot/chat-bot';
 import { getFilterCourses } from '../../services/getFilterCourses';
 import feature_courses from './feature_courses'
 import newsList from '../../news/news_list';
+import NewsDetailModal from '../../news/NewsDetailsModal';
 
 const BodyContent = () => {
   const { formatMessage } = useIntl();
@@ -131,7 +132,7 @@ const BodyContent = () => {
               </div>
 
               <div className="bg-white videos">
-                {/* <VideoPlayer
+                <VideoPlayer
                   sources={["https://hutech-media.goamazing.org/hutech-statics/media/videos/HD-Dang-Nhap-LMS-20240821.mp4", "https://d10g66pf9vjy7h.cloudfront.net/media/videos/HD-Dang-Nhap-LMS-20240821.mp4"]}
                   title="Dành cho người học"
                   videoPoster={cdn + "/media/images/homepage-v2025/video-thumbnail-01.png"}
@@ -140,21 +141,6 @@ const BodyContent = () => {
                   sources={["https://hutech-media.goamazing.org/hutech-statics/media/videos/cau-truc-khoa-hoc-he-chinh-quy.mp4", "https://d10g66pf9vjy7h.cloudfront.net/media/videos/cau-truc-khoa-hoc-he-chinh-quy.mp4"]}
                   title="Dành cho giảng viên"
                   videoPoster={cdn + "/media/images/homepage-v2025/video-thumbnail-02.jpg"}
-                /> */}
-                <VideoPlayer
-                  sources={["https://hutech-media.goamazing.org/hutech-statics/media/videos/HD-Dang-Nhap-LMS-20240821.mp4", "https://d10g66pf9vjy7h.cloudfront.net/media/videos/HD-Dang-Nhap-LMS-20240821.mp4"]}
-                  title="Cách đăng nhập HUTECH eLearning"
-                  videoPoster={cdn + "/media/home-page-resources/video-thumbnail-01.jpg"}
-                />
-                <VideoPlayer
-                  sources={["https://hutech-media.goamazing.org/hutech-statics/media/videos/huongdantracnghiemtuluan-26-05-fix.mp4", "https://d10g66pf9vjy7h.cloudfront.net/media/videos/huongdantracnghiemtuluan-26-05-fix.mp4"]}
-                  title="Cách làm bài tập HUTECH eLearning"
-                  videoPoster={cdn + "/media/home-page-resources/video-thumbnail-02.jpg"}
-                />
-                <VideoPlayer
-                  sources={["https://hutech-media.goamazing.org/hutech-statics/media/videos/cau-truc-khoa-hoc-he-chinh-quy.mp4", "https://d10g66pf9vjy7h.cloudfront.net/media/videos/cau-truc-khoa-hoc-he-chinh-quy.mp4"]}
-                  title="Cấu trúc khóa học hệ chính quy"
-                  videoPoster={cdn + "/media/home-page-resources/video-thumbnail-03.jpg"}
                 />
               </div>
               <Carousel className="video-carousel">
@@ -163,23 +149,15 @@ const BodyContent = () => {
                     <video poster={cdn + "/media/home-page-resources/video-thumbnail-01.jpg"} controls>
                       <source src='https://hutech-media.goamazing.org/hutech-statics/media/videos/HD-Dang-Nhap-LMS-20240821.mp4'type="video/mp4"/>
                     </video>
-                    <div>Cách đăng nhập HUTECH eLearning</div>
+                    <div>Dành cho người học</div>
                   </div>
                 </Carousel.Item>
                 <Carousel.Item interval={1000000}>
                   <div className="video-wrapper">
                     <video poster={cdn + "/media/home-page-resources/video-thumbnail-02.jpg"} controls>
-                      <source src='https://hutech-media.goamazing.org/hutech-statics/media/videos/huongdantracnghiemtuluan-26-05-fix.mp4'type="video/mp4"/>
-                    </video>
-                    <div>Cách làm bài tập HUTECH eLearning</div>
-                  </div>
-                </Carousel.Item>
-                <Carousel.Item interval={1000000}>
-                    <div className="video-wrapper">
-                    <video poster={cdn + "/media/home-page-resources/video-thumbnail-03.jpg"} controls>
                       <source src='https://hutech-media.goamazing.org/hutech-statics/media/videos/cau-truc-khoa-hoc-he-chinh-quy.mp4'type="video/mp4"/>
                     </video>
-                    <div>Cấu trúc khóa học hệ chính quy</div>
+                    <div>Dành cho giảng viên</div>
                   </div>
                 </Carousel.Item>
               </Carousel>
@@ -224,10 +202,7 @@ const BodyContent = () => {
 
             <div className="flex-shrink-0 pr-xl-6"></div>
           </section>
-
-
-
-          
+          <NewsDetailModal slug={newsList[0].slug}/>
         </div>
         <ChatBot />
 

@@ -334,6 +334,7 @@
                         }
                 
                         .carousel-caption {
+                            min-height: 210px;
                             position: relative !important;
                             right: auto !important;
                             left: auto !important;
@@ -422,7 +423,7 @@
     flex-wrap: wrap;
     justify-content: center;
     >div {
-        flex: 0 0 30%;
+        flex: 0 0 45%;
     }
 }
 
@@ -436,7 +437,7 @@
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
     .videos {
         display: none!important;
     }

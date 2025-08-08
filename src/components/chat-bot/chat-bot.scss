@@ -36,7 +36,13 @@
     }
 }
 
+.popover-body {
+    background-color: white;
+    overflow: hidden;
+}
+
 .chat-popout {
+    background-color: white;
     display: flex;
     align-items: top;
     max-width: 236px;
