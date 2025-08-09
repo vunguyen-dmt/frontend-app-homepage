@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import {
   Breadcrumb
@@ -15,22 +14,16 @@ import messages from '../messages/messages';
 
 const News = () => {
   const { formatMessage } = useIntl();
-  const { slug } = useParams();
-  const [content, setContent] = useState('');
-  const [error, setError] = useState(null);
-  const itemsPerPage = 5;
+  const itemsPerPage = 10;
   const [currentPage, setCurrentPage] = useState(1);
   const news = newsList.sort((a, b) => new Date(b.date) - new Date(a.date));
   const newsDetailsModalRef = useRef();
   const totalPages = Math.ceil(news.length / itemsPerPage);
-
-  // Data for current page
   const currentData = news.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
-
-  // Create page buttons
+  
   const pageButtons = Array.from({ length: totalPages }, (_, index) => (
     <button
       key={index}
@@ -47,32 +40,6 @@ const News = () => {
       {index + 1}
     </button>
   ));
-
-  // const goToPage = (page) => {
-  //   setCurrentPage(page);
-  //   window.scrollTo({ top: 0, behavior: "smooth" });
-  // };
-  
-  useEffect(() => {
-    const fetchNews = async () => {
-      try {
-        const module = await import(`!raw-loader!../news/news/demo.md`);
-        setContent(module.default);
-      } catch (err) {
-        setError(err.message);
-      }
-    };
-
-    fetchNews();
-  }, [slug]);
-
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
-
-  if (!content) {
-    return <div>Loading...</div>;
-  }
 
   const openNewsModal = (slug) => {
     newsDetailsModalRef.current.openModal(slug);
@@ -115,7 +82,9 @@ const News = () => {
                 ))
               }
             </div>
-            <div className="page-button">{pageButtons}</div>
+            {
+              totalPages > 1 && <div className="page-button">{pageButtons}</div>
+            }
         </div>
         <NewsDetailModal base="/home/news/" ref={newsDetailsModalRef} />
         <Footer />
