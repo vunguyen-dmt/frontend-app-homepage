@@ -4,7 +4,7 @@ export const feature_courses = [
         "image" : "https://lms.hutech.edu.vn/asset-v1:DHS+DHS+HK3-2024-2025+type@asset+block@course_image.png",
         "name": "Women and Leadership",
         "description" : "Trường Đại học Công nghệ TP.HCM & University of Hertfordshire",
-        "numberOfLessons": "5",
+        "numberOfLessons": "6",
         "aboutPage": "https://apps.lms.hutech.edu.vn/courses/course-v1:DHS+DHS+HK3-2024-2025",
         "orgLogo": "https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/images/hutech-logo.png",
         "tag": "MOOCS course"
@@ -51,7 +51,7 @@ export const feature_courses = [
     },
     {
         "id": "course-v1:HUTECH_XHNV+KHQHCC_PSY167+2022_2023_HK3",
-        "image" : "https://studio.lms.hutech.edu.vn/asset-v1:HUTECH_XHNV+KHQHCC_PSY167+2022_2023_HK3+type@asset+block@TAM_LY.png",
+        "image" : "https://lms.hutech.edu.vn/asset-v1:HUTECH_XHNV+KHQHCC_PSY167+2022_2023_HK3+type@asset+block@images.png",
         "name": "Tâm lý học ứng dụng",
         "description" : "Khoa Khoa học Xã hội và Quan hệ Công chúng",
         "numberOfLessons": "6",

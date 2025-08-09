@@ -103,7 +103,7 @@ const messages = defineMessages({
   },
   FindYourCourses: {
     id: 'homepage.findYourCourses',
-    defaultMessage: 'Find your courses',
+    defaultMessage: 'Find your courses!',
     description: '',
   },
   Course: {

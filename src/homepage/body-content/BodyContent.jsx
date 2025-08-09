@@ -87,15 +87,15 @@ const BodyContent = () => {
                   <div className="px-4 px-xl-5 py-3 text-primary bg-white">
                     <div className='body-text-title'>{formatMessage(messages.popularCourses)}</div>
                   </div>
-                  <div className="courses-bg d-flex flex-sm-nowrap flex-md-wrap justify-content-around justify-content-xl-center p-4 pt-xl-5">
+                  <div className="courses-bg d-flex flex-sm-nowrap flex-md-wrap p-4 pt-xl-5">
                     {
                         courses.map((item) => (
                             <div className="py-2 px-3 p-md-2 ">
                               <div className="card" id={item.id}>
-                                <img src={item.image} alt="John" />
+                                <a className='course-card-img-wrapper' href={item.aboutPage}><img src={item.image} alt={item.name} /></a>
                                 <a href={item.aboutPage} className="course-name">{item.name}</a>
                                 <div className="description">{item.description}</div>
-                                <a className="button course-btn" href="/courses/" >
+                                <a className="button course-btn" href={item.aboutPage}>
                                   {messages[item.tag] ? formatMessage({...messages[item.tag]}) : item.tag}
                                 </a>
                                 <div className="pb-4"></div>
