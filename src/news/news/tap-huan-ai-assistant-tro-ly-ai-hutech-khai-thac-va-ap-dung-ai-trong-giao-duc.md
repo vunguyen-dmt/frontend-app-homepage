@@ -1,6 +1,6 @@
 # Tập huấn “AI Assistant – Trợ lý AI”: HUTECH khai thác và áp dụng AI trong giáo dục
 
-**Ngày đăng**: 09/12/2024
+Ngày đăng: 09/12/2024
 
 ![tap-huan-ai-assistant-tro-ly-ai-hutech-khai-thac-va-ap-dung-ai-trong-giao-duc.jpg](https://hutech-media.goamazing.org/hutech-statics/media/news/tap-huan-ai-assistant-tro-ly-ai-hutech-khai-thac-va-ap-dung-ai-trong-giao-duc.jpg)
 

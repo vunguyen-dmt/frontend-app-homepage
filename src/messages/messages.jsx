@@ -83,7 +83,7 @@ const messages = defineMessages({
   },
   newsEvent: {
     id: 'homepage.bodyContent.newsEvent',
-    defaultMessage: 'Event',
+    defaultMessage: 'Events',
     description: '',
   },
   contact: {

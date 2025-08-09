@@ -13,17 +13,8 @@
     --gray-active: #BFC7D8;
 }
 
-@font-face {
-	font-family: "AvoRegular";
-	src: local("AvoRegular"), url("./assets/fonts/SVN-Avo_Regular.ttf");
-}
-
-@font-face {
-	font-family: "AvoBold";
-	src: local("AvoBold"), url("./assets/fonts/SVN-Avo_Bold.ttf");
-}
-
 body {
     color: rgba(0,0,0,0.87);
-    font-family: AvoRegular, Open Sans, Helvetica Neue, Roboto, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 1rem;
 }

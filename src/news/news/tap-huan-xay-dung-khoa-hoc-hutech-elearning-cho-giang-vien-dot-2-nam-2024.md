@@ -1,6 +1,6 @@
 # Tập huấn “Xây dựng khóa học Hutech eLearning” cho giảng viên – Đợt 2, năm 2024
 
-**Ngày đăng**: 05/05/2024
+Ngày đăng: 05/05/2024
 
 ![tap-huan-xay-dung-khoa-hoc-hutech-elearning-cho-giang-vien-dot-2-nam-2024.jpg](https://hutech-media.goamazing.org/hutech-statics/media/news/tap-huan-xay-dung-khoa-hoc-hutech-elearning-cho-giang-vien-dot-2-nam-2024.jpg)
 

@@ -124,13 +124,13 @@ const BodyContent = () => {
                   <div className="pr-4">
                     <a href="/home/faq/?role=student" className="link-title">
                       <img src={cdn + "/media/images/homepage-v2025/link-thumbnail-01.jpg"} />
-                      <div className="font-weight-bold px-3 pt-2">{formatMessage(messages.forLearners)}</div>
+                      <div className="px-3 pt-2">{formatMessage(messages.forLearners)}</div>
                     </a>
                   </div>
                   <div className="pl-4">
                     <a href="/home/faq/?role=instrustor" className="link-title">
                       <img src={cdn + "/media/images/homepage-v2025/link-thumbnail-02.jpg"} />
-                      <div className="font-weight-bold px-3 pt-2">{formatMessage(messages.forInstructors)}</div>
+                      <div className="px-3 pt-2">{formatMessage(messages.forInstructors)}</div>
                     </a>
                   </div>
                 </div>
@@ -186,7 +186,7 @@ const BodyContent = () => {
                               openNewsModal(i.slug);
                             }
                           } className="carousel-title" href={'/home/news/' + i.slug} >{i.title}</a>
-                          <div className="carousel-description font-italic">{i.description}</div>
+                          <div className="carousel-description">{i.description}</div>
                         </Carousel.Caption>
                       </Carousel.Item>
                     ))

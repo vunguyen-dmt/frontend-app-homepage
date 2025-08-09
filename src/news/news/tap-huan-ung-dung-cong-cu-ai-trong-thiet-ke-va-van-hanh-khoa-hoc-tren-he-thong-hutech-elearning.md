@@ -1,6 +1,6 @@
 # Tập huấn “Ứng dụng công cụ AI trong thiết kế và vận hành khóa học trên hệ thống Hutech eLearning” 
 
-**Ngày đăng**: 12/04/2025
+Ngày đăng: 12/04/2025
 
 ![tap-huan-ung-dung-cong-cu-ai-trong-thiet-ke-va-van-hanh-khoa-hoc-tren-he-thong-hutech-elearning.jpg](https://hutech-media.goamazing.org/hutech-statics/media/news/tap-huan-ung-dung-cong-cu-ai-trong-thiet-ke-va-van-hanh-khoa-hoc-tren-he-thong-hutech-elearning.jpg)
 

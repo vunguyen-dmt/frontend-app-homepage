@@ -1,6 +1,6 @@
 # Khóa học trực tuyến mở rộng MOOC “Nữ giới và năng lực lãnh đạo” sẽ chính thức khởi động vào 20/7 tới
 
-**Ngày đăng**: 17/07/2025 
+Ngày đăng: 17/07/2025 
 
 
 ![khoa-hoc-truc-tuyen-mo-rong-mooc-nu-gioi-va-nang-luc-lanh-djao-se-chinh-thuc-khoi-djong-vao-207-toi.jpg](https://hutech-media.goamazing.org/hutech-statics/media/news/khoa-hoc-truc-tuyen-mo-rong-mooc-nu-gioi-va-nang-luc-lanh-djao-se-chinh-thuc-khoi-djong-vao-207-toi.jpg)

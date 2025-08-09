@@ -1,6 +1,6 @@
 # Giảng viên Khoa Xây dựng chia sẻ kinh nghiệm ứng dụng AI trong công tác giảng dạy và nghiên cứu
 
-**Ngày đăng**: 26/05/2025
+Ngày đăng: 26/05/2025
 
 ![giang-vien-khoa-xay-dung-chia-se-kinh-nghiem-ung-dung-ai-trong-cong-tac-giang-day-va-nghien-cuu.jpg](https://hutech-media.goamazing.org/hutech-statics/media/news/giang-vien-khoa-xay-dung-chia-se-kinh-nghiem-ung-dung-ai-trong-cong-tac-giang-day-va-nghien-cuu.jpg)
 
