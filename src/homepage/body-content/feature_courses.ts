@@ -1,4 +1,4 @@
-var feature_courses = [
+export const feature_courses = [
     {
         "id": "course-v1:DHS+DHS+HK3-2024-2025",
         "image" : "https://lms.hutech.edu.vn/asset-v1:DHS+DHS+HK3-2024-2025+type@asset+block@course_image.png",
@@ -79,6 +79,4 @@ var feature_courses = [
         "orgLogo": "https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/images/hutech-logo.png",
         "tag": "LMS course"
     }
-]
-
-export default feature_courses;
+];

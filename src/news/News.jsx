@@ -4,7 +4,7 @@ import {
   Breadcrumb
 } from '@openedx/paragon';
 import './News.scss';
-import newsList from './news_list';
+import { newsList } from './news_list';
 import Footer from '@edx/frontend-component-footer';
 import { useIntl } from '@edx/frontend-platform/i18n';
 import { getConfig } from '@edx/frontend-platform';
@@ -23,7 +23,7 @@ const News = () => {
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
-  
+
   const pageButtons = Array.from({ length: totalPages }, (_, index) => (
     <button
       key={index}

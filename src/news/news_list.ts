@@ -1,4 +1,4 @@
-const newsList = 
+export const newsList = 
 [
     {
       id: 1,
@@ -41,5 +41,3 @@ const newsList =
       slug: 'tap-huan-xay-dung-khoa-hoc-hutech-elearning-cho-giang-vien-dot-2-nam-2024'
     }
 ];
-
-export default newsList

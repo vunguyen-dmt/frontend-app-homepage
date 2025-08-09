@@ -13,8 +13,8 @@ import trainingUnit from '../data/training-unit.json';
 import './BodyContent.scss';
 import ChatBot from '../../components/chat-bot/chat-bot';
 import { getFilterCourses } from '../../services/getFilterCourses';
-import feature_courses from './feature_courses'
-import newsList from '../../news/news_list';
+import { feature_courses } from './feature_courses';
+import { newsList } from '../../news/news_list';
 import NewsDetailModal from '../../news/NewsDetailsModal';
 
 const BodyContent = () => {
