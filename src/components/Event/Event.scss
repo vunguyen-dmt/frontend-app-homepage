@@ -11,3 +11,11 @@
 .event-item {
     padding: 50px 0;
 }
+
+.event-date {
+    font-weight: 600;
+    width: 145px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-bottom: 1rem;
+}
