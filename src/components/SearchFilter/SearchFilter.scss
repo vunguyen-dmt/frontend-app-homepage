@@ -15,18 +15,49 @@
 }
 
 .popover-content-unit {
+    padding: 50px!important;
     background-color: var(--blue-active) !important;
     overflow-y: auto !important;
-    height: 500px;
+    height: 564px;
+    width: 1120px;
+    max-width: calc(100vw - 110px);
     @media (max-width: 575px) {
         height: 350px;
+    }
+
+    .pgn__form-control-set {
+        flex-direction: row;
+        flex-wrap: wrap;
+        >div {
+            flex: 0 0 450px;
+            max-width: 100%;
+            margin: 6px 50px 6px 0;
+        }
+    }
+
+    .pgn__form-radio {
+        >div {
+            width: 100%;
+        }
+    }
+
+    .xlabel {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        .count {
+            margin-left: auto;
+            padding-left: 20px;
+            white-space: nowrap;
+        }
     }
 }
 
 .popover-content-semester {
     background-color: var(--blue-active) !important;
     overflow-y: auto !important;
-    height: 350px;
+    height: 265px;
+    padding: 50px!important;
 }
 
 .popover-button-hide {
@@ -38,6 +69,6 @@
 }
 
 .pgn__form-label {
-    font-size: 1em !important;
+    font-size: 0.8rem !important;
     color: white !important;
 }

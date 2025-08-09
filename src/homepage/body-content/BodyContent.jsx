@@ -21,6 +21,8 @@ const BodyContent = () => {
   const { formatMessage } = useIntl();
   const [courses, setCourses] = useState(feature_courses);
   const [filterRuns, setFilterRuns] = useState([]);
+  const [faculties, setFaculties] = useState([]);
+
   const newsDetailsModalRef = useRef();
   const news = newsList.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3);
   const cdn = "https://hutech-media.goamazing.org/hutech-statics";
@@ -28,21 +30,44 @@ const BodyContent = () => {
   useEffect(() => {
     setCourses(feature_courses);
     getFilterCourses().then(response => {
-      const responseData = response.data.results.runs;
-      const sortedFilterRuns = responseData.sort((a, b) => {
-        if (b.count !== a.count) {
-          return b.count - a.count;
-        }
-        return a.vKey.localeCompare(b.vKey);
+      var orgDict = {};
+      response.data.results.orgs.forEach((i) => {
+        orgDict[i.vKey] = i;
       });
-      
-      setFilterRuns(sortedFilterRuns.slice(0, 10));
+
+      var newFaculties = [];
+      trainingUnit.forEach((i) => {
+        if(orgDict[i.id]) {
+          i.count = orgDict[i.id].count;
+        }
+        newFaculties.push(i);
+      })
+
+      setFaculties(newFaculties);
+      const year = (new Date()).getFullYear() + 1;
+      const validFormatRegex = /^HK\d+-\d{4}-\d{4}$/;
+      const runs = response.data.results.runs.filter(item => validFormatRegex.test(item.vKey) && isAcceptableRuns(item.vKey, year));
+      const sortedFilterRuns = runs.sort((a, b) => {
+        const [hkA, y1A, y2A] = a.vKey.match(/\d+/g).map(Number);
+        const [hkB, y1B, y2B] = b.vKey.match(/\d+/g).map(Number);
+        if (y2A !== y2B) return y2B - y2A;
+        if (y1A !== y1B) return y1B - y1A;
+        return hkB - hkA;
+      }).slice(0, 5);
+      setFilterRuns(sortedFilterRuns);
     })
 
   }, []);
 
   const openNewsModal = (slug) => {
     newsDetailsModalRef.current.openModal(slug);
+  }
+
+  const isAcceptableRuns = (run, year) => {
+    if (!run.startsWith('HK')) return false;
+    const [hkA, y1A, y2A] = run.match(/\d+/g).map(Number);
+    if (y2A >  year) return false;
+    return true;
   }
 
   return (

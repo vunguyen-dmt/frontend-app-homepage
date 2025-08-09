@@ -19,6 +19,19 @@ const SearchFilter = ({data, nameFilter, type}) => {
     }
 
     useEffect(() => {
+        setTimeout(() => {
+            document.querySelectorAll('.search-common-course .popover-button').forEach(function(elem) {
+                elem.addEventListener('mouseover', () => {
+                    console.log(elem.textContent)
+                    if (elem.textContent == nameFilter) {
+                        setShowPopover(true);
+                    }
+                });
+            });
+        });
+    }, [])
+
+    useEffect(() => {
         const handleClickOutside = (event) => {
             const popoverElement = document.querySelector('.popover');
             // If the popover is open and click target is not inside it
@@ -26,16 +39,16 @@ const SearchFilter = ({data, nameFilter, type}) => {
                 setShowPopover(false);
             }
         };
-          // Attach listener on mount
-          document.addEventListener('mousedown', handleClickOutside);
-          // Cleanup
-          return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-          };
+        // Attach listener on mount
+        document.addEventListener('mousedown', handleClickOutside);
+        // Cleanup
+        return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+        };
     }, [showPopover]);
 
     const popover = (
-        <Popover className="popover-positioned-bottom" placement="auto">
+        <Popover className="popover-positioned-bottom pop-on-mouseover" placement="auto">
             <Popover.Content className={type=="unit" ? "popover-content-unit" : "popover-content-semester"}>
                 <Form.Group>
                     <Form.RadioSet
@@ -46,7 +59,7 @@ const SearchFilter = ({data, nameFilter, type}) => {
                         {
                             data.map(item => (
                                 type=="unit" ? 
-                                    <Form.Radio key={item.id} value={item.id}>{item.name}</Form.Radio> :
+                                    <Form.Radio key={item.id} value={item.id}><div className="xlabel"><span>{item.name}</span> <span className="count">{item.count}</span></div></Form.Radio> :
                                     <Form.Radio key={item.vKey} value={item.vKey}>{item.name}</Form.Radio>
                             ))
                         }
