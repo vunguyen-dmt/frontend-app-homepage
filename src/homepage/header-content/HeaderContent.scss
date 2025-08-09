@@ -54,7 +54,6 @@
                 
                 @media (max-width: 767px) {
                     font-size: 1.3rem;
-                    font-weight: normal;
                 }
             }
         }
@@ -122,8 +121,10 @@
         }
 
         @media (max-width: 768px) {
+            height: 38px;
             width: auto;
             input {
+                height: 36px;
                 &::placeholder {
                     font-size: 0.8rem;
                 }
