@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
 import { getConfig } from '@edx/frontend-platform';
 import { fetchAuthenticatedUser, getAuthenticatedUser } from '@edx/frontend-platform/auth';
 import { Route, Routes } from 'react-router-dom';

@@ -1,11 +1,23 @@
-.pgn__icon svg {
-    path {
-        fill: grey;
-    }
-}
+.news-details-modal.pgn__modal {
+    height: 100vh;
+    width: 90%;
+    max-width: 90%;
+    top: 5%;
+    max-height: 100vh;
+    margin-top: 3%;
 
-.pgn__modal-header {
-    background-color: transparent!important;
-    transition: none!important;
-    box-shadow: none;
+    .pgn__modal-header {
+        background-color: transparent!important;
+        transition: none!important;
+        box-shadow: none;
+    }
+
+    .pgn__modal-body.pgn__modal-body-scroll-bottom::before, .pgn__modal-body::before {
+        display: none!important;
+    }
+
+    .btn-icon .btn-icon__icon-container .pgn__icon.btn-icon__icon {
+        height: 50px;
+        width: 50px;
+    }
 }

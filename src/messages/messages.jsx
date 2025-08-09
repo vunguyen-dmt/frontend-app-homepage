@@ -42,7 +42,7 @@ const messages = defineMessages({
     description: '',
   },
   postgraduate: {
-    id: 'homepage.headerContent.postGraduate ',
+    id: 'homepage.headerContent.postGraduate',
     defaultMessage: 'Postgraduate',
     description: '',
   },
@@ -66,19 +66,19 @@ const messages = defineMessages({
     defaultMessage: 'View more',
     description: '',
   },
-  semester: {
-    id: 'homepage.bodyContent.semester',
-    defaultMessage: 'Semester',
+  semesters: {
+    id: 'homepage.bodyContent.semesters',
+    defaultMessage: 'Semesters',
     description: '',
   },
-  trainingUnit: {
-    id: 'homepage.bodyContent.trainingUnit',
-    defaultMessage: 'Training Unit',
+  faculties: {
+    id: 'homepage.bodyContent.faculties',
+    defaultMessage: 'Faculties',
     description: '',
   },
   newsInfo: {
     id: 'homepage.bodyContent.newsInfo',
-    defaultMessage: 'Information - News',
+    defaultMessage: 'Information - news',
     description: '',
   },
   newsEvent: {
@@ -134,6 +134,31 @@ const messages = defineMessages({
   title: {
     id: 'homepage.title',
     defaultMessage: 'Home | {siteName}',
+    description: '',
+  },
+  newsPageTitle: {
+    id: 'homepage.newsPageTitle',
+    defaultMessage: 'News | {siteName}',
+    description: '',
+  },
+  news: {
+    id: 'homepage.news',
+    defaultMessage: 'News',
+    description: '',
+  },
+  faqFrequentlyAskedQuestions: {
+    id: 'homepage.faqFrequentlyAskedQuestions',
+    defaultMessage: 'FAQ - Frequently Asked Questions',
+    description: '',
+  },
+  forLearners: {
+    id: 'homepage.forLearners',
+    defaultMessage: 'For learners',
+    description: '',
+  },
+  forInstructors: {
+    id: 'homepage.forInstructors',
+    defaultMessage: 'For instructors',
     description: '',
   },
 });

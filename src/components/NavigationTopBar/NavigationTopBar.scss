@@ -1,3 +1,16 @@
+.nav-wrapper {
+    background-color: var(--blue-active);
+    >nav {
+        max-width: 1600px;
+    }
+}
+
+.login-btn {
+    svg {
+        margin-right: 10px;
+    }
+}
+
 .logo {
     max-height: 80px;
     width: auto;
@@ -56,7 +69,7 @@
     margin-left: -12px;
     &:not(.collapsed) {
         .navbar-toggler-icon {
-            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABN0lEQVR4nO3ZTWrDMBCG4fcoXfQkLZTuK83CSc6eRc8QAk0hJWBDMTFxJM1oLPRBdsYzj34S2YGenp6e1vIKhIr1w9hDVl6AI/ALHLCPABfgOwczIa7jxxojI2Kqn4yJY/PXGWaHfnYLtW89FRkVi5kRrZqWGNGuZYExGzDNQuZLWBQK1tiHxQtXQ5RsoDqiRCNuEDkNuUOkNOYW8UyD7hFrGt0M4tFhr9bhMyv3Rn8zM7EWsylEMxBpYWkNLWx2aeHrNy40uv93jXtMXIFwj4lPINxiYgLCHSZkINxgQgFEdUxYKJzzm2COCQoIc0xQRJhhAvBjdMQQLczXAuJ2ptKKlMbcW06XnFf7BZ40h5SbfQBnw5mYZz4zJ+A99WYTxhoxx2QhpnxW/jN0AN4q1u/p6emhfP4AxlR3VfJGRpkAAAAASUVORK5CYII=) ;
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAABWUlEQVR4nO2ZQW7CMBBFUU/SBSdppYo9gUUoZ2fBGRASVHpdgKWRFSMy8YydyH+dzP/PY5J4WK2ampqaFiVgDXQF/TtgPbXIJ3AC/oBjpmxj/PfAHTirYQREkCuMgAjSwQC7Z3gimINB7tj7kPDeaQvGq2LeGTNPTxhzLw8YtwWzNHLfwhaG7hAWxsUgcgYoDpEjSDUQUwJVB6EJVi1E0DsBq4cIehV0NhBBpD/2inx8TlJi9efRiVgvYMwgPiyKLkKL2FpAP/sfe6IT83r88jjfDwX9FdfUDfMOhLi2TpgxEOKeumA0EOLeOmB4jDFVEKJG8dPhZAhRq9h5PQWhfie4w1hAiNpuMy0zCOFhPmXsgJslhPAym/tuExB9puxDnnlhEtvpjna0P847ddIcv4DAD3D16sSAf9yZC/CtLRZgXCGEf4DRQ4hiG8r+GdoDX6X8m5qammz0DxSI24yFKOQmAAAAAElFTkSuQmCC")!important;
         }
     }
 }
@@ -73,7 +86,7 @@
 .navbar-light .navbar-toggler-icon {
     height: 24px;
     // color: var(--norm-text)!important;
-    background-color: var(--gray-active) !important;
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")!important;
     width: 24px;
 }
 
@@ -96,11 +109,14 @@
     font-family: AvoRegular, Arial, Helvetica, sans-serif;
 
     .navbar {
-        padding: 0.5rem 0!important;
+        padding: 0.5rem 1rem!important;
     }
 
     .right-box-faq {
         flex-wrap: nowrap!important;
+        .dropdown-toggle::after {
+            margin-left: 10px;
+        }
     }
 
 }

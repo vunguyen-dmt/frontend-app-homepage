@@ -12,10 +12,7 @@ import messages from '../../messages/messages';
 import './HeaderContent.scss';
 
 const HeaderContent = () => {
-
-  // const cdn = "https://d10g66pf9vjy7h.cloudfront.net";
   const cdn = "https://hutech-media.goamazing.org/hutech-statics";
-
   const { formatMessage } = useIntl();
   const [searchQuery, setSearchQuery] = React.useState('');
   const [dropdownCourses, setDropdownCourses] = React.useState([]);
@@ -30,7 +27,6 @@ const HeaderContent = () => {
     const delay = 500;
     clearTimeout(searchDropdownTimerId);
     if (searchQuery) {
-      // eslint-disable-next-line react-hooks/exhaustive-deps
       searchDropdownTimerId = setTimeout(() => {
         searchCourse({
           page: 1,
@@ -72,12 +68,10 @@ const HeaderContent = () => {
           <div className="text-over">
             <div className="text-wrapper">
               <div className="text-title">{formatMessage(messages.learning)} {formatMessage(messages.managementSystem)}</div>
-              {/* <div className="text-title margin-bottom-20">{formatMessage(messages.managementSystem)}</div> */}
               <div className="text-name">HUTECH</div>
               <div className="search-area">
                 <SearchField
                   submitButtonLocation="external"
-                  // buttonText={formatMessage(messages.Search)}
                   placeholder={formatMessage(messages.FindYourCourses)}
                   value={searchQuery}
                   onSubmit={searchSubmittedHandle}
@@ -110,13 +104,13 @@ const HeaderContent = () => {
         
         <section id="programs" className="programs d-flex flex-lg-nowrap flex-column flex-md-row /*text-white text-center*/">
           <div className="first-program w-100">
-            <a href="/courses/?page=1&language=&org=TH,DU,DDXN,HQH,HT,MC,KHQHCC,LU,MARQT,NB,DL,QT,NN,TQH,TT,TYCN,XD&run=">{formatMessage(messages.underGraduate)}</a>
+            <a href="/courses/?page=1&language=&org=TH,DU,DDXN,HQH,HT,MC,KHQHCC,LU,MARQT,NB,DL,QT,NN,TQH,TT,TYCN,XD">{formatMessage(messages.underGraduate)}</a>
           </div>
           <div className="second-program w-100">
-            <a href="/courses/?page=1&language=&org=SDH&run=">{formatMessage(messages.postgraduate)}</a>
+            <a href="/courses/?page=1&language=&org=SDH">{formatMessage(messages.postgraduate)}</a>
           </div>
           <div className="last-program w-100">
-            <a href="/courses/?page=1&language=&org=DHS&run=">{formatMessage(messages.shortTermCourses)}</a>
+            <a href="/courses/?page=1&language=&org=DHS">{formatMessage(messages.shortTermCourses)}</a>
           </div>
         </section>
       </header>

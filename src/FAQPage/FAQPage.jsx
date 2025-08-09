@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import Footer from '@edx/frontend-component-footer';
-import Header from '@edx/frontend-component-header';
 import {
   Collapsible, Breadcrumb,
 } from '@openedx/paragon';
-import * as qs from 'qs';
 import { Helmet } from 'react-helmet';
+import { useIntl } from '@edx/frontend-platform/i18n';
+import * as qs from 'qs';
 import './FAQPage.scss';
 import NavigationTopBar from '../components/NavigationTopBar/NavigationTopBar';
+import messages from '../messages/messages';
 
 const FAQPage = () => {
+  const { formatMessage } = useIntl();
   const [FAQList, setFAQList] = useState([]);
   const roles = ['student', 'instructor'];
   const parseRole = () => {
@@ -37,11 +39,11 @@ const FAQPage = () => {
         <Breadcrumb
           ariaLabel="Breadcrumb is active"
           links={[
-            { label: 'Trang chủ', href: 'https://apps.lms.hutech.edu.vn/home/' },
+            { label: formatMessage(messages.home), href: '/home/' },
           ]}
           activeLabel="FAQ"
         />
-        <div className="font-weight-bold py-3 text-center tl">FAQ - Các câu hỏi thường gặp</div>
+        <div className="font-weight-bold py-3 text-center tl">{formatMessage(messages.faqFrequentlyAskedQuestions)}</div>
         {
             FAQList.map(item => (
               <Collapsible
@@ -53,7 +55,7 @@ const FAQPage = () => {
             ))
         }
       </div>
-      <Footer showLanguageSelector />
+      <Footer />
     </div>
   );
 };

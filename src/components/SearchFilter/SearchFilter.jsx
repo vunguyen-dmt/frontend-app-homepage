@@ -1,13 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "./SearchFilter.scss";
 import { OverlayTrigger, Button, Popover, Form } from "@openedx/paragon"
 
 const SearchFilter = ({data, nameFilter, type}) => {
     const [value, setValue] = useState("");
-
     const [showPopover, setShowPopover] = useState(false); // Toggle div visibility
-
-    // const handleChange = e => setValue(e.target.value);
 
     const handleChange = (e) => {
         const value = e.target.value;
@@ -24,16 +21,13 @@ const SearchFilter = ({data, nameFilter, type}) => {
     useEffect(() => {
         const handleClickOutside = (event) => {
             const popoverElement = document.querySelector('.popover');
-      
             // If the popover is open and click target is not inside it
             if (showPopover && popoverElement && !popoverElement.contains(event.target)) {
                 setShowPopover(false);
             }
         };
-      
           // Attach listener on mount
           document.addEventListener('mousedown', handleClickOutside);
-      
           // Cleanup
           return () => {
             document.removeEventListener('mousedown', handleClickOutside);

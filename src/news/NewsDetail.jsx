@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import ReactMarkdown from 'react-markdown';
 import { Helmet } from 'react-helmet';
 import Footer from '@edx/frontend-component-footer';
-import Header from '@edx/frontend-component-header';
+import { useIntl } from '@edx/frontend-platform/i18n';
+import { getConfig } from '@edx/frontend-platform';
 import NavigationTopBar from '../components/NavigationTopBar/NavigationTopBar';
 import {
    Breadcrumb,
 } from '@openedx/paragon';
 import './NewsDetail.scss';
+import NewsBody from './NewsBody';
+import messages from '../messages/messages';
 
 const NewsDetail = () => {
+  const { formatMessage } = useIntl();
   const { slug } = useParams();
   const [content, setContent] = useState('');
   const [error, setError] = useState(null);
@@ -38,21 +41,20 @@ const NewsDetail = () => {
 
   return (
     <div className="news-detail">
-      <Helmet><title>News | HUTECH eLearning</title></Helmet>
-      {/* <Header /> */}
+      <Helmet><title>{formatMessage(messages.newsPageTitle, { siteName: getConfig().SITE_NAME })}</title></Helmet>
       <NavigationTopBar />
       <div className='news-content'>
         <Breadcrumb
-        ariaLabel="Breadcrumb is active"
+        ariaLabel=""
         links={[
-          { label: 'Trang chủ', href: '/home/' },
-          { label: 'Tin tức', href: '/news/' },
+          { label: formatMessage(messages.home), href: '/home/' },
+          { label: formatMessage(messages.news), href: '/home/news/' },
         ]}
         activeLabel=""
       />
-        <ReactMarkdown>{content}</ReactMarkdown>
+        <NewsBody content={content} />
       </div>
-      <Footer showLanguageSelector />
+      <Footer />
     </div>
   );
 };

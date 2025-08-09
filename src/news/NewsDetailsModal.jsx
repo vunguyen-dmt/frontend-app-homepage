@@ -1,56 +1,57 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
+import React, { forwardRef, useImperativeHandle, useState, useEffect, } from 'react';
 import {
-  Breadcrumb, FullscreenModal, ActionRow, Button, useToggle, Container
+  StandardModal, useToggle, Container
 } from '@openedx/paragon';
-import ReactMarkdown from 'react-markdown';
 import './News.scss';
-import newsList from './news_list';
-import Footer from '@edx/frontend-component-footer';
-import Header from '@edx/frontend-component-header';
-import NavigationTopBar from '../components/NavigationTopBar/NavigationTopBar';
 import './NewsDetailsModal.scss';
+import NewsBody from './NewsBody';
 
-const NewsDetailModal = ({slug}) => {
+const NewsDetailModal = forwardRef(({base}, ref) => {
   const [isOpen, open, close] = useToggle(false);
   const [content, setContent] = useState('');
+  const [slug, setSlug] = useState('');
+  
+
+  useImperativeHandle(ref, () => ({
+    openModal(openSlug) {
+      window.history.replaceState({}, '', `/home/news/${openSlug}`);
+      setSlug(openSlug)
+      open();
+    },
+  }));
+
+  const onClose = () => {
+    window.history.replaceState({}, '', `${base}`);
+    close();
+  }
+
+  const fetchNews = async () => {
+    try {
+      const module = await import(`!raw-loader!../news/news/${slug}.md`);
+      setContent(module.default);
+    } catch (err) {
+    console.log(err)
+    }
+  };
 
    useEffect(() => {
-     const fetchNews = async () => {
-       try {
-         const module = await import(`!raw-loader!../news/news/${slug}.md`);
-         setContent(module.default);
-       } catch (err) {
-         setError(err.message);
-       }
-     };
- 
      fetchNews();
+     console.log(slug)
    }, [slug]);
 
   return (
-    <div className='news-details-modal'>
-      <Button variant="outline-primary" onClick={open}>Open fullscreen modal</Button>
-      <FullscreenModal
+    <div >
+      <StandardModal
+        className='news-details-modal'
         title=""
         isOpen={isOpen}
-        onClose={close}
-        // footerNode={(
-        //   <ActionRow>
-        //     <ActionRow.Spacer />
-        //     <Button variant="tertiary" onClick={close}>Cancel</Button>
-        //     <Button>Submit</Button>
-        //   </ActionRow>
-        // )}
+        onClose={onClose}
         isOverflowVisible={false}
       >
-        <Container size="md">
-        <ReactMarkdown>{content}</ReactMarkdown>
-        </Container>
-      </FullscreenModal>
+        <Container size="md"><NewsBody content={content} /></Container>
+      </StandardModal>
     </div>
   );
-};
+});
 
 export default NewsDetailModal;

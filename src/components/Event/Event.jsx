@@ -1,9 +1,7 @@
 import React from 'react';
 import './Event.scss';
 
-const Event = ({
-  videoId, sources, title, videoPoster
-}) => {
+const Event = () => {
     var eventList = [
         {
             id: 1,

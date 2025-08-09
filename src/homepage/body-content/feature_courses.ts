@@ -1,11 +1,11 @@
 var feature_courses = [
     {
-        "id": "course-v1:HUTECH+MMC101+2022MMC101",
-        "image" : "https://studio.lms.hutech.edu.vn/asset-v1:HUTECH+MMC101+2022MMC101+type@asset+block@Cover_MMC_1.png",
-        "name": "Cơ học vật liệu nâng cao",
-        "description" : "GS.TS Nguyễn Trung Kiên",
+        "id": "course-v1:DHS+DHS+HK3-2024-2025",
+        "image" : "https://lms.hutech.edu.vn/asset-v1:DHS+DHS+HK3-2024-2025+type@asset+block@course_image.png",
+        "name": "Women and Leadership",
+        "description" : "Trường Đại học Công nghệ TP.HCM & University of Hertfordshire",
         "numberOfLessons": "5",
-        "aboutPage": "https://apps.lms.hutech.edu.vn/courses/course-v1:HUTECH+MMC101+2022MMC101",
+        "aboutPage": "https://apps.lms.hutech.edu.vn/courses/course-v1:DHS+DHS+HK3-2024-2025",
         "orgLogo": "https://hutech-statics.s3.ap-southeast-1.amazonaws.com/media/images/hutech-logo.png",
         "tag": "MOOCS course"
     },
