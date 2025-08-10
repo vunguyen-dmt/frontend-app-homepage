@@ -1,16 +1,23 @@
-.scrollup-btn{
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    position: fixed;
-    bottom: 180px;
-    right: 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: rgb(33, 62, 140);
-    color: #fff;
-    border: none;
-    svg {
-        transform: rotate(-90deg);
-    }
+.scrollup-btn {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 180px;
+  right: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: rgb(33, 62, 140);
+  color: #fff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    transform: rotate(-90deg);
+    display: block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+  }
 }

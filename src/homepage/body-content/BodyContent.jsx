@@ -39,6 +39,8 @@ const BodyContent = () => {
       trainingUnit.forEach((i) => {
         if(orgDict[i.id]) {
           i.count = orgDict[i.id].count;
+        } else {
+          i.count = '-';
         }
         newFaculties.push(i);
       })

@@ -25,6 +25,12 @@
         height: 350px;
     }
 
+    @media (max-width: 1200px) {
+        width: 470px;
+        padding: 15px!important;
+    }
+
+
     .pgn__form-control-set {
         flex-direction: row;
         flex-wrap: wrap;
@@ -58,6 +64,9 @@
     overflow-y: auto !important;
     height: 265px;
     padding: 50px!important;
+    @media (max-width: 1200px) {
+        padding: 15px!important;
+    }
 }
 
 .popover-button-hide {

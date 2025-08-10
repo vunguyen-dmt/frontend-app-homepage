@@ -9,7 +9,7 @@
     }
 
     .text-over {
-        top: 25%;
+        top: 200px;
         left: 10%;
         z-index: 1;
         position: absolute;
@@ -26,7 +26,10 @@
 
         @media (max-width: 1199px) {
             max-height: 300px;
-            top: 15%;
+        }
+
+        @media (max-width: 991px) {
+            top: 40px;
         }
   
         .text-wrapper {

@@ -47,7 +47,7 @@ const messages = defineMessages({
     description: '',
   },
   shortTermCourses: {
-    id: 'homepage.headerContent.shortTermCourses ',
+    id: 'homepage.headerContent.shortTermCourses',
     defaultMessage: 'Short-term training',
     description: '',
   },
