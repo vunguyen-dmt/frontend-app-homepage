@@ -16,11 +16,6 @@ const messages = defineMessages({
     defaultMessage: 'Courses',
     description: '',
   },
-  educationTechnology: {
-    id: 'homepage.navigationTopBar.educationTechnology',
-    defaultMessage: 'Education & Technology',
-    description: '',
-  },
   login: {
     id: 'homepage.navigationTopBar.login',
     defaultMessage: 'Login',
