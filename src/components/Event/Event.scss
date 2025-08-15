@@ -18,12 +18,12 @@
 }
 
 .event-date {
-    border: 1px solid;
+    border: 1px solid #ddd;
     width: 145px;
     white-space: nowrap;
     flex-shrink: 0;
-    color: rgb(29, 103, 205);
     text-align: center;
+    margin-bottom: 15px;
 
     @media (min-width: 992px) {
         margin-top: 5px;
@@ -32,10 +32,12 @@
     .date {
         padding: 0 5px;
         color: var(--blue-active);
+        padding: 8px 0;
     }
     
     .week-date {
-        background-color: #ff7023;;
+        background-color: #ff7023;
+        padding: 8px 0;
         color: white;
         font-weight: 600;
     }
