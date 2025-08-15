@@ -62,6 +62,7 @@ const NavigationTopBar = () => {
             <Nav className="mx-auto">
               <Nav.Link href="/home/">{formatMessage(messages.home)}</Nav.Link>
               <Nav.Link href="/courses/">{formatMessage(messages.Courses)}</Nav.Link>
+              <Nav.Link href="#">{formatMessage(messages.educationTechnology)}</Nav.Link>
               <Nav.Link href="/home/faq/?role=student" className="/*d-lg-none*/">FAQ</Nav.Link>
             </Nav>
             <Form inline className="fw-600 right-box-faq">

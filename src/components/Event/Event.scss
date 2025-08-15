@@ -6,10 +6,15 @@
 
 .event-name {
     font-size: 1rem;
+    text-align: justify;
 }
 
 .event-item {
-    padding: 50px 0;
+    padding: 20px 0;
+
+    @media (min-width: 992px) {
+        padding: 50px 0;
+    }
 }
 
 .event-date {
@@ -17,5 +22,13 @@
     width: 145px;
     white-space: nowrap;
     flex-shrink: 0;
-    margin-bottom: 1rem;
+    // margin-bottom: 1rem;
+    margin-top: unset;
+    background-color: #ff7023;;
+    color: white;
+    padding: 0 2px;
+    
+    @media (min-width: 992px) {
+        margin-top: 5px;
+    }
 }

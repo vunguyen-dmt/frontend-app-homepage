@@ -72,6 +72,10 @@
         "name": "KHOA XÂY DỰNG"
     },
     {
+        "id": "SDH",
+        "name": "SAU ĐẠI HỌC"
+    },
+    {
         "id": "ANNT",
         "name": "VIỆN ÂM NHẠC - NGHỆ THUẬT"
     },
@@ -86,6 +90,10 @@
     {
         "id": "VQ",
         "name": "VIỆN ĐÀO TẠO QUỐC TẾ"
+    },
+    {
+        "id": "TX",
+        "name": "VIỆN HỢP TÁC PHÁT TRIỂN ĐÀO TẠO"
     },
     {
         "id": "DT",

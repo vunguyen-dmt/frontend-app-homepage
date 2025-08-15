@@ -22,7 +22,7 @@ const SearchFilter = ({data, nameFilter, type}) => {
         setTimeout(() => {
             document.querySelectorAll('.search-common-course .popover-button').forEach(function(elem) {
                 elem.addEventListener('mouseover', () => {
-                    console.log(elem.textContent)
+                    // console.log(elem.textContent)
                     if (elem.textContent == nameFilter) {
                         setShowPopover(true);
                     }

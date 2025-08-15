@@ -15,11 +15,11 @@
 }
 
 .popover-content-unit {
-    padding: 50px!important;
+    padding: 30px 50px!important;
     background-color: var(--blue-active) !important;
     overflow-y: auto !important;
     height: 564px;
-    width: 1120px;
+    width: 1080px;
     max-width: calc(100vw - 110px);
     @media (max-width: 575px) {
         height: 350px;
@@ -37,7 +37,12 @@
         >div {
             flex: 0 0 450px;
             max-width: 100%;
-            margin: 6px 50px 6px 0;
+            &:nth-child(2n+1) {
+                margin: 6px 50px 6px 0;
+            }
+            &:nth-child(2n) {
+                margin: 6px 10px 6px 0;
+            }
         }
     }
 
@@ -62,8 +67,8 @@
 .popover-content-semester {
     background-color: var(--blue-active) !important;
     overflow-y: auto !important;
-    height: 265px;
-    padding: 50px!important;
+    height: 225px;
+    padding: 30px!important;
     @media (max-width: 1200px) {
         padding: 15px!important;
     }

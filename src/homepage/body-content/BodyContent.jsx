@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef  } from 'react';
 import { useIntl } from '@edx/frontend-platform/i18n';
 import {
-  KeyboardArrowRight
+  KeyboardArrowRight, AutoStories, EventNote
 } from '@openedx/paragon/icons';
 import {
    Icon, Carousel
@@ -24,7 +24,7 @@ const BodyContent = () => {
   const [faculties, setFaculties] = useState([]);
 
   const newsDetailsModalRef = useRef();
-  const news = newsList.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3);
+  const news = newsList.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 4);
   const cdn = "https://hutech-media.goamazing.org/hutech-statics";
 
   useEffect(() => {
@@ -117,15 +117,25 @@ const BodyContent = () => {
                   <div className="courses-bg d-flex flex-sm-nowrap flex-md-wrap p-4 pt-xl-5">
                     {
                         courses.map((item) => (
-                            <div className="py-2 px-3 p-md-2 ">
+                            <div className="py-3 px-3 /*p-md-2*/ ">
                               <div className="card" id={item.id}>
                                 <a className='course-card-img-wrapper' href={item.aboutPage}><img src={item.image} alt={item.name} /></a>
                                 <a href={item.aboutPage} className="course-name">{item.name}</a>
                                 <div className="description">{item.description}</div>
-                                <a className="button course-btn" href={item.aboutPage}>
+                                {/* <a className="button course-btn" href={item.aboutPage}>
                                   {messages[item.tag] ? formatMessage({...messages[item.tag]}) : item.tag}
-                                </a>
-                                <div className="pb-4"></div>
+                                </a> */}
+                                <div className="pb-2"></div>
+                                <div className="foot">
+                                  <div>
+                                    <Icon src={AutoStories} />
+                                    {messages[item.tag] ? formatMessage({...messages[item.tag]}) : item.tag}
+                                  </div>
+                                  <div>
+                                    <Icon src={EventNote} />
+                                    {item.numberOfLessons} {formatMessage(messages.Lessons)}
+                                  </div>
+                                </div>
                               </div>
                             </div>
                             )
@@ -192,7 +202,7 @@ const BodyContent = () => {
                 <Carousel interval={5000} indicators={true} slide={true} fade={false}>
                   {
                     news
-                      .slice(0,5)
+                      // .slice(0,5)
                       .map(i => (
                       <Carousel.Item key={i.id}>
                         <a onClick={(e) =>{

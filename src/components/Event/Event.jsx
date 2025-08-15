@@ -25,8 +25,8 @@ const Event = () => {
         {
             events.map(i => (
                 <div key={i.id}>
-                    <div className="d-flex flex-column flex-lg-row align-items-start align-items-lg-center event-item">
-                        <div className="event-date text-left pr-lg-3">{i.date.toString("dd/MM/yyyy")}</div>
+                    <div className="event-item d-flex flex-column flex-lg-row align-items-start">
+                        <div className="event-date text-left">{i.date.toString("dd/MM/yyyy")}</div>
                         <div className="event-name pl-lg-3">{i.eventName}</div>
                     </div>
                     <div className="event-line"></div>

@@ -31,8 +31,12 @@
             color: var(--yellow-active) !important;
         }
 
-        @media (min-width: 992px) {
+        @media (min-width: 1200px) {
             padding: 0 2rem !important;
+        }
+
+        @media (min-width: 992px) and (max-width: 1199px) {
+            padding: 0 1.5rem !important;
         }
 
         @media (max-width: 991px) {

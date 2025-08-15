@@ -17,7 +17,7 @@
         }
 
         .popular-courses-wrapper {
-            background-color: rgba(191, 199, 216, 0.2);
+            background-color: white;
 
             .popular-courses {
                 max-width: 1740px;
@@ -113,7 +113,13 @@
                                 height: 200px;
                                 overflow: hidden;
                                 height: 150px;
+
+                                &:hover, &:not(hover) {
+                                    border-top-left-radius: 20px;
+                                    border-top-right-radius: 20px;    
+                                }
                             }
+
                             img {
                                 border-top-left-radius: 20px;
                                 border-top-right-radius: 20px;
@@ -146,12 +152,18 @@
                                 background-color: var(--blue-active);
                                 font-size: 0.875rem;
                                 color: white;
+                                border: 1px solid;
+                                border-left-color: white;
+                                border-right-color: white;
                                 bottom: 0;
                                 margin-top: 1rem;
                                 padding: 8px .75rem;
                                 display: flex;
                                 overflow: hidden;
-                                border-radius: 0 0 0.425rem 0.425rem!important;
+                                border-radius: 0 0 20px 20px!important;
+                                // border-radius: 0.75rem!important;
+                                margin: auto;
+                                width: 100%;
                                 >div {
                                     display: flex;
                                     align-items: center;
@@ -308,11 +320,20 @@
                 >div {
                     &:first-child {
                         flex: 0 0 60%;
-                        padding-right: 60px;
+                        padding-right: 30px;
+
+                        @media (min-width: 1200) {
+                            padding-right: 60px;
+                        }
                     }
+                    
                     &:last-child {
                         flex: 0 0 40%;
-                        padding-left: 60px;
+                        padding-left: 30px;
+
+                        @media (min-width: 1200px) {
+                            padding-left: 60px;
+                        }
                     }
                 }
 
@@ -328,12 +349,16 @@
                         }
                     }
                 }
+                
                 .news-events-text {
                     font-weight: 600;
                     font-size: 1.1rem;
-                    margin-bottom: 20px;
+                    margin-bottom: unset;
                     margin-top: 10px;
 
+                    @media (min-width: 576px) {
+                        margin-bottom: 20px;
+                    }
                     .pgn__icon {
                         padding-top: 5px;
                     }
