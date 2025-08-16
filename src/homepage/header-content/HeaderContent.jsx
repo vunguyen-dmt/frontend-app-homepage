@@ -97,8 +97,9 @@ const HeaderContent = () => {
               </div>
             </div>
           </div>
-          <video autoPlay loop muted preload="auto" className="main-video" poster={cdn + '/media/home-page-resources/header-cover.jpg'}>
-            <source src={cdn + "/media/videos/background_chinh.mp4"} type="video/mp4"/>
+          <video autoPlay loop muted preload="auto" className="main-video" poster="https://hutech-media.goamazing.org/hutech-statics/media/home-page-resources/header-cover.jpg">
+            <source src="http://hutech-media.goamazing.org/hutech-statics/media/home-page-resources/home-bg.webm" type="video/webm"></source>
+            <source src="http://hutech-media.goamazing.org/hutech-statics/media/home-page-resources/home-bg.mp4" type="video/mp4"/>
           </video>
         </section>
         
