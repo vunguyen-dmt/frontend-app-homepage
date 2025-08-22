@@ -18,11 +18,22 @@
 
         .popular-courses-wrapper {
             background-color: white;
+            display: flex;
+            margin: 0 auto;
+            flex-direction: row;
 
-            .popular-courses {
-                max-width: 1740px;
+            @media (max-width: 1199px) {
+                flex-direction: column;
+            }
+
+            .course-filter-options {
+                flex: 0 0 11vw;
                 margin: 0 auto;
-    
+
+                @media (min-width: 2140px) {
+                    flex: 0 0 calc((100vw - 1500px)/2);
+                }
+
                 .blank-area {
                     padding: 30px;
     
@@ -30,8 +41,14 @@
                         padding: unset;
                     }
                 }
-    
+
                 .search-common-course {
+                    display: flex;
+                    
+                    @media (min-width: 1200px) {
+                        flex-direction: column;
+                    }
+                    
                     .icon-info {
                         margin: 0 auto;
                         padding: 4rem 0;
@@ -81,10 +98,13 @@
                         }
                     }
                 }
+            }
+
+            .popular-courses {
+                max-width: 1450px;
+                margin: 0 auto;
     
                 .popular-courses-inner {
-                    max-width: 1440px;
-                    margin: auto 0;
         
                     .courses-bg {
                         background-color: var(--blue-active);
@@ -229,13 +249,26 @@
                     }
                 }
             }
+
+            .blank-courses {
+                flex: 0 0 11vw;
+                margin: 0 auto;
+            
+                @media (min-width: 2140px) {
+                    flex: 0 0 calc((100vw - 1500px)/2);
+                }
+
+                @media (max-width: 1600px) {
+                    display: none;
+                }
+            }
         }
 
         .guide-video-wrapper {
             background-color: var(--blue-active);
 
             .guide-video-area {
-                max-width: 1740px;
+                max-width: 1450px;
                 margin: 0 auto;
                 .video-blank-area {
                     margin-left: 230px;
@@ -307,15 +340,11 @@
             color: var(--blue-active)!important;
             margin: 0 auto;
             padding: 10px;
-            max-width: 1740px;
+            max-width: 1450px;
             min-height: 600px;
 
             .news-event-content {
                 margin-left: unset;
-
-                @media (min-width: 1200px) {
-                    margin-left: 230px;
-                }
 
                 >div {
                     &:first-child {
@@ -475,6 +504,10 @@
             line-height: normal;
             letter-spacing: -1px;
             font-weight: 600;
+
+            @media (max-width: 575px) {
+                font-size: 1.25rem;
+            }
         }
     }
 }

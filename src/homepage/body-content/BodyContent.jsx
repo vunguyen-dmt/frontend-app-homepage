@@ -94,27 +94,27 @@ const BodyContent = () => {
           </section>
           
           <section id="popular_courses" className="popular-courses-wrapper">
-            <div className="popular-courses d-flex flex-column flex-xl-row px-xl-5 pb-3">
-              <div className="px-md-3 /*w-xl-25 px-sm-3*/">
-                <div className="blank-area"></div>
-                <div className="search-common-course d-flex flex-row flex-xl-column">
-                  <div className="icon-info">
-                    <img src={cdn + "/media/images/homepage-v2025/icon_1.png"} alt="icon_1" />
-                    <SearchFilter data={filterRuns} nameFilter={formatMessage(messages.semesters)} type="semester"/>
-                  </div>
-                  <div className="icon-info-line"></div>
-                  <div className="icon-info">
-                    <img src={cdn + "/media/images/homepage-v2025/icon_2.png"} alt="icon_2" />
-                    <SearchFilter data={trainingUnit} nameFilter={formatMessage(messages.faculties)} type="unit"/>
-                  </div>
-                  <div className="icon-info-line"></div>
+            <div className="course-filter-options">
+              <div className="blank-area"></div>
+              <div className="search-common-course">
+                <div className="icon-info">
+                  <img src={cdn + "/media/images/homepage-v2025/icon_1.png"} alt="icon_1" />
+                  <SearchFilter data={filterRuns} nameFilter={formatMessage(messages.semesters)} type="semester"/>
                 </div>
+                <div className="icon-info-line"></div>
+                <div className="icon-info">
+                  <img src={cdn + "/media/images/homepage-v2025/icon_2.png"} alt="icon_2" />
+                  <SearchFilter data={trainingUnit} nameFilter={formatMessage(messages.faculties)} type="unit"/>
+                </div>
+                <div className="icon-info-line"></div>
               </div>
+            </div>
+            <div className="popular-courses d-flex flex-column flex-xl-row px-xl-3 pb-3">
               <div className="popular-courses-inner">
                   <div className="px-4 px-xl-5 py-3 text-primary bg-white">
                     <div className='body-text-title'>{formatMessage(messages.popularCourses)}</div>
                   </div>
-                  <div className="courses-bg d-flex flex-sm-nowrap flex-md-wrap p-4 pt-xl-5">
+                  <div className="courses-bg d-flex flex-sm-nowrap flex-md-wrap pt-xl-5 /*p-4*/ ">
                     {
                         courses.map((item) => (
                             <div className="py-3 px-3 /*p-md-2*/ ">
@@ -147,11 +147,12 @@ const BodyContent = () => {
                   </div>
               </div>
             </div>
+            <div className="blank-courses">
+            </div>
           </section>
 
           <section id="user_guide_video" className="guide-video-wrapper">
-            <div className="guide-video-area d-flex flex-column flex-xl-row flex-lg-nowrap px-4 px-xl-5 pb-5">
-              <div className="video-blank-area"></div>
+            <div className="guide-video-area d-flex flex-column flex-xl-row flex-lg-nowrap px-4 px-xl-3 pb-5">
               <div className="guide-video text-white">
                 <div className="px-sm-0 px-md-4 px-xl-5 py-3">
                   <div className="body-text-title">{formatMessage(messages.guide)}</div>
@@ -193,7 +194,7 @@ const BodyContent = () => {
             </div>
           </section>
 
-          <section id="news_event" className="news-event-wrapper d-flex flex-column flex-xl-row flex-lg-nowrap px-sm-4 px-xl-5 pb-3">
+          <section id="news_event" className="news-event-wrapper d-flex flex-column flex-xl-row flex-lg-nowrap px-sm-4 px-xl-3 pb-3">
             <div className="news-event-content d-flex flex-column flex-md-row flex-lg-nowrap justify-content-between">
               <div>
                 <div className="news-events-text">
