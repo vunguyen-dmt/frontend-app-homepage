@@ -323,3 +323,14 @@
         }
     }
 }
+
+
+@media (max-width: 575px) {
+    .search-area form[role=search] {
+        background-color: transparent!important;
+        border-color: white!important;
+        input {
+            background-color: transparent!important;
+        }
+    }
+}
