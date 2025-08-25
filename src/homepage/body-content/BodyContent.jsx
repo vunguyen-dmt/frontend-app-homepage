@@ -148,25 +148,27 @@ const BodyContent = () => {
           <div class="col-xl-2"></div>
         </div>
       </div>
-
-      <div className="row r2">
-        <div class="col-xl-8 mx-auto">
-          <div className='lg-title text-white'>{formatMessage(messages.guide)}</div>
-          <div className='container guide-items'>
-              <div className='row'>
-              <div className='col-md-6'>
-                <a href="/home/faq/?role=instrustor"><img src={cdn + "/media/images/homepage-v2025/link-thumbnail-01.jpg"} /></a>
-                <div className="px-3 pt-2">{formatMessage(messages.forLearners)}</div>
-              </div>
-              <div className='col-md-6'>
-                <a href='ref="/home/faq/?role=instrustor"'><img src={cdn + "/media/images/homepage-v2025/link-thumbnail-02.jpg"} /></a>
-                <div className="px-3 pt-2">{formatMessage(messages.forInstructors)}</div>
+      <div className='primary-bg'>
+        <div className='container'>
+          <div className="row r2">
+            <div class="col-xl-8 mx-auto">
+              <div className='lg-title text-white'>{formatMessage(messages.guide)}</div>
+              <div className='container guide-items'>
+                  <div className='row'>
+                  <div className='col-md-6'>
+                    <a href="/home/faq/?role=instrustor"><img src={cdn + "/media/images/homepage-v2025/link-thumbnail-01.jpg"} /></a>
+                    <div className="px-3 pt-2">{formatMessage(messages.forLearners)}</div>
+                  </div>
+                  <div className='col-md-6'>
+                    <a href='ref="/home/faq/?role=instrustor"'><img src={cdn + "/media/images/homepage-v2025/link-thumbnail-02.jpg"} /></a>
+                    <div className="px-3 pt-2">{formatMessage(messages.forInstructors)}</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
       <div className="container">
         <div className="row r3">
           <div class="col-xl-8 mx-auto">

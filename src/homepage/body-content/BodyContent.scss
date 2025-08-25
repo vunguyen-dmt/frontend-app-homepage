@@ -1,4 +1,8 @@
 .home-body {
+    .primary-bg {
+        background-color: var(--blue-active);
+    }
+
     .primary-text {
         color: var(--blue-active);
     }
@@ -8,7 +12,6 @@
     }
 
     .r2 {
-        background-color: var(--blue-active);
         padding-bottom: 70px;
     }
 
