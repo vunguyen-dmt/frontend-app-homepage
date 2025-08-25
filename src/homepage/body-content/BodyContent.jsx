@@ -172,7 +172,7 @@ const BodyContent = () => {
       <div className="container">
         <div className="row r3">
           <div class="col-xl-8 mx-auto">
-            <div className='container news-events'>
+            <div className='container news-events px-0'>
               <div className='row'>
                 <div className='col-md-7'>
                   <div><a className='news-title md-title' href="/home/news/">{formatMessage(messages.newsInfo)}<Icon src={KeyboardArrowRight} /></a></div>

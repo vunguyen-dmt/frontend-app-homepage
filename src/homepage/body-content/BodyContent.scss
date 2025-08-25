@@ -1,4 +1,9 @@
 .home-body {
+    .px-0 {
+        padding-left: 0px!important;
+        padding-right: 0px!important;
+    }
+
     .primary-bg {
         background-color: var(--blue-active);
     }
@@ -285,13 +290,6 @@
 }
 
 @media (max-width: 767px) {
-    .container.home-body, .home-body .container {
-        width: 100%!important;
-        max-width: 100%!important;
-        padding-left: 0!important;
-        padding-right: 0!important;
-    }
-
     .home-body {
         .courses {
             justify-content: flex-start;
