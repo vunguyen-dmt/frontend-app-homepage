@@ -156,11 +156,11 @@ const BodyContent = () => {
               <div className='container guide-items'>
                   <div className='row'>
                   <div className='col-md-6'>
-                    <a href="/home/faq/?role=instrustor"><img src={cdn + "/media/images/homepage-v2025/link-thumbnail-01.jpg"} /></a>
+                    <a href="/home/faq/?role=student"><img src={cdn + "/media/images/homepage-v2025/link-thumbnail-01.jpg"} /></a>
                     <div className="px-3 pt-2">{formatMessage(messages.forLearners)}</div>
                   </div>
                   <div className='col-md-6'>
-                    <a href='ref="/home/faq/?role=instrustor"'><img src={cdn + "/media/images/homepage-v2025/link-thumbnail-02.jpg"} /></a>
+                    <a href='https://dlc.hutech.edu.vn/docs/gioi-thieu/'><img src={cdn + "/media/images/homepage-v2025/link-thumbnail-02.jpg"} /></a>
                     <div className="px-3 pt-2">{formatMessage(messages.forInstructors)}</div>
                   </div>
                 </div>
