@@ -314,3 +314,11 @@
         padding-left: 12px;
     }
 }
+
+@media (min-width: 1200px) {
+    .home-body {
+        .container {
+            max-width: 1800px;
+        }
+    }
+}
