@@ -98,8 +98,8 @@ const HeaderContent = () => {
             </div>
           </div>
           <video autoPlay loop muted preload="auto" className="main-video" poster="https://hutech-media.goamazing.org/hutech-statics/media/home-page-resources/header-cover.jpg">
-            <source src="http://hutech-media.goamazing.org/hutech-statics/media/home-page-resources/home-bg.webm" type="video/webm"></source>
-            <source src="http://hutech-media.goamazing.org/hutech-statics/media/home-page-resources/home-bg.mp4" type="video/mp4"/>
+            <source src="https://hutech-media.goamazing.org/hutech-statics/media/home-page-resources/home-bg.webm" type="video/webm"></source>
+            <source src="https://hutech-media.goamazing.org/hutech-statics/media/home-page-resources/home-bg.mp4" type="video/mp4"/>
           </video>
         </section>
         
